@@ -15,8 +15,6 @@
 
     <!-- Custom styles for this template -->
     <link href="media/fabacademy.css" rel="stylesheet">
-      <link href="media/stilemassimo.css" rel="stylesheet"> 
-      <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     
     <!-- 3D files viewer -->
     <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
@@ -40,7 +38,6 @@
 					  $('#exercises').load("exercises-menu.html");
 					  $('#project').load("project-menu.html");
 					  $('#cclicense').load("license.html");
-					  $('#cclicense').load("license.html");
 					  }
 	</script>
 
@@ -58,11 +55,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">MASSIMO BIANCHINI</a>
+          <a class="navbar-brand" href="index.html">Name Surname</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="about.html">My profile</a></li>
+            <li><a href="about.html">About</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
               <ul id="exercises" class="dropdown-menu" role="menu">
@@ -83,36 +80,33 @@
 
 	<!-- Insert your content here below! -->
 
-      <div class="jumbotron">
-        <h1>Massimo Bianchini</h1>
-        <p>
-       I am a designer and a PhD in Design at the School of Design, Politecnico di Milano. I am very interested to explore the role of design in the change of production models. So, for me there is a main reason to be part of Fab Academy: In the last years I have been acquiring precious theoretical knowledge but I am progressively loosing my practical capabilities. Nowadays, I think that to do research and  teaching in the field of new models of innovation and production is vital to go back learning how to make things. In this way, I could support other people and organizations to better materialize their ideas.
-        </p>
-		
-      </div>
-      
-    <!--  <div class="row">
-        <div class="col-lg-4">
-       <h2>My Profile</h2>
-          <p>You can know more about my background </p>
-          <p><a class="btn btn-primary" href="#" role="button">View more &raquo;</a></p>
-        </div>
-        <div class="col-lg-4">
-           <h2>My lab</h2>
-           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-primary" href="#" role="button">View more &raquo;</a></p>
-       </div>
-        <div class="col-lg-4">
-          <h2>Final Project</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-          <p><a class="btn btn-primary" href="#" role="button">View more &raquo;</a></p>
-        </div>
-      </div> -->
-		
-        
+
+    <h2>Final Project Process</h1>
+    
+    <p>
+    Edit your <em>gantt.js</em> file in order to edit the following Gantt Chart...
+    </p>
+    
+    <div class="fluidMedia">
+    <iframe id="ganttframe" onLoad="calcHeight();" width="100%" src="gantt.html" scrolling="no" style="border: 0px;">
+	This is the Gantt.
+	</iframe> 
+	</div>
+    
     <!-- End of your content -->
 
     </div> <!-- /container -->
+
+	<!-- footer -->
+    
+    <footer id="footer">
+        <p id="cclicense">
+                </p>
+        <p class="license">
+        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
     
 
 	<!-- Do not touch this! -->
