@@ -1,0 +1,25 @@
+p {
+    color: #222;
+    text-align: left;
+}
+
+a:hover {
+    color: #000;
+}
+
+a:active {
+    color: #000;
+}
+
+body {
+    color: #1d1d1d;
+    font-family: 'Droid Serif', sans-serif;
+    font-weight: 500
+}
+
+strong {
+    color: #222;
+}
+
+
+/* commento */
