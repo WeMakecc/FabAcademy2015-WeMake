@@ -18,7 +18,6 @@
     <!-- Custom styles for this template -->
     <link href="media/fabacademy.css" rel="stylesheet">
     <link href="media/costantino.css" rel="stylesheet">
-
     
     <!-- 3D files viewer -->
     <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
@@ -41,7 +40,6 @@
 	function menu() {
 					  $('#exercises').load("exercises-menu.html");
 					  $('#project').load("project-menu.html");
-					  $('#cclicense').load("license.html");
 					  $('#cclicense').load("license.html");
 					  }
 	</script>
@@ -85,33 +83,61 @@
 
 	<!-- Insert your content here below! -->
 
-      <div class="jumbotron">
-        <h1>Costantino @ FabAcademy </h1>
-        <p>
-        In this website I'm documenting my Excercises and Projects during the FabAcademy 2015 @ <a ref="wemake.cc">WeMake.cc</a> 
-        </p>
-		
-      </div>
-      
-      <div class="row">
-        <div class="col-lg-4">
-          <h2>About me</h2>
-          <p>Here you can find some information about me.</p>
-          <p><a class="btn btn-primary" href="/about.html" role="button">View more &raquo;</a></p>
-        </div>
-        <div class="col-lg-4">
-          <h2>WeMake - FabLab</h2>
-          <p>WeMake is a makerspace where you can make things and connect with people in Milan.</p>
-          <p><a class="btn btn-primary" href="http://wemake.cc" role="button">View more &raquo;</a></p>
-       </div>
-        <div class="col-lg-4">
-          <h2>Final Project</h2>
-          <p>Here will be my final project and documentation.</p>
-          <p><a class="btn btn-primary" href="/project01.html" role="button">View more &raquo;</a></p>
-        </div>
-      </div>
-		
 
+    <h1>Final Project - Concept</h1>
+  
+    <h2>Introduction</h2>
+        <p>Last June I  opened together with a team, a fablab here in Milan. We believe fablab should be connected with their territory that's why we focused many of our activities to attract people coming from design and fashion design scene. Student and professionals in those fields are used to make a lot of prototyping and small scale production of furniture, products, accessories and garments. The use of digital fabrication technologies could accelerate the iteration of their work and produce small batches of ready-to-sell products.</p>
+        <p>In the first 6 months we realized that on one side, people coming from design background have skills for software to produce vectorial drawings (.svg, .dxf, .eps), people coming from fashion design have great manual skills in producing technical drawings but are not able to use software and their archives are mostly made of cardboard and paper. On top of that, many fashion designers express their creativity using  "Moulage " technique: draping paper or textiles directly on the mannequin and create the technical drawing with reverse-engineering  the result.</p>
+        
+    <h2>The objective</h2>    
+    <p>A different way to convert paper patterns into vector/digital designs.
+And what about doing also the opposite? Print vector patterns on paper or directly on textile using a simple marking system.</p>
+        
+    <h2>The Inspiration</h2>
+    <p>Do you remember the portable scanner ScanMan? <a href="http://www.computerhistory.org/revolution/input-output/14/352/1788">see here if </a> <a href="http://appletothecore.me/files/logitech_scanman.php">you're too young ;)</a> A portable rolling scanner that you can use to digitize a document or image. </p>
+    
+    <h2>The idea</h2>    
+    <p>The idea is to create a digitally fabricated device that can be moved on a surface. 
+The device has wheels connected to sensor (i.e. rotary encoder)  that can recognize relative position on a x-y plane.
+The user moves it following the line on paper with the help of a pointer. The user clicks on a button to memorize marks (the more marks the more accurate the drawing).</p>    
+        
+    <h2>Components</h2>
+
+<ul>
+<li>  lasercut structure and wheel </li>
+<li>  laser Pointers</li>
+<li>  buttons</li>
+<li>  rotary encoder</li>
+<li>  microcontroller and pcb </li>
+<li>  sd card reader</li>
+<li>  pen/pencil holder (for further upgrade)</li>
+<li>  embedded software to convert sensor to actual point / marks</li>
+<li>  software to convert marker point in lines (export in svg)</li>
+</ul>    
+    <h2>Further upgrade</h2>
+        <p>reverse the process</p>
+        <ul>
+<li>  attach a laser to draw a digital design  on paper or textile (the user move manually the device that knows her placement)</li>
+<li>  connect a pico projector to display the image on the paper / textile  (the user sketch by hand the pattern) </li>
+</ul>
+
+<p>automation </p>
+
+<ul>
+<li>the device can roll autonoumosly on the surface and recognize the lines and through an image recognition software the pattern</li>
+</ul>
+        
+        <h2>Other Links</h2>
+        
+        <ul>
+<li>  <a href="http://www.core77.com/blog/digital_fabrication/a_copernican_revolution_in_digital_fabrication_handheld_cnc_for_2d_applications_23342.asp"></a><a href="http://www.core77.com/blog/digital_fabrication/a_copernican_revolution_in_digital_fabrication_handheld_cnc_for_2d_applications_23342.asp">www.core77.com/blog/digital_fabrication/a_copernican_revolution_in_digital_fabrication_handheld_cnc_for_2d_applications_23342.asp</a></li>
+<li>  <a href="http://openfitlab.com/"></a><a href="http://openfitlab.com/">http://openfitlab.com/</a></li>
+<li>  <a href="http://www.element14.com/community/thread/29697/l/challenge-cnc-milling-robot"></a><a href="http://www.element14.com/community/thread/29697/l/challenge-cnc-milling-robot">http://www.element14.com/community/thread/29697/l/challenge-cnc-milling-robot</a></li>
+<li>  <a href="https://www.youtube.com/watch?v=Kf3W7PNtclM"></a><a href="https://www.youtube.com/watch?v=Kf3W7PNtclM">https://www.youtube.com/watch?v=Kf3W7PNtclM</a></li>
+<li>  <a href="http://www.fastcodesign.com/1669187/pocket-sized-drawing-robot-costs-less-than-70"></a><a href="http://www.fastcodesign.com/1669187/pocket-sized-drawing-robot-costs-less-than-70">http://www.fastcodesign.com/1669187/pocket-sized-drawing-robot-costs-less-than-70</a></li>
+</ul>
+        
     <!-- End of your content -->
 
     </div> <!-- /container -->

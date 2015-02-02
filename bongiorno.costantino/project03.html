@@ -12,13 +12,9 @@
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Cantarell:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
     <link href="media/fabacademy.css" rel="stylesheet">
-    <link href="media/costantino.css" rel="stylesheet">
-
     
     <!-- 3D files viewer -->
     <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
@@ -41,7 +37,6 @@
 	function menu() {
 					  $('#exercises').load("exercises-menu.html");
 					  $('#project').load("project-menu.html");
-					  $('#cclicense').load("license.html");
 					  $('#cclicense').load("license.html");
 					  }
 	</script>
@@ -85,33 +80,19 @@
 
 	<!-- Insert your content here below! -->
 
-      <div class="jumbotron">
-        <h1>Costantino @ FabAcademy </h1>
-        <p>
-        In this website I'm documenting my Excercises and Projects during the FabAcademy 2015 @ <a ref="wemake.cc">WeMake.cc</a> 
-        </p>
-		
-      </div>
-      
-      <div class="row">
-        <div class="col-lg-4">
-          <h2>About me</h2>
-          <p>Here you can find some information about me.</p>
-          <p><a class="btn btn-primary" href="/about.html" role="button">View more &raquo;</a></p>
-        </div>
-        <div class="col-lg-4">
-          <h2>WeMake - FabLab</h2>
-          <p>WeMake is a makerspace where you can make things and connect with people in Milan.</p>
-          <p><a class="btn btn-primary" href="http://wemake.cc" role="button">View more &raquo;</a></p>
-       </div>
-        <div class="col-lg-4">
-          <h2>Final Project</h2>
-          <p>Here will be my final project and documentation.</p>
-          <p><a class="btn btn-primary" href="/project01.html" role="button">View more &raquo;</a></p>
-        </div>
-      </div>
-		
 
+    <h2>Final Project Process</h1>
+    
+    <p>
+    Edit your <em>gantt.js</em> file in order to edit the following Gantt Chart...
+    </p>
+    
+    <div class="fluidMedia">
+    <iframe id="ganttframe" onLoad="calcHeight();" width="100%" src="gantt.html" scrolling="no" style="border: 0px;">
+	This is the Gantt.
+	</iframe> 
+	</div>
+    
     <!-- End of your content -->
 
     </div> <!-- /container -->
@@ -120,9 +101,9 @@
     
     <footer id="footer">
         <p id="cclicense">
-        </p>
+                </p>
         <p class="license">
-        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> modifided by Costantino Bongiorno <br>modifided by Costantino Bongiorno <br>
+        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> modifided by Costantino Bongiorno <br> <br>
         Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
         </p>
     </footer>
