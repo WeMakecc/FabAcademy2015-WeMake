@@ -2,7 +2,7 @@
 
 .license, #cclicense { 
 			font-size: 11px; 
-			text-align: center;
+			text-align: right;
 		 }
 		 
 .license img, #cclicense { 
@@ -10,30 +10,30 @@
 		 }
 
 #cv {
-  -webkit-border-radius: 14px;
-  border-radius: 14px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
   margin: auto;
   text-align: center;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  padding: 5px;
+  padding: 0px;
   margin: 30px auto 30px auto !important;
   display: block;
 }
 
 .container p img {
   display: block;
-  padding: 4px;
-  line-height: 1;
+  padding: 0px;
+  line-height: 0;
   max-width: 920px;
-  border: 1px solid #ddd;
-  -webkit-border-radius: 14px;
-  -moz-border-radius: 14px;
-  border-radius: 14px;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
-  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
-  margin-left: auto;
+  border: 0px solid #fff;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0 1px 0px rgba(0, 0, 0, 0);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+  margin-left: 0;
   margin-right: auto;
   margin-top: 15px;
   margin-bottom:15px;
@@ -41,7 +41,7 @@
 
 legend { 
 	margin:3px; 
-	text-align:center;
+	text-align:left;
 	width:100%; 
 	font-size: 14px; 
 	border: 0px;   
@@ -89,7 +89,7 @@ body {
   bottom: 0;
   height: 140px;
   width: 100%;
-  background-color: #eee;
+  background-color: #fff;
   padding: 20px;
 }
 

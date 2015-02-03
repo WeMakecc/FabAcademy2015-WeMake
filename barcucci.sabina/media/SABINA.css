@@ -1,9 +1,75 @@
 p {
     color:#000000;
-    justify-content: space-around;
+    justify-content: flex-end;
     
 }
 body {
     font-family: 'Karla', sans-serif; 
-    
+    background-color: #d8faf0;    
+}
+.navbar
+{
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border-top-width: 1px;
+  border-right-width-value: 1px;
+  border-bottom-width: 1px;
+  border-left-width-value: 1px;
+  border-top-style: solid;
+  border-right-style-value: solid;
+  border-bottom-style: solid;
+  border-left-style-value: solid;
+  border-top-color: transparent;
+  border-right-color-value: transparent;
+  border-bottom-color: transparent;
+  border-left-color-value: transparent;
+  border-image-source: none;
+  border-image-slice: 100% 100% 100% 100%;
+  border-image-width: 1 1 1 1;
+  border-image-outset: 0 0 0 0;
+  border-image-repeat: stretch stretch;
+}
+
+/* Line 5 */
+*
+{
+  box-sizing: border-box;
+}
+
+/* Line 5 */
+.jumbotron
+{
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  margin-bottom: 0px;
+  color: inherit;
+  background-color: #eeeeee;
+}
+
+/* Line 5 */
+.jumbotron
+{
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: px;
+  padding-left: 0px;
+}
+
+/* Line 5 */
+.container .jumbotron, .container-fluid .jumbotron
+{
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+/* Line 5 */
+.container .jumbotron, .container-fluid .jumbotron
+{
+  padding-right: 60px;
+  padding-left: 60px;
 }
