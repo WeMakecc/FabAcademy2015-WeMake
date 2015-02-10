@@ -8,13 +8,15 @@
     <meta name="author" content="Name Surname">
     <link rel="icon" href="media/favicon.ico">
 
-    <title>Fab Academy 2015 - Name Surname</title>
+    <title>Fab Academy 2015 - Massimo Bianchini</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="media/fabacademy.css" rel="stylesheet">
+         <link href="media/stilemassimo.css" rel="stylesheet"> 
+      <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     
     <!-- 3D files viewer -->
     <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
@@ -81,103 +83,43 @@
 	<!-- Insert your content here below! -->
 
 
-     <h2>Exercise...</h1>
+     <h1>Exercise 02 - Computer-Aided Design </h1>
     
-    <h3>Menu</h3>
-	<p>
-	You can edit it by changing the <em>exercises-menu.html</em> and <em>project-menu.html</em>. Do <strong>not</strong> add any &ltol&gt; or &ltul&gt;, leave the structure as it is.
-	</p>
+    <h3>Assignment</h3>
+	<p> Model (Draw, Render, Animate, Simulate,…) a possible final project, and post it on your class page.
+	</p></br>
     
-    
-    <h3>Text</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp&gt;
-	Your text here
-	&lt/p&gt;</pre>
-	</p>
-	Result:
-	<p>
-	Your text here
-	</p>
+    <h3>Approach</h3>
+	<p> 15 years ago was the last time I used a 3D modeling software (Alias Wavefront). So I am re-starting to acquire technical knowledge dividing my assignment into two tasks:
+<li>  2D drawing: I drew a first version of my project in 2D. Starting from Illustrator I prepared and saved my work in .svg in order to use it in Inkscape (from a closed source to an open one);</li>
+        <li> 3D modeling: I use the 2D model exported in SVG file in order to create a base to 3D modeling and rendering a first raw version of my project.</li></br>
+    My approach is to start from what i know to explore step by step what I don't know (and what I want learn during Fab Academy).
 	
-	<h3>Images</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp class="pic&gt;>&ltimg src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg"&gt;
-	&ltlegend&gt;Here's the legend of the picture.&lt/legend&gt;
-	&lt/p&gt;</pre>
-	</p>
-	Result:
-	<p class="pic"><img src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg">
-	<legend>Here's the legend of the picture.</legend>
-	</p>
+	<h3>2D Drawing</h3>
+	<p>To have an idea about the final dimensions of my project, I started to research on the web the right size ot its two biggest components: the microcontroller and the battery.
+I created a first technical draw and a 2D model using Illustrator. I saved an SVG file and opening it in Inkscape. I tried to play with this software. Firstly, I explored the main functions comparing Inkscape options with the Illustrators ones. The shift is not so traumatic and there are interesting functionalities about the use of patterns and materials. Playing with the materials tools and adding a shadows Inkscape continuously crashes but automatic and easily recovered my work</p></br>
      
-	<h3>Code</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltpre class="prettyprint linenums"&gt;
-	Your code here
-	&lt/pre&gt;</pre>
-	
-	Result:
-	<pre class="prettyprint linenums">
-	for i in members:
-		print ""
-		print "USER:",members[i]
-		print "Loading connections..."
-		followers = load_connections([i], "followers")
-		friends = load_connections([i], "friends")
+<img src="images/esercitazione02/odbikedrawing.jpg"></br>
+<img src="images/esercitazione02/inkscapecrash.jpg"></br>
 
-		# Add edges...
-		print "Building the graph..."
+	<h3>3D modeling and rendering</h3>
+	<p>	I started to use Rhino (for the first time in my life). First of all, I exported an SVG file from illustrator with the tecnical drawing of my object. Then I started to take confidence with 3D modeling in Rhino extruding the basic surfaces. Step by Step I learned to use other basic commands (scale, rotate, copy, move, etc.). Then, I tried to use more sophisticated functions to better define my object (as the fillets) but without success. I have to spend much more time to learn commands in a professional way. After modeling the micro-controller case I started to 3D model the micro-sensors case. Then, I tried to apply some basic materials in order to create a basic rendering (I discovered Rhino is not so good for rendering). Finally, I created a .STL file to import my 3D model in Blender then simplify it in order to create a lighter file to publish on my website.</p></br>
 
-		for f in followers:
-			for k in followers[f]:
-				graph.add_edge(k,f)
-	
-		for f in friends:
-			for k in friends[f]:
-				graph.add_edge(f,k)</pre>
-	</p>
-	
-	<h3>3D Model</h3>
-	<p>	
-	The model can be rotated and zoomed with the mouse/trackpad. You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltcanvas id="cv" width=640 height=480&gt;
-	It seems you are using an outdated browser that does not support canvas :-(
-	&lt/canvas&gt;
-	&ltscript type="text/javascript"&gt;
-		var canvas = document.getElementById('cv');
-		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
-		viewer.setParameter('ModelColor','#CAA618');
-		viewer.setParameter('BackgroundColor1','#E5D7BA');
-		viewer.setParameter('BackgroundColor2','#383840');
-		viewer.setParameter('RenderMode','flat');
-		viewer.setParameter('MipMapping','on');
-		viewer.setParameter('Definition','high');
-		viewer.setParameter('Renderer','webgl');
-		viewer.init();
-		viewer.update();
-	&lt/script&gt;</pre>
-	
-	You can set up the path to the 3D model (.stl/.obj) within this line:
-	<pre class="prettyprint linenums">
-	viewer.setParameter('SceneUrl','media/monkey.stl');</pre>
-	
-	Result:
-	<canvas id="cv" width=640 height=480>
+<img src="images/esercitazione02/rhinorender01.jpg"></br>
+<img src="images/esercitazione02/rhinorender02.jpg"></br>
+<img src="images/esercitazione02/rhinorender02b.jpg"></br>
+<img src="images/esercitazione02/rhinorender03.jpg"></br>
+<img src="images/esercitazione02/rhinorender04.jpg"></br><br>
+
+<p> This is the 3D model of my object.</p>
+
+<canvas id="cv" width=640 height=480>
 	It seems you are using an outdated browser that does not support canvas :-(
 	</canvas>
 	<script type="text/javascript">
 		var canvas = document.getElementById('cv');
 		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
+		viewer.setParameter('SceneUrl','images/esercitazione02/drwaingobject.stl');
 		viewer.setParameter('ModelColor','#CAA618');
 		viewer.setParameter('BackgroundColor1','#E5D7BA');
 		viewer.setParameter('BackgroundColor2','#383840');
@@ -187,32 +129,17 @@
 		viewer.setParameter('Renderer','webgl');
 		viewer.init();
 		viewer.update();
-	</script> 
-    </p> 
-    
-    <h3>Download</h3>
-	<p>
-	You can set up a button for files to be downloaded with:
-	<pre class="prettyprint linenums">
-	&lta href="#"&gt;
-	&ltbutton type="button" class="btn btn-primary btn-lg">Download the file&lt/button&gt;
-	&lt/a&gt;</pre>
-	</p>
+	</script>
+
+
+<h3>Software</h3>
+	<p>	Rhino is very limited in rendering but is very easy to use as a beginner. Probably, I will combine Rhino and Blender to develop my project. I also tried FreeCad but it seems to me very 'obscure' and sometimes it unexpectedly crashes.</p></br>
+
+<h3>Lessons learnt</h3>
+	<p>	I need to make a lot practice with 3D modeling softwares in order to better develop my project. It is very important learn to use in proficient way a couple of softwares - probably Rhino and Blender. At the same time it is also important to understand the basic functions (and the logics) of other 3D modeling softwares in order to rapidly change and convert formats and bridging from closed to open softwares. </p></br>
 	
-	<p>
-	Result:
-	</p>
-	<p>
-	<a href="#">
-	<button type="button" class="btn btn-primary btn-lg">Download the file</button>
-	</a>
-	</p>
-      
-    <h3>Would you like to insert more style/elements?</h3>
-      <p>
-      Check the documentation of Bootstrap <a href="">here</a>.
-      </p>
-    <!-- End of your content -->
+    
+<!-- End of your content -->
 
     </div> <!-- /container -->
 
