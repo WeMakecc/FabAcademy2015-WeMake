@@ -84,14 +84,63 @@
 	<!-- Insert your content here below! -->
 
 
-     <h2>Exercise...</h1>
+     <h2>Exercise 2 - Computer aided design</h1>
     
-    <h3>Menu</h3>
+    <h3>Exploration</h3>
 	<p>
-	You can edit it by changing the <em>exercises-menu.html</em> and <em>project-menu.html</em>. Do <strong>not</strong> add any &ltol&gt; or &ltul&gt;, leave the structure as it is.
+	I want to use and explore <a href:"http://freecadweb.org">FreeCad</a> to design an object composed by different part.
 	</p>
     
-    
+    <h3>Some problem</h3>
+        <p>FreeCad 0.14 (the current stable version) does'nt have yet an assembly workbench. A workaround can be to simple copy a part (under Part Workbench) or making a Clone under the Draft workbench. 
+        </p>
+        <p>The Cloned object mantains the parametric properties, so when you modify one object the clones follows. 
+        </p>
+        <p>The worklfows is:
+        <ul>design your parts</ul>
+        <ul>Simple Copy or Clone it</ul>
+        <ul>Open a new "assembly" file</ul>
+        <ul>Copy and Paste your parts and place them properly</ul>
+        </p>
+        <p>Problem starts when you want to mantain fully parametric the assembly of your project. This method does'nt reflect in your assembly the updates of a part.</p>
+      
+    <h3>A FreeCad Mods</h3>  
+      <p>Antoine Dymond is working on that and the new features are shown in this video</p>
+      
+      <p><iframe width="420" height="315" src="https://www.youtube.com/embed/dhaYJKDk4GI" frameborder="0" allowfullscreen></iframe></p>
+      <p>The mods is released on <a href"https://github.com/hamish2014/FreeCAD_assembly2">GitHub here</a></p>
+      <p>I'm working on a OSX and I simply follow this instruction to install it and make it works.</p>
+      <pre class="prettyprint linenums">
+      $ cd FreeCAD.app/Contents/Mod/
+      $ git clone https://github.com/hamish2014/FreeCAD_assembly2.git
+      </pre>
+      
+    <h3>to be continued ...</h3>
+      <p>I worked to design my project device v 0.1. 
+      The FreeCad learning curve is steep. I'll need to practice a lot more to be able to create a useful 3d modeling. 
+      </p>
+    <h3>3D Model</h3>
+	<p>
+      <canvas id="cv" width=640 height=480>
+	It seems you are using an outdated browser that does not support canvas :-(
+	</canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById('cv');
+		var viewer = new JSC3D.Viewer(canvas);
+		viewer.setParameter('SceneUrl','media/jijiv01.stl');
+		viewer.setParameter('ModelColor','#CAA618');
+		viewer.setParameter('BackgroundColor1','#E5D7BA');
+		viewer.setParameter('BackgroundColor2','#383840');
+		viewer.setParameter('RenderMode','flat');
+		viewer.setParameter('MipMapping','on');
+		viewer.setParameter('Definition','high');
+		viewer.setParameter('Renderer','webgl');
+		viewer.init();
+		viewer.update();
+	</script> 
+    </p>   
+      
+  <!--  
     <h3>Text</h3>
 	<p>
 	You can set it up with:
@@ -215,6 +264,8 @@
       <p>
       Check the documentation of Bootstrap <a href="">here</a>.
       </p>
+
+-->
     <!-- End of your content -->
 
     </div> <!-- /container -->
