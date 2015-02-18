@@ -8,14 +8,14 @@
     <meta name="author" content="Name Surname">
     <link rel="icon" href="media/favicon.ico">
 
-    <title>Fab Academy 2015 - Name Surname</title>
+    <title>Fab Academy 2015 - Sabina Barcucci</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="media/fabacademy.css" rel="stylesheet">       <link href="media/SABINA.css" rel="stylesheet">
-    
+    <link href="media/fabacademy.css" rel="stylesheet">       <link href="media/SABINA.css" rel="stylesheet">     <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+      
     <!-- 3D files viewer -->
     <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
 	<script type="text/javascript" src="media/jsc3d.min.js"></script>
@@ -80,138 +80,74 @@
 
 	<!-- Insert your content here below! -->
 
+<h2><strong>Computer-Controlled Cutting</strong></h1><br>
+        
+        <h3>Box Making and Editing + Laser settings</h3>
+        
+    <p>
+	My goal for this module was to develop a tridimensional box in plywood with rounded corners in order to understand how to design notches on curved surfaces. 
 
-     <h2>Exercise...</h1>
-    
-    <h3>Menu</h3>
-	<p>
-	You can edit it by changing the <em>exercises-menu.html</em> and <em>project-menu.html</em>. Do <strong>not</strong> add any &ltol&gt; or &ltul&gt;, leave the structure as it is.
+I started thinking on how to work my object using a 3d modeling software. Afterward, I realized that my goal could have been accomplished also design with a cad in 2D. 
 	</p>
-    
-    
-    <h3>Text</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp&gt;
-	Your text here
-	&lt/p&gt;</pre>
-	</p>
-	Result:
-	<p>
-	Your text here
-	</p>
-	
-	<h3>Images</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp class="pic&gt;>&ltimg src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg"&gt;
-	&ltlegend&gt;Here's the legend of the picture.&lt/legend&gt;
-	&lt/p&gt;</pre>
-	</p>
-	Result:
-	<p class="pic"><img src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg">
-	<legend>Here's the legend of the picture.</legend>
-	</p>
-     
-	<h3>Code</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltpre class="prettyprint linenums"&gt;
-	Your code here
-	&lt/pre&gt;</pre>
-	
-	Result:
-	<pre class="prettyprint linenums">
-	for i in members:
-		print ""
-		print "USER:",members[i]
-		print "Loading connections..."
-		followers = load_connections([i], "followers")
-		friends = load_connections([i], "friends")
+        
 
-		# Add edges...
-		print "Building the graph..."
-
-		for f in followers:
-			for k in followers[f]:
-				graph.add_edge(k,f)
-	
-		for f in friends:
-			for k in friends[f]:
-				graph.add_edge(f,k)</pre>
-	</p>
-	
-	<h3>3D Model</h3>
-	<p>	
-	The model can be rotated and zoomed with the mouse/trackpad. You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltcanvas id="cv" width=640 height=480&gt;
-	It seems you are using an outdated browser that does not support canvas :-(
-	&lt/canvas&gt;
-	&ltscript type="text/javascript"&gt;
-		var canvas = document.getElementById('cv');
-		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
-		viewer.setParameter('ModelColor','#CAA618');
-		viewer.setParameter('BackgroundColor1','#E5D7BA');
-		viewer.setParameter('BackgroundColor2','#383840');
-		viewer.setParameter('RenderMode','flat');
-		viewer.setParameter('MipMapping','on');
-		viewer.setParameter('Definition','high');
-		viewer.setParameter('Renderer','webgl');
-		viewer.init();
-		viewer.update();
-	&lt/script&gt;</pre>
-	
-	You can set up the path to the 3D model (.stl/.obj) within this line:
-	<pre class="prettyprint linenums">
-	viewer.setParameter('SceneUrl','media/monkey.stl');</pre>
-	
-	Result:
-	<canvas id="cv" width=640 height=480>
-	It seems you are using an outdated browser that does not support canvas :-(
-	</canvas>
-	<script type="text/javascript">
-		var canvas = document.getElementById('cv');
-		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
-		viewer.setParameter('ModelColor','#CAA618');
-		viewer.setParameter('BackgroundColor1','#E5D7BA');
-		viewer.setParameter('BackgroundColor2','#383840');
-		viewer.setParameter('RenderMode','flat');
-		viewer.setParameter('MipMapping','on');
-		viewer.setParameter('Definition','high');
-		viewer.setParameter('Renderer','webgl');
-		viewer.init();
-		viewer.update();
-	</script> 
-    </p> 
     
-    <h3>Download</h3>
+        <img src="img3/composit-01.jpg"> <br>
+        <br>
 	<p>
-	You can set up a button for files to be downloaded with:
-	<pre class="prettyprint linenums">
-	&lta href="#"&gt;
-	&ltbutton type="button" class="btn btn-primary btn-lg">Download the file&lt/button&gt;
-	&lt/a&gt;</pre>
+	Before using a CAD, I first understood the general dimensions of the bounding box of my idea. Indeed, the firt element I designed has been a simple box 18x36x18 cm. 
+        
+        I switched on the website of 
+    <a href="http://boxmaker.connectionlab.org/">Box Maker Connection Lab</a> to generate my initial box. 
+        I put all the information about my box in the tabs like in the following image:
+    <img src="img3/Box_Maker_web.jpg"> <br>
+        
+        
+        I payed attention to the thickness of the availabe material (plywood 3 mm thick), the notches lenght and the cut width (I use an Epilog and the hypotesis was that the cut widht is 0.15 mm). To understand how to set the notches lenght I first worked on the CAD on the curved part of my object and projected by the centre of the circle generating the first curved notches that were about 9 mm lenght. I set the same lenght for the straight notches on the web app. <br><br>
+        
+        <img src="img3/Box_maker_settings.jpg"> <br>
+        <br>
+        The software generated a pdf file that I opened in Illustrator and exported as dwg file in order to work on it in Autocad. Infact, to do this job, I needed a tool highly precise, and, since I had few hour to accomplish my goal, I decided to use the one I know better, that is Autocad. 
+        <img src="img3/Export_pdf_Illustrator.jpg"> <br>
+        <br>
+        
+        In Autocad I worked mainly on three aspects: bending pattern for curved faces, notches fitting and position for bending faces and notches dimension in order to make the element solid without gluing it. 
+    <br><br>    <img src="img3/Autocad.jpg"> <br>
+    
+        As the image above shows, I used a color code to distinguish the several elements that had to lock together. So: notches coloured in magenta have to fith notches magenta and so on. I also wrote with a microscopic font the position of the elements for the assembly phase. Once finished the first version of my object, I printed the dwg file with a PDF printer on a scale 1:1, inscribing all the elements in a rectangle with the same dimensions of the Laser Cutter Epilog. 
+        <br>    <img src="img3/Dwg_to_pdf.jpg"> <br>
+    The last passage has been done in illustrator where I edited the lines to be cutted of my drawing. Following the settings I used to edit the lines and to set the Laser Cutter Epilog Legend 36, 60 Watts
+        <br><br>
+    ////// Lines Settings <br>
+CUT <br>
+        line color black (RGB 0,0,0)<br>
+        line stroke 0.01 mm <br>
+        ENGRAVE <br>
+        fill color red (RGB 255, 0 0)<br><br>
+        ////// Epilog settings <br>
+        Color Code<br>
+        (cutting) RGB 0,0,0 / Speed 30; Power 80; Frequency 500;<br>
+        (engraving) RGB 255, 0, 0 / Speed 80; Power 60; Frequency 500;<br><br>
+        
+        <h3>Prototyping Test and Retry</h3>
+        
+    <p>
+	The first prototype coming out from the laser wasn't working at all. It needed a lot of tape to stay together and the bending pattern wasn't performing good. In particular, the bending pattern was very fragile and very stiff.   
 	</p>
+        <img src="img3/first_prototype.jpg"> <br><br>
+        <p>       With the physical prototypes I was able to quickly understand the most of my problems. I retried with a new version and then a third. <br>Below the first and the last bending for a confrontation and a details of the curved notches on the bending wood. 
+        <br><img src="img3/bendings.jpg"> 
+        <br>
+            <br><img src="img3/curved_edged.jpg"> <br>
+        Following a recap of my tests until the last version (the third) that I consider the last one. The elements don't require anymore glue to fit. In any case, a fourth version of the object with larger notches would be preferable.  </p>
+        
+        <img src="img3/model_history-01.jpg"> <br><br><br>
+        
+        <img src="img3/composit_2.jpg"> <br>
+<!-->
+    
 	
-	<p>
-	Result:
-	</p>
-	<p>
-	<a href="#">
-	<button type="button" class="btn btn-primary btn-lg">Download the file</button>
-	</a>
-	</p>
-      
-    <h3>Would you like to insert more style/elements?</h3>
-      <p>
-      Check the documentation of Bootstrap <a href="">here</a>.
-      </p>
+	
     <!-- End of your content -->
 
     </div> <!-- /container -->
