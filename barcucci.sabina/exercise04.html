@@ -8,13 +8,13 @@
     <meta name="author" content="Name Surname">
     <link rel="icon" href="media/favicon.ico">
 
-    <title>Fab Academy 2015 - Name Surname</title>
+    <title>Fab Academy 2015 - Sabina Barcucci </title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="media/fabacademy.css" rel="stylesheet">       <link href="media/SABINA.css" rel="stylesheet">
+<link href="media/fabacademy.css" rel="stylesheet">       <link href="media/SABINA.css" rel="stylesheet">     <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     
     <!-- 3D files viewer -->
     <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
@@ -55,13 +55,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Name Surname</a>
+          <a class="navbar-brand" href="index.html">Sabina Barcucci</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="about.html">About</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Modules <span class="caret"></span></a>
               <ul id="exercises" class="dropdown-menu" role="menu">
               </ul>
             </li>
@@ -81,14 +81,83 @@
 	<!-- Insert your content here below! -->
 
 
-     <h2>Exercise...</h1>
-    
-    <h3>Menu</h3>
+    <h2><strong>Electronics production</strong></h1><br>
+        
+        <h3>Version 2.3 FabISPkey</h3> <br> 
+        <h4>1 | pcb milling </h4> <br>
+        
+    For the electronics production home assignment, I decided to try fabricating the version 2.3 FabISPkey, based on <a href="http://fab.cba.mit.edu/content/projects/fabispkey/index.html">the design of Andy</a> <br>
+        I downloaded the files in his page, the png version, in order to use the 
+        <a href="http://fablab.muse.it/modela-mdx-20-0">Modela MDX 20 Roland</a> milling machine and Fab Modules as CAM. <br> <br>
+ <img src="img4/my_fab_ISP.jpg"/></a> <br> <br>
 	<p>
-	You can edit it by changing the <em>exercises-menu.html</em> and <em>project-menu.html</em>. Do <strong>not</strong> add any &ltol&gt; or &ltul&gt;, leave the structure as it is.
+	I previously downloaded the Fab Modules <a href="http://kokompe.cba.mit.edu/downloads.html">here</a>
+and installed them on Ubuntu operating system. 
+
+For the first phase of the Electronics production module, since the material supply of FR1 and electronics components for the FabISP wasn't available yet, I tried just to experimenting milling the pcb with the Modela MDX20, but using instead a piece of 
+        
+        
+        
+        that was available at my lab. I investigated about the toxicity of the board, and I discover that  it's actually quite toxic but and I took care of milling the FR2 wearing a mask. 
+
+
+
+
+ <br><br>
+        <img src="img4/fabisp_cmp.png"/></a> <br>
+      <img src="img4/fabisp_drd.png"/></a> <br>
+        
+Before starting the milling procedure, I cut the FR2 board (20 x 20 cm) in subparts a bit bigger than the size of the pcb drew in the Andy's png file. Since the fabisp_cmp.png file was 45.932 x 18.627 mm, I prepared portions of FR2 2 cm higher and wider than. 
+
+<br><br>
+        <img src="img4/Fsb_ISP_Subparts_cutting_web.jpg"/></a> <br>
+
+Once cut the 20x20 cm board in subparts, I attached the first on the milling machine sacrificial layer with an average double-sided bonding tape. 
+
+<br><br>
+        <img src="img4/double_side_tape_web.jpg"/></a> <br>
+As machine tool, I used a DIY burin (bulino) that in the largest section has a diameter of 6 mm (as Modela MDX 20 tools show). Since the burin is DIY and unprecise, I couldn't establish a precise measure for its tool peak, and I had to test and retry the fabmodules settings many times in order to get a rapport between tool diameter and engrave depht close to reality. 
+
+<br><br>
+        <img src="img4/DIY_Burin_web.jpg"/></a> <br>
+
+After some attempts with bad results (I set many times a 2D type path, setting that didn't allow me to set the miling depht, creating some bad effects on my fabrication), I found the right setting and generated a .rml file that provided an almost acceptable milling result on the board. Below the best settings I found for the traces. 
+
+<br><br>
+        <img src="img4/Fab_modules_fabisp4_traces_web.jpg"/></a> <br>
+I then substituted the milling cilyndrical tool with the o.4 mm original Roland one, and proceeded with the interior milling phase. 
+
+
+<br><br>
+        <img src="img4/Modela_Traces_Cilyndrical_tool.jpg"/></a> <br>
+
+        <img src="img4/Modela_Interior_cutting_web.jpg"/></a> <br>
+
+Below the fab module settings I used for the interior.
+
+ <img src="img4/Fab_module_fabisp3_profile_web.jpg"/></a> <br>
+As a last step, I worked manually on the pcb to correct those traces that didn't came out in a proper and "clean" way. It occurred that in the "south" area of the board, the mill was less deep, and some traces weren't enough defined. In the same way, I found a couple of copper "bridges" that didn't have to be there and I removed them with a cutter. I think that the depth difference of the milling process on the pcb has been caused by the wrong type of double-sided bonding tape that I used to assure the FR2 board to the milling machine sacrificial layer. Indeed, I think it was to "squeezy" and thick than the suitable one for this kind of fabrication. In the image below, how it looks the right type of double-sided bonding tape: thin and not squeezy at all. 
+
+<br><br>
+        <img src="img4/double_side_bonding_tape_right.jpg"/></a> <br>
+
+Finally, an overview of all my unsuccesful results, from both sides. 
+
+<br><br>
+        <img src="img4/My_fab_ISP_bad_results.jpg"/></a> <br>
+<br><br>
+        <img src="img4/pcb_retrolux.jpg"/></a> <br>
+
+<!--
+To double check the pcb dimensions, I opened the png file with <a href="http://fabmodules.org/">FabModules.org</a> that provides dimensions in px, mm and inches. 
+
+<br><br>
+        <img src="img4/Fab_Modules_org_screenshot_dim.jpg"/></a> <br>
+-->
+
 	</p>
     
-    
+    <!--
     <h3>Text</h3>
 	<p>
 	You can set it up with:
@@ -211,6 +280,7 @@
     <h3>Would you like to insert more style/elements?</h3>
       <p>
       Check the documentation of Bootstrap <a href="">here</a>.
+-->
       </p>
     <!-- End of your content -->
 
