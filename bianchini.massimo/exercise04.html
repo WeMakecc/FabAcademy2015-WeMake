@@ -8,13 +8,15 @@
     <meta name="author" content="Name Surname">
     <link rel="icon" href="media/favicon.ico">
 
-    <title>Fab Academy 2015 - Name Surname</title>
+    <title>Fab Academy 2015 - Massimo Bianchini</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="media/fabacademy.css" rel="stylesheet">
+      <link href="media/fabacademy.css" rel="stylesheet">
+         <link href="media/stilemassimo.css" rel="stylesheet"> 
+      <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'> 
     
     <!-- 3D files viewer -->
     <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
@@ -80,152 +82,76 @@
 
 	<!-- Insert your content here below! -->
 
+     <h2>Exercise 04 - Electronic Production</h1>
+    
+    <h3>Assignment</h3>
+	<p> Make the FabISP in-circuit programmer </p></br>
+    
+    <h3>Set up</h3>
+	<p>First time in my life approaching electronics. So, I am starting from zero. I started to prepare the PCB. First of all I installed Oracle VirtualBox on my Mac, then I downloaded and installed the latest version of Ubuntu. After I installed Fab Modules on Ubuntu dowloading all the instructions to materialize my first PCB. At We Make Fab Lab I cut a piece of material to prepare the PCB. In parallel a PC has been connected to the Micro Milling Machine Imodela Roland DG, the machine we will use to create the base of PCB.
+One week to to set-up the IModela waiting all the components from DigiKey. I partially worked in team in order to better understand how to create the PCB, set-up and use a Roland IModela. It has been very difficult set-up this micro-machine and the parameters for milling the board. To set-up Imodela we use two computers:
+<li>the first, which install Windows, to set-up the parameters of Roland Imodela</li>
+<li>the second, which install Ubuntu, to work with FabModules.org</li></br>
+    
+<img src="images/esercitazione04/01_twocomputers.jpg"></br> 
 
-     <h2>Exercise...</h1>
+We use a burin to mill the PCB and a two-fluted mill to final cut-out the board. First tentatives have been a sort of disaster… (see pictures below)<br>
+        
+<img src="images/esercitazione04/02_experiment.jpg"></br>
+<img src="images/esercitazione04/04_experiment2.jpg"></br>
     
-    <h3>Menu</h3>
-	<p>
-	You can edit it by changing the <em>exercises-menu.html</em> and <em>project-menu.html</em>. Do <strong>not</strong> add any &ltol&gt; or &ltul&gt;, leave the structure as it is.
-	</p>
+To solve all these problems we follow trigonometry rules to use the burin (having a sharp point) as a two-fluted mill (having a flat tip). In this we we calculate the parameters to set-up Fab Modules using appropriate parameters for depth and cut speed.
+Starting from the first encouraging results I develop my assignment in two phases.</p>
     
-    
-    <h3>Text</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp&gt;
-	Your text here
-	&lt/p&gt;</pre>
-	</p>
-	Result:
-	<p>
-	Your text here
-	</p>
-	
-	<h3>Images</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp class="pic&gt;>&ltimg src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg"&gt;
-	&ltlegend&gt;Here's the legend of the picture.&lt/legend&gt;
-	&lt/p&gt;</pre>
-	</p>
-	Result:
-	<p class="pic"><img src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg">
-	<legend>Here's the legend of the picture.</legend>
-	</p>
-     
-	<h3>Code</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltpre class="prettyprint linenums"&gt;
-	Your code here
-	&lt/pre&gt;</pre>
-	
-	Result:
-	<pre class="prettyprint linenums">
-	for i in members:
-		print ""
-		print "USER:",members[i]
-		print "Loading connections..."
-		followers = load_connections([i], "followers")
-		friends = load_connections([i], "friends")
+<img src="images/esercitazione04/05_trigonometry.jpg"></br>
 
-		# Add edges...
-		print "Building the graph..."
 
-		for f in followers:
-			for k in followers[f]:
-				graph.add_edge(k,f)
-	
-		for f in friends:
-			for k in friends[f]:
-				graph.add_edge(f,k)</pre>
-	</p>
-	
-	<h3>3D Model</h3>
-	<p>	
-	The model can be rotated and zoomed with the mouse/trackpad. You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltcanvas id="cv" width=640 height=480&gt;
-	It seems you are using an outdated browser that does not support canvas :-(
-	&lt/canvas&gt;
-	&ltscript type="text/javascript"&gt;
-		var canvas = document.getElementById('cv');
-		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
-		viewer.setParameter('ModelColor','#CAA618');
-		viewer.setParameter('BackgroundColor1','#E5D7BA');
-		viewer.setParameter('BackgroundColor2','#383840');
-		viewer.setParameter('RenderMode','flat');
-		viewer.setParameter('MipMapping','on');
-		viewer.setParameter('Definition','high');
-		viewer.setParameter('Renderer','webgl');
-		viewer.init();
-		viewer.update();
-	&lt/script&gt;</pre>
-	
-	You can set up the path to the 3D model (.stl/.obj) within this line:
-	<pre class="prettyprint linenums">
-	viewer.setParameter('SceneUrl','media/monkey.stl');</pre>
-	
-	Result:
-	<canvas id="cv" width=640 height=480>
-	It seems you are using an outdated browser that does not support canvas :-(
-	</canvas>
-	<script type="text/javascript">
-		var canvas = document.getElementById('cv');
-		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
-		viewer.setParameter('ModelColor','#CAA618');
-		viewer.setParameter('BackgroundColor1','#E5D7BA');
-		viewer.setParameter('BackgroundColor2','#383840');
-		viewer.setParameter('RenderMode','flat');
-		viewer.setParameter('MipMapping','on');
-		viewer.setParameter('Definition','high');
-		viewer.setParameter('Renderer','webgl');
-		viewer.init();
-		viewer.update();
-	</script> 
-    </p> 
+<h3>Phase 1 - Creating PCB calibrating IModela</h3>
+<p> This is the process we adopt (Me, Costantino and Sabina at WeMake) to create the board:
+<li>Download files form FabModules.org/Beta</li>
+<li>Setting-up the parameters to mill PCB Interior and Exterior working on Fab Modules using Ubuntu</li>
+<li>Save .RML files</li>
+<li>Setting-up Imodela parameters using Windows (setting up the origin point)</li>
+<li>Connecting IModela with PC Ubuntu and launch CAM operations using terminal application</li>
+<li>Milling machine works</li>
+<li>Control of the workpiece</li>
+<li>Change the tip (installing a two-fluted mill)</li>
+<li>Setting-up Imodela using Windows (setting up origin n.2)</li>
+<li>Connecting IModela with PC Ubuntu and launch CAM operations using the Terminal application</li>
+<li>Control the final workpiece</li></p>
+
+<h3>Lesson learnt from Fab Modules and Imodela<h3>
+    <p>It has been a fine and complex experience. I learnt to set-up a micro-milling machine taking confidence with this kind of technology. This first set of acquired knowledge will encourage me to use the bigger milling machine and learning more about CAM software.</p></br>
     
-    <h3>Download</h3>
-	<p>
-	You can set up a button for files to be downloaded with:
-	<pre class="prettyprint linenums">
-	&lta href="#"&gt;
-	&ltbutton type="button" class="btn btn-primary btn-lg">Download the file&lt/button&gt;
-	&lt/a&gt;</pre>
-	</p>
-	
-	<p>
-	Result:
-	</p>
-	<p>
-	<a href="#">
-	<button type="button" class="btn btn-primary btn-lg">Download the file</button>
-	</a>
-	</p>
+<img src="images/esercitazione04/06_board10.jpg"></br>
+    
+    
+<h3>Phase 2 - installing (micro)components</h3>
+<p> I start to learn the basic principles of soldering working on a damaged workpiece. So this is the process I follow. An old electronic engineer, a member of We Make Fab Lab (Gianni) teaches and supports me to complete my task, expliaining to me all the secret of (micro)soldering. 
+    First of all, I used a rubber to clean my PCB. Secondly, I use a liquid to facilitate the next phase of soldering. Thirdly, I started to solder all components following this sequence (honestly: it is very difficult for me remember all their names and functions):
+    <li>Capacitors</li>
+<li>Crystal</li>
+<li>Diode</li>
+<li>ATTiny</li>
+<li>Resistors</li>
+<li>6 pin connnector and header</li>
+<li>Mini USB connector</li>
+<li>Finally, I prepared the ribbon cable and the USB cable</li>
+    <li>I checked all the circuits finding possible black outs (everything is ok). Now I am ready to install the software.</li></br>
+    
+   <img src="images/esercitazione04/07_preparesoldering.jpg"></br>
+ <img src="images/esercitazione04/08_solderingstart.jpg"></br> 
+ <img src="images/esercitazione04/09_solderingmiddle.jpg"></br> 
+ <img src="images/esercitazione04/10_finalsoldering.jpg"></br> 
+ <img src="images/esercitazione04/11_finalresult.jpg"></br> 
+
+</p>
       
-    <h3>Would you like to insert more style/elements?</h3>
-      <p>
-      Check the documentation of Bootstrap <a href="">here</a>.
-      </p>
     <!-- End of your content -->
 
     </div> <!-- /container -->
 
-	<!-- footer -->
-    
-    <footer id="footer">
-        <p id="cclicense">
-                </p>
-        <p class="license">
-        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
-        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
-        </p>
-    </footer>
+
     
 
 	<!-- Do not touch this! -->
