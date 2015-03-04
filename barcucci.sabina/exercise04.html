@@ -14,7 +14,8 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-<link href="media/fabacademy.css" rel="stylesheet">       <link href="media/SABINA.css" rel="stylesheet">     <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+      
+ <link href="media/fabacademy.css" rel="stylesheet">       <link href="media/SABINA.css" rel="stylesheet">     <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     
     <!-- 3D files viewer -->
     <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
@@ -82,72 +83,136 @@
 
 
     <h2><strong>Electronics production</strong></h1><br>
+        <h3>FabISP </h3> <br> 
+         <img src="img4/fab_ISP.jpg"/></a> <br> <br>
         
-        <h3>Version 2.3 FabISPkey</h3> <br> 
-        <h4>1 | pcb milling </h4> <br>
         
-    For the electronics production home assignment, I decided to try fabricating the version 2.3 FabISPkey, based on <a href="http://fab.cba.mit.edu/content/projects/fabispkey/index.html">the design of Andy</a> <br>
+     <p>   
+         <strong>For this assignment I experimented to mill both with Modela and I-Modela with FabISPKey and FabISP. I then soldered only the FabISP milled with I-Modela  </strong> 
+         <br><br>
+The FabISP is an in-system programmer for AVR microcontrollers, designed for production within a FabLab. It allows you to program the microcontrollers on other boards you make.The Neil's FabISP is based on <a href="http://fab.cba.mit.edu/content/projects/fabisp/">David Mellis's FabISP</a> which is based on <a href="http://www.ladyada.net/make/usbtinyisp/index.html">Limor's USBTinyISP</a> which is based on Dick Streefland's USBTiny. <br> <br>
+         
+         
+         
+</p>
+        <h4>1 | pcb milling with Modela and Fab Modules </h4> <br>
+      <p>
+      For the pcb miling I decided frist to try fabricating the version 2.3 FabISPkey, based on <a href="http://fab.cba.mit.edu/content/projects/fabispkey/index.html">the design of Andy</a> in which the USB connector has been replaced with a board edge USB connector taken from the SparkFun library. 
         I downloaded the files in his page, the png version, in order to use the 
         <a href="http://fablab.muse.it/modela-mdx-20-0">Modela MDX 20 Roland</a> milling machine and Fab Modules as CAM. <br> <br>
- <img src="img4/my_fab_ISP.jpg"/></a> <br> <br>
+ <img src="img4/my_fab_ISP.jpg"/></a> 
 	<p>
 	I previously downloaded the Fab Modules <a href="http://kokompe.cba.mit.edu/downloads.html">here</a>
 and installed them on Ubuntu operating system. 
 
-For the first phase of the Electronics production module, since the material supply of FR1 and electronics components for the FabISP wasn't available yet, I tried just to experimenting milling the pcb with the Modela MDX20, but using instead a piece of 
+For the first phase of the Electronics production module, since the material supply of FR1 and electronics components for the FabISP wasn't available yet, I tried just to experimenting milling the pcb with the Modela MDX20, but using instead a piece of <a href="http://en.wikipedia.org/wiki/FR-2">FR2</a> that was available at my lab. I investigated about the toxicity of the board, and I discover that  it's actually quite toxic but and I took care of milling the FR2 wearing a mask. 
+        As machine tool, since I had no 1/34 inches tool, I used a DIY burin that in the largest section has a diameter of 6 mm (as Modela MDX 20 tools show). Since the burin section is variable and moreover mine was DIY and unprecise, I couldn't establish a precise measure for its tool peak, and I had to test and retry the fabmodules settings many times in order to get a rapport between tool diameter and engrave depht close to reality. <br><br> <strong>Afterward, I learned how to calculate precisely the depht of a burin, as I will report in the milling tests I did with I-Modela. </strong>        
+        <br> <br>
+        Below the screenshot of the Fab Modules settings I used for the most acceptable pcb result I milled. 
+        <img src="img4/MODELA_Traces_Fab_modules_fabisp4_traces_web.jpg"/>
+        <img src="img4/MODELA_Interior_Fab_module_fabisp3_profile_web.jpg"/>
+      </p>
+<br> 
+    <h4>2 | pcb milling with iModela and FabModules.org/beta </h4> <br>
+      <p>
+    To use the <a href="http://fablab.muse.it/i-modela">iModela</a> and setting it with <a href="http://fabmodules.org/">FabModule.org</a> we had several problem, most of all to understand how to set XYZ origin. We digged into the iModela gcode, the RML, using the <a href="https://itp.nyu.edu/classes/cdp-spring2014/files/2014/09/RML1_Manual.pdf">RML-1 Programming guideline to learn how to modify the GCode. </a> We didn't succeed, meaning even if we understood how generally the rml code is composed, we didn't find any place in which set up manually (with code) the XYZ origin. <br> <br> We proceeded finding this solution: we used the proprietary Roland controller that runs in Windows to manually set the Z origin, since the machine keep the setting also after rebooting it and then we switched the iModela to another laptop with Ubuntu installed, to generate the rml file and run the milling machine via Ubuntu.  
+     <img src="img4/ROLAND_CONTROLLER.jpg"/>     
+We donwloaded the two pngs with traces and interior to mill the circuits. 
+          
+          <img src="img4/hello.ISP.44.traces.png"width="20%" height="20%"/> Traces.png
+          
+          <img src="img4/hello.ISP.44.interior.png"width="20%" height="20%"/> Interior.png
+          
+          <br> <br>
         
-        
-        
-        that was available at my lab. I investigated about the toxicity of the board, and I discover that  it's actually quite toxic but and I took care of milling the FR2 wearing a mask. 
+          Since we were not provided with the prescribed end mill tool for the FabISP (1/34 inch diameter), we used an iModela burin converting it into an end mill tool. Below a recap on how to calculate these elements, a recap of the best settings we found for FabModule for iModela and a preview of our pcb milling tests. 
+        <br> <br>
+          <strong>Output #1 (Less engraving depth, more speed)</strong><br><br>
 
+Speed: 1.4 mm/s<br>
+Jog: 1 mm<br>
+x=4<br>
+y=4<br>
+z=0<br><br>
 
+Process<br><br>
 
+Cut depth: 0.27 mm<br>
+Tool diameter: 0.3 mm<br>
+nr offsets: 10<br>
+offsets overlap: 30%<br><br>
 
- <br><br>
-        <img src="img4/fabisp_cmp.png"/></a> <br>
-      <img src="img4/fabisp_drd.png"/></a> <br>
-        
-Before starting the milling procedure, I cut the FR2 board (20 x 20 cm) in subparts a bit bigger than the size of the pcb drew in the Andy's png file. Since the fabisp_cmp.png file was 45.932 x 18.627 mm, I prepared portions of FR2 2 cm higher and wider than. 
+<strong>Output #2 (more engraving depth, less speed - to not to overload the machine)</strong><br><br>
 
+Speed: 1 mm/s<br>
+jog: 1 mm<br>
+x=4<br>
+y=4<br>
+z=0<br><br>
+
+Process <br><br>
+
+Cut depth: 0.35 mm<br>
+Tool diameters: 0.4 mm<br>
+nr offsets: 7<br>
+offsets overlap: 70%<br>
+          
+          <br>
+        <br>
+          
+          
+     <img src="img4/SCHEME_SETTINGS.jpg"/>      
+          <img src="img4/ALL_THE_TESTS.jpg"/>  
+    For the interior cut, we used the 1.6 mm iModela end mill. Below the result. 
+          <br> <br> 
+         <img src="img4/PCB_CUT_OFF.jpg"/>   
+           <img src="img4/A_GOOD_MILLED_PCB.jpg"/>
+          <br> <br>
+          
+          <h4>3 | pcb SMD soldering and stuffing </h4> <br>
+    These are all the components required to stuff the FabISP <br><br>
+    
+    1 ATTiny 44 microcontroller<br>
+    1 Capacitor 1uF<br>
+    2 Capacitor 10 pF<br>
+    2 Resistor 100 ohm<br>
+    1 Resistor 499 ohm<br>
+    1 Resistor 1K ohm<br>
+    1 Resistor 10K<br>
+    one 6 pin header<br>
 <br><br>
-        <img src="img4/Fsb_ISP_Subparts_cutting_web.jpg"/></a> <br>
+	
 
-Once cut the 20x20 cm board in subparts, I attached the first on the milling machine sacrificial layer with an average double-sided bonding tape. 
-
-<br><br>
-        <img src="img4/double_side_tape_web.jpg"/></a> <br>
-As machine tool, I used a DIY burin (bulino) that in the largest section has a diameter of 6 mm (as Modela MDX 20 tools show). Since the burin is DIY and unprecise, I couldn't establish a precise measure for its tool peak, and I had to test and retry the fabmodules settings many times in order to get a rapport between tool diameter and engrave depht close to reality. 
-
-<br><br>
-        <img src="img4/DIY_Burin_web.jpg"/></a> <br>
-
-After some attempts with bad results (I set many times a 2D type path, setting that didn't allow me to set the miling depht, creating some bad effects on my fabrication), I found the right setting and generated a .rml file that provided an almost acceptable milling result on the board. Below the best settings I found for the traces. 
-
-<br><br>
-        <img src="img4/Fab_modules_fabisp4_traces_web.jpg"/></a> <br>
-I then substituted the milling cilyndrical tool with the o.4 mm original Roland one, and proceeded with the interior milling phase. 
-
-
-<br><br>
-        <img src="img4/Modela_Traces_Cilyndrical_tool.jpg"/></a> <br>
-
-        <img src="img4/Modela_Interior_cutting_web.jpg"/></a> <br>
-
-Below the fab module settings I used for the interior.
-
- <img src="img4/Fab_module_fabisp3_profile_web.jpg"/></a> <br>
-As a last step, I worked manually on the pcb to correct those traces that didn't came out in a proper and "clean" way. It occurred that in the "south" area of the board, the mill was less deep, and some traces weren't enough defined. In the same way, I found a couple of copper "bridges" that didn't have to be there and I removed them with a cutter. I think that the depth difference of the milling process on the pcb has been caused by the wrong type of double-sided bonding tape that I used to assure the FR2 board to the milling machine sacrificial layer. Indeed, I think it was to "squeezy" and thick than the suitable one for this kind of fabrication. In the image below, how it looks the right type of double-sided bonding tape: thin and not squeezy at all. 
-
-<br><br>
-        <img src="img4/double_side_bonding_tape_right.jpg"/></a> <br>
-
-Finally, an overview of all my unsuccesful results, from both sides. 
-
-<br><br>
-        <img src="img4/My_fab_ISP_bad_results.jpg"/></a> <br>
-<br><br>
-        <img src="img4/pcb_retrolux.jpg"/></a> <br>
-
+    1 USB connector<br>
+    2 jumpers - 0 ohm resistors<br>
+    1 Cystal 20MHz<br>
+    two Zener Diode 3.3 V<br>
+    one usb mini cable<br>
+    one ribbon cable<br>
+    two 6 pin connectors<br><br>
+    
+    And this is the file we followed to organize components layout while soldering
+    <br>
+    <br>
+    <img src="img4/hello.ISP.44.png"width="20%" height="20%"/> <br> <br>
+    
+    We prepared the pcb surface using by fluxing it in order to make tin flowing correclty within copper traces.
+    <br> <br>
+<img src="img4/Flux.jpg"/> <br> <br>
+    Once recognized and arranged all the electronic components, the SMD soldering phase has started. <br> <br>
+    <img src="img4/ELECTRONICS_COMPONENTS.jpg"/><br><br>
+    Before actually start stuffing the board, we pre-tinned the pcb in every copper pads. Then, with the desolder braid, we removed the tin in excess, leaving the pcb surfaced pre-tinned and plane. 
+ <br> <br>
+<img src="img4/Pre_tinned_pcb.jpg"/> <br> <br>pre-tinned board<br><br>
+<img src="img4/pre_tinned_de_soldered_pcb.jpg"/>
+    <br><br> Pre-tinned desoldered board<br><br>
+    After this process, we started soldering the USB connector, that was a quite complex step. We added more flux to make the tin flows more on the super tiny traces under the connector "racks". <br> <br>
+<img src="img4/USB_CONNECTOR.jpg"/> <br> <br>
+    Once stuffed allt he components on the board, I have got my resulting FabISP pcb. <br> <br>
+    
+    <img src="img4/My_FabISP_finshed.jpg"/> <br> <br>
+     <img src="img4/FINAL_RESULT.jpg"/> <br> <br>
+    
 <!--
 To double check the pcb dimensions, I opened the png file with <a href="http://fabmodules.org/">FabModules.org</a> that provides dimensions in px, mm and inches. 
 
