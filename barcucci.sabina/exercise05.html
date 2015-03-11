@@ -8,13 +8,13 @@
     <meta name="author" content="Name Surname">
     <link rel="icon" href="media/favicon.ico">
 
-    <title>Fab Academy 2015 - Name Surname</title>
+    <title>Fab Academy 2015 - Sabina Barcucci </title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="media/fabacademy.css" rel="stylesheet">       <link href="media/SABINA.css" rel="stylesheet">
+  <link href="media/fabacademy.css" rel="stylesheet">       <link href="media/SABINA.css" rel="stylesheet">     <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     
     <!-- 3D files viewer -->
     <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
@@ -55,18 +55,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Name Surname</a>
+          <a class="navbar-brand" href="index.html">Sabina Barcucci</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="about.html">About</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Modules <span class="caret"></span></a>
               <ul id="exercises" class="dropdown-menu" role="menu">
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Neuro Toy <span class="caret"></span></a>
               <ul id="project" class="dropdown-menu" role="menu">
               </ul>
             </li>
@@ -81,14 +81,45 @@
 	<!-- Insert your content here below! -->
 
 
-     <h2>Exercise...</h1>
-    
-    <h3>Menu</h3>
+      <h2><strong>3D scanning</strong></h1><br>
+        <h3>Fab Scan </h3> <br> 
+        <img src="img5/FabScan_device.jpg"/><br> <br>
+        
+        
 	<p>
-	You can edit it by changing the <em>exercises-menu.html</em> and <em>project-menu.html</em>. Do <strong>not</strong> add any &ltol&gt; or &ltul&gt;, leave the structure as it is.
+	I didn't performed yet the 3D scanning module in a succesful way. I tried to use the FabScan 3d scanner for this assignment but I have several issues with the scanning and exporting phase. I can document a little bit of my process but I need to make it again in order to understand and solve the issues I had. <br> <br> 
+        
+        <a href="http://hci.rwth-aachen.de/fabscan"/>FabScan</a> is an open-source, do-it-yourself 3D laser scanner.
+It started out as a Bachelor's thesis by Francis Engelmann, supervised by René Bohne.
+
+In 2014, development was taken over by René Bohne and Mario Lukas.<br>
+	The current FabScan100 Software uses qt and most people are having problems with it. I downloaded the FabScan Ubuntu Live DVD. I runned Ubuntu LiveDVD with preinstalled the FabScan software. The whole software options are donwloadable <a href="http://hci.rwth-aachen.de/fabscan_software"/>here</a> <br> <br> 
+          
 	</p>
     
+
+<p>
+    <img src="img5/willendorf_venus_3d_printed.jpg"/><br> 
+    I decided to try scanning a 3D printed Willendorf Venus, and choosed for a color contrasting with the color of the scanner room, that is light brown (plywood). <br> <br> 
     
+    I partially followed <a href="http://www.mariolukas.de/2014/07/scannen-mit-dem-fabscan/"/> this tutorial </a> that unfortunately is not fully understandable because is in german. Paying attention to cover the opening of the FabScan that lets too much light get in and uncovered doesn't allow to scan anything, I made dark the scanning environment. I then opened the point cloud panel and the control panel of FabScan software. <br> <br> 
+    
+    
+    <img src="img5/UBUNTU_SCREENSHOT.jpg"/><br> 
+    On one panel I could control the scanner turntable and on the other one I could control the point cloud growth. 
+    <img src="img5/FabScan_control_panel.jpg"/><br>
+    <img src="img5/FabScan_POINT_CLOUD.jpg"/><br>
+Once scanning proces was finished, I tried to export the .stl file and the .PCD file (point cloud file) but the result was unsuccesful. The point cloud wasn't exported at all and I couldn't test it in NetFab to generate the meshes. The .stl file seems unusable as well. Below the .stl file is in any case donwloadable. 
+
+<p>
+	<a href="img5/Venus.stl">
+	<button type="button" class="btn btn-primary btn-lg">Grab the points cloud .stl file</button>
+	</a>
+	</p>
+          
+	</p>
+
+<!--
     <h3>Text</h3>
 	<p>
 	You can set it up with:
@@ -222,7 +253,7 @@
         <p id="cclicense">
                 </p>
         <p class="license">
-        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a>modified by Sabina Barcucci  <br>
         Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
         </p>
     </footer>
