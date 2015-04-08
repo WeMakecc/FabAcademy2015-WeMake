@@ -8,13 +8,15 @@
     <meta name="author" content="Name Surname">
     <link rel="icon" href="media/favicon.ico">
 
-    <title>Fab Academy 2015 - Name Surname</title>
+    <title>Fab Academy 2015 - Sabina Barcucci</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="media/fabacademy.css" rel="stylesheet">       <link href="media/SABINA.css" rel="stylesheet">
+<link href="media/fabacademy.css" rel="stylesheet">       <link href="media/SABINA.css" rel="stylesheet">     <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    
+    
     
     <!-- 3D files viewer -->
     <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
@@ -55,18 +57,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Name Surname</a>
+          <a class="navbar-brand" href="index.html">Sabina Barcucci</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="about.html">About</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Modules <span class="caret"></span></a>
               <ul id="exercises" class="dropdown-menu" role="menu">
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Neuro Toy <span class="caret"></span></a>
               <ul id="project" class="dropdown-menu" role="menu">
               </ul>
             </li>
@@ -81,13 +83,48 @@
 	<!-- Insert your content here below! -->
 
 
-     <h2>Exercise...</h1>
-    
-    <h3>Menu</h3>
+      <h2><strong>Computer Controlled Machining</strong></h1>
+        <h3>Wooden Fab-Ladder </h3> 
 	<p>
-	You can edit it by changing the <em>exercises-menu.html</em> and <em>project-menu.html</em>. Do <strong>not</strong> add any &ltol&gt; or &ltul&gt;, leave the structure as it is.
-	</p>
+<img src="img8/05.jpg"/></a> <br> 
+      
+     For this assignment I made a wooden ladder for the Wemake guesthouse raised bed.  
+      
+      I first tooke measurements in site like the distance from the floor and the wooden beam from which the raised bed is sustained. The same beam will sustain both the bed and the ladder. Before starting designing, I choosed the type of wood of the ladder, which is a plywood 12 mm thick. 
+    <br> <br> 
+     
     
+      <h3>Design </h3> 
+	<p>
+         I designed the ladder with a 2D CAD software (Autoca2007), drawing first a section to understand the ladder tilt and its following overall lenght. I then divided the overall lenght for a finite number of steps and established an overall width of the ladder (40 cm). 
+      Since the limited steph thickness, and in order to make as much confortable as possible the ladder climb, each step is asymmetric, meaning who uses the ladder should start climbing it with right foot.
+   
+<img src="img8/section_view.jpg"/></a> <br> 
+    
+    Each ladder step will be sustained by an edgeways spport transversely bolted to the ladder vertical shoulders. As in the detail below, I left in each step support an empty bolt lodging. I then headed of an hardware shop to find the right DIN bolts and I bought a 20 pieces box of them. I measured my bolts and then I precisely dimensioned the lodging on my drawing. 
+ <img src="img8/dett_zoom-02.jpg"/></a> <br> 
+    
+    As final step, I doubled the number of lateral supporting shoulders, to improve the general ladder stiffness. Finally, I calculated the number of each element (steps, step supports, lateral shoulders) and nested all the elements inside a 2400x1200 mm area, that corresponds to the milling machine bed. 
+    <img src="img8/nesting.jpg"/></a> <br> 
+    <p>
+	<a href="Ladder_Nesting.dxf">
+	<button type="button" class="btn btn-primary btn-lg">Grab the dxf file</button>
+	</a>
+	</p><br> 
+    
+     <h3>Machine toolpath and tooling / VCarve Pro</h3><br>
+    <img src="img8/01.jpg"/></a> <br> <br>
+    I used VCarve Pro to generate the toolpath, using a 2D milling process. Every piece should be milled with the same z depht. So, the general toolpath is easy to calculate and can be done in one round. 
+    
+    <h3>Fabrication / Shopbot Alpha Model </h3><br>
+      <img src="img8/02.jpg"/></a> <br><br>
+<img src="img8/04.jpg"/></a> <br><br>
+    
+    <h3>Assembly </h3><br>
+    <img src="img8/FINAL.jpg"/></a> <br>
+    
+      
+      <!--
     
     <h3>Text</h3>
 	<p>
@@ -222,7 +259,7 @@
         <p id="cclicense">
                 </p>
         <p class="license">
-        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+        Theme: Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a>modified by Sabina Barcucci  <br>
         Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
         </p>
     </footer>

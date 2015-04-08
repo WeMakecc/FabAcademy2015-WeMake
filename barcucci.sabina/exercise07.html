@@ -14,7 +14,7 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="media/fabacademy.css" rel="stylesheet">       <link href="media/SABINA.css" rel="stylesheet">
+<link href="media/fabacademy.css" rel="stylesheet">       <link href="media/SABINA.css" rel="stylesheet">     <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     
     <!-- 3D files viewer -->
     <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
@@ -55,18 +55,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Name Surname</a>
+          <a class="navbar-brand" href="index.html">Sabina Barcucci</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="about.html">About</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Modules <span class="caret"></span></a>
               <ul id="exercises" class="dropdown-menu" role="menu">
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Neuro Toy <span class="caret"></span></a>
               <ul id="project" class="dropdown-menu" role="menu">
               </ul>
             </li>
@@ -81,12 +81,135 @@
 	<!-- Insert your content here below! -->
 
 
-     <h2>Exercise...</h1>
-    
-    <h3>Menu</h3>
+     <h2><strong>Embedded programming</strong></h1>
+        <h3>Hello Echo light sensor </h3> 
 	<p>
-	You can edit it by changing the <em>exercises-menu.html</em> and <em>project-menu.html</em>. Do <strong>not</strong> add any &ltol&gt; or &ltul&gt;, leave the structure as it is.
-	</p>
+<img src="img7/Hello_Echo_Stuffed.jpg"/></a> <br> 
+      
+      In this tutorial you will find the steps that I faced to design, mold and cast a soft robot, a PneuNets Bending actuator. I started to study this topic with the 3D printing module and now I am ready to prototype a more complex actuator. The final goal is to create something close to this air-muscle designed by Bijing Zhang & Francois Mangion as part of "Furl: Soft Pneumatic Pavilion" (Bartlett University): 
+      
+      <pre class="prettyprint linenums">
+	&ltpre class="prettyprint linenums"&gt;
+	SabinaBarcucci-MacBook-Pro:fabISP_mac.0.8.2_firmware SabinaBarcucci$ sudo make fuse
+avrdude -c stk500v1 -b19200 -P /dev/tty.usbmodem1411 -p attiny44 -U hfuse:w:0xDF:m -U lfuse:w:0xFF:m
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.05s
+
+avrdude: Device signature = 0x1e9207
+avrdude: reading input file "0xDF"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.02s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xDF:
+avrdude: load data hfuse data from input file 0xDF:
+avrdude: input file 0xDF contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.02s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+avrdude: reading input file "0xFF"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.02s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xFF:
+avrdude: load data lfuse data from input file 0xFF:
+avrdude: input file 0xFF contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.02s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+
+avrdude: safemode: Fuses OK (E:FF, H:DF, L:FF)
+
+avrdude done.  Thank you.
+
+SabinaBarcucci-MacBook-Pro:fabISP_mac.0.8.2_firmware SabinaBarcucci$ sudo program
+sudo: program: command not found
+SabinaBarcucci-MacBook-Pro:fabISP_mac.0.8.2_firmware SabinaBarcucci$ sudo make program
+avrdude -c stk500v1 -b19200 -P /dev/tty.usbmodem1411 -p attiny44 -U flash:w:main.hex:i
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.05s
+
+avrdude: Device signature = 0x1e9207
+avrdude: NOTE: "flash" memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: reading input file "main.hex"
+avrdude: writing flash (1988 bytes):
+
+Writing | ################################################## | 100% 3.44s
+
+avrdude: 1988 bytes of flash written
+avrdude: verifying flash memory against main.hex:
+avrdude: load data flash data from input file main.hex:
+avrdude: input file main.hex contains 1988 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 2.33s
+
+avrdude: verifying ...
+avrdude: 1988 bytes of flash verified
+
+avrdude: safemode: Fuses OK (E:FF, H:DF, L:FF)
+
+avrdude done.  Thank you.
+
+avrdude -c stk500v1 -b19200 -P /dev/tty.usbmodem1411 -p attiny44 -U hfuse:w:0xDF:m -U lfuse:w:0xFF:m
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.05s
+
+avrdude: Device signature = 0x1e9207
+avrdude: reading input file "0xDF"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.02s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xDF:
+avrdude: load data hfuse data from input file 0xDF:
+avrdude: input file 0xDF contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.02s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+avrdude: reading input file "0xFF"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.02s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xFF:
+avrdude: load data lfuse data from input file 0xFF:
+avrdude: input file 0xFF contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.02s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+
+avrdude: safemode: Fuses OK (E:FF, H:DF, L:FF)
+
+avrdude done.  Thank you.
+
+	&lt/pre&gt;</pre>
+      <!--
     
     
     <h3>Text</h3>
@@ -222,7 +345,7 @@
         <p id="cclicense">
                 </p>
         <p class="license">
-        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+       Theme: Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a>modified by Sabina Barcucci  <br>
         Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
         </p>
     </footer>

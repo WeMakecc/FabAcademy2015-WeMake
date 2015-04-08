@@ -8,13 +8,14 @@
     <meta name="author" content="Name Surname">
     <link rel="icon" href="media/favicon.ico">
 
-    <title>Fab Academy 2015 - Name Surname</title>
+    <title>Fab Academy 2015 - Sabina Barcucci</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="media/fabacademy.css" rel="stylesheet">       <link href="media/SABINA.css" rel="stylesheet">
+   <link href="media/fabacademy.css" rel="stylesheet">       <link href="media/SABINA.css" rel="stylesheet">     <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    
     
     <!-- 3D files viewer -->
     <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
@@ -55,18 +56,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Name Surname</a>
+          <a class="navbar-brand" href="index.html">Sabina Barcucci</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="about.html">About</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Modules <span class="caret"></span></a>
               <ul id="exercises" class="dropdown-menu" role="menu">
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Neuro Toy <span class="caret"></span></a>
               <ul id="project" class="dropdown-menu" role="menu">
               </ul>
             </li>
@@ -81,11 +82,77 @@
 	<!-- Insert your content here below! -->
 
 
-     <h2>Exercise...</h1>
-    
-    <h3>Menu</h3>
+     <h2><strong>Molding & Casting</strong></h1>
+        <h3>PneuNets Bending Actuator </h3> 
 	<p>
-	You can edit it by changing the <em>exercises-menu.html</em> and <em>project-menu.html</em>. Do <strong>not</strong> add any &ltol&gt; or &ltul&gt;, leave the structure as it is.
+<img src="img9/Molds_WEBSAFE.jpg"/></a> <br> 
+      
+      In this tutorial you will find the steps that I faced to design, mold and cast a soft robot, a PneuNets Bending actuator. I started to study this topic with the 3D printing module and now I am ready to prototype a more complex actuator. The final goal is to create something close to this air-muscle designed by Bijing Zhang & Francois Mangion as part of "Furl: Soft Pneumatic Pavilion" (Bartlett University): 
+      
+      <img src="img9/0-_Soft-Architecture_GAD-RC3-Bartlett-032-copy-700x325.jpg"/></a> <br>
+    
+    
+<h3>Design </h3> 
+    
+    To understand and design my actuator, I followed the thorough tutorial I found on <a href="http://softroboticstoolkit.com/book/pneunets-mold-design-cad-tutorial"/>Soft Robotics Toolkit</a> and I designed my actuator taking ispiration by the one of Pneumatic Pavilion. <br><br>
+      
+      <img src="img9/Actuator_Section_WEBSAFE.jpg"/></a> <br><br>
+Two parts are necessary to cast a silycon bening PenuNets actuator, which  in total are made by three molds. You can understand the elements here, especially looking at the section. The dimensions reported are those I used for my model. <br><br>
+    
+<img src="img9/Actuator_plan_WEBSAFE.jpg"/></a> <br> <br>
+        I designed first in 2D the 3 actuatuors components and then I exported in rhino the dwg file to extrude them, taking into consideration the machinable wax carving block dimensions. <br> <br>
+
+<img src="img9/carving_wax.jpg"/></a><br><br>
+<img src="img9/Actuator_DIM_WEBSAFE.jpg"/></a><br><br>
+<img src="img9/Rhinoceros.jpg"/></a> <br> <br>
+
+<p>
+	<a href="Pneumatic_Muscle_NURBS.zip">
+	<button type="button" class="btn btn-primary btn-lg">Download the NURBS 3D models</button>
+	</a>
+	</p>
+<p>
+	<a href="Pneumatic_Muscle_STL.zip">
+	<button type="button" class="btn btn-primary btn-lg">Download the STL files</button>
+	</a>
+	</p>
+<h3>Fabrication </h3>
+<img src="img9/After_milling.jpg"/></a><br><br>
+
+Once the stl models were ready, I created the toolpaths for the Shopbot Alpha model milling machine. I used VCarve as postprocessor for this purpose. Below the settings I used for the three models (I used purple machinable wax): <br><br>
+- diameter: 2 mm<br>
+- pass depht: 1 mm <br>
+- Stepover: 40 %<br>
+- Spindle speed: 18000 rpm (to be lowered and fine tuned manually)<br>
+- feed rate: 6000 mm/min (since the machine works with in minutes units)<br>
+- plunge: 1500 mm/min (same reason)<br><br>
+<img src="img9/wax_placement.jpg"/></a><br><br>
+<h3>Casting and demolding </h3>
+<h4>Bill of Materials </h4>
+
+	<pre class="prettyprint linenums">
+	&ltpre class="prettyprint linenums"&gt;
+   ELASTOMERS & MOLDING			
+- Dragon Skin® 30		Smooth-On	http://www.smooth-on.com/Silicone-Rubber-an/c2_1115_1129/index.html
+- Pneumatic Tubing (OD 1/8 ")	5790K15	McMaster	http://www.mcmaster.com/#5790k15/=t1audv
+- Office Paper (White)			
+- Thin rod (2-3 mm diameter)	1681T21	McMaster	http://www.mcmaster.com/#1681t21/=t1bdoj
+			
+LAB SUPPLIES			
+- Latex gloves	6072T94	McMaster	http://www.mcmaster.com/#6072t94/=t1c9vh
+
+- Syringe for pressurizing actuator	7510A802	McMaster	http://www.mcmaster.com/#7510a802/=t1bj3v
+
+- Vacuum chamber + pump	70.01032.AA	A-Vac	http://www.avac.com/economy-vacuum-chamber-systems-vacuum-p-39.html
+
+- Lab oven	13-262-52	Fisher Scientific	http://www.fishersci.com/ecomm/servlet/itemdetail?storeId=10652&langId=-1&catalogId=-1&productId=2080238&distype=0&hasPromo=0
+
+- Mass scale	1863T61	McMaster	http://www.mcmaster.com/#1863t61/=szo1b3
+
+- Centrifugal mixer + mixing cups		Thinky USA	http://www.thinkyusa.com/products/item-all/rotation-revolution-mixer/are-310.html
+	&lt/pre&gt;</pre>
+
+        <!-- <em>exercises-menu.html</em> and <em>project-menu.html</em>. Do <strong>not</strong> add any &ltol&gt; or &ltul&gt;, leave the structure as it is.
 	</p>
     
     
@@ -222,7 +289,7 @@
         <p id="cclicense">
                 </p>
         <p class="license">
-        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+        Theme: Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a>modified by Sabina Barcucci  <br>
         Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
         </p>
     </footer>

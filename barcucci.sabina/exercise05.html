@@ -79,12 +79,79 @@
     <div class="container">
 
 	<!-- Insert your content here below! -->
+        
+        <h2><strong>3D Printing Module</strong></h1>
+        <h3>3D printed mold for PneuNets Extending Actuator (PEA) </h3> <br> 
+        <img src="img5/IMG_20150406_163045_WEBSAFE.jpg"/><br> <br>
+        
+        
+	<p>
+	I am interested in Soft Robotics and to start learning the logic behind this topic, I modeled and 3D printed a first simple mold for a soft robot actuator following and amazing tutorial I found <a href="http://softroboticstoolkit.com/book/pneunets-variation-geometry"/>here</a>. Specifically, I started with a PentNeuts bending actuator, which nature, logics and function is explained below.  <br> <br> 
+      
+      </p>
+    
+        	<p>
+      <blockquote cite=" http://softroboticstoolkit.com/book/pneunets-bending-actuator">
+                  PneuNets Bending Actuators
 
+PneuNets (pneumatic networks) are a class of soft actuator originally developed by the Whitesides Research Group at Harvard. They are made up of a series of channels and chambers inside an elastomer. These channels inflate when pressurized, creating motion.
 
-      <h2><strong>3D scanning</strong></h1><br>
+The nature of this motion is controlled by modifying the geometry of the embedded chambers and the material properties of their walls. When a PneuNets actuator is pressurized, expansion occurs in the most compliant (least stiff) regions.
+
+For example, if the PneuNet is composed of a single, homogenous elastomer, most expansion will occur at the thinnest structures. Designers can pre-program the behavior of the actuator by selecting wall thicknesses that will result in a desired type of motion.
+                  </blockquote>
+        
+And this is the video that explain the final behaviour of the PneuNets Bending Actuator I am going to make. <br> <br>
+    
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/veFcGu0sS38" frameborder="0" allowfullscreen></iframe>
+	</p>
+ 
+        <h3>PEA Design Phase </h3> <br> 
+
+	<p>
+        Watching the video and the related tutorial, I started designging the molds in order to make them working as in this scheme to cast soft robots: 
+        
+        <br> 
+        <img src="img5/SR_Fabrication-WEBSAFE.jpg"width="40%" height="40%"/><br> 
+    Once established precise measurements of the 3 mold subparts, I designed them using a 2D CAD software (I use Autocad) and once done, I opened the 2D dwg file in Rhinoceros for exstrusion and .stl (3d printer compliant format) export. 
+        <br> 
+        <br>
+        
+        
+        
+        
+        
+        <img src="img5/PEA_Actuator_Design_WEBSAFE.jpg"/>
+        
+        Once finish to model the actuator parts in Rhino, it is important to check the model in order to convert the NURBS in meshes and only then to export them in .stl format. I found helpful <a href="https://wikis.utexas.edu/display/SOAdigitech/Exporting+from+Rhino+to+.stl"/>this wiki</a> and executed the steps that the tutorial suggests. It has perfectly worked. <br> <br>
+Before sending the files to the 3D printer, I checked the model in 
+<a href="https://http://www.netfabb.com/basic.php"/>NetFabb basic</a>
+
+The 3D models opened in NetFabb should look in this way: 
+      <br><br>  <img src="img5/NetFabb_WEBSAFE.jpg"/><br> 
+        
+I set the Ultimaker 3D printer and finally printed out the 3 molds. The overall printing process took 9 hours. 
+<br>  <img src="img5/Ultimaker_WEBSAFE.jpg"/><br> 
+   <img src="img5/Scheme_Molds_Tutorial_WEBSAFE.jpg"/>
+
+ <p>
+	<a href="img5/PEA_stl.zip">
+	<button type="button" class="btn btn-primary btn-lg">Grab the PEA stl files</button>
+	</a>
+	</p>
+
+<p>
+	<a href="img5/Ultimaker Profile.zip">
+	<button type="button" class="btn btn-primary btn-lg">Grab the Ultimaker settings </button>
+	</a>
+	</p>
+<br> <br> <br> 
+
+      <h2><strong>3D scanning</strong></h1>
         <h3>Fab Scan </h3> <br> 
         <img src="img5/FabScan_device.jpg"/><br> <br>
         
+
         
 	<p>
 	I didn't performed yet the 3D scanning module in a succesful way. I tried to use the FabScan 3d scanner for this assignment but I have several issues with the scanning and exporting phase. I can document a little bit of my process but I need to make it again in order to understand and solve the issues I had. <br> <br> 

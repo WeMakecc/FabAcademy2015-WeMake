@@ -82,9 +82,9 @@
 	<!-- Insert your content here below! -->
 
 
-    <h2><strong>Electronics production</strong></h1><br>
+    <h2><strong>Electronics production</strong></h1>
         <h3>FabISP </h3> <br> 
-         <img src="img4/fab_ISP.jpg"/></a> <br> <br>
+         <img src="img4/FabISP_Final_Final.jpg"/></a> <br> <br>
         
         
      <p>   
@@ -214,7 +214,7 @@ offsets overlap: 70%<br>
      <img src="img4/FINAL_RESULT.jpg"/> <br> <br>
     
     <br> 
-    <h4>3 | FabISP test and programming / board remake </h4> <br>
+    <h4>3 | FabISP test / board remake </h4> <br>
     <p>
     Once we tried to program the FabISP using an other FabISP, we realized that our boards werent' working. The main problem resulted to be the milling process that wasn't filled. So, probably the amount of copper close to MSD components was to high and created problems with conductivity and circuit functioning. 
         <img src="img4/LST_MILL_FILL.jpg"/> <br> <br>
@@ -250,6 +250,147 @@ tool diameter: 1.6 mm
 	<button type="button" class="btn btn-primary btn-lg">Grab the FabISP double png files</button>
 	</a>
 	</p>
+    <br>
+    <h4>4 | FabISP programming </h4> <br>
+    <p>
+       
+    Following the Neil's tutorial, here the steps:<br>
+    - USB power <br>
+    - make clean<br>
+    - make hex <br>
+
+        - (sudo) make fuse (check programmer in Makefile, may need to repeat)<br>
+         - (sudo) make program<br>
+         - desolder SJ1 and SJ2<br>
+         - make IDC ISP cable, connecting header pin 1 to pin 1, check wires<br>
+<br>        
+        
+Outupt terminal FabISP:
+        
+        <pre class="prettyprint linenums">
+	&ltpre class="prettyprint linenums"&gt;
+	SabinaBarcucci-MacBook-Pro:fabISP_mac.0.8.2_firmware SabinaBarcucci$ sudo make fuse
+avrdude -c stk500v1 -b19200 -P /dev/tty.usbmodem1411 -p attiny44 -U hfuse:w:0xDF:m -U lfuse:w:0xFF:m
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.05s
+
+avrdude: Device signature = 0x1e9207
+avrdude: reading input file "0xDF"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.02s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xDF:
+avrdude: load data hfuse data from input file 0xDF:
+avrdude: input file 0xDF contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.02s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+avrdude: reading input file "0xFF"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.02s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xFF:
+avrdude: load data lfuse data from input file 0xFF:
+avrdude: input file 0xFF contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.02s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+
+avrdude: safemode: Fuses OK (E:FF, H:DF, L:FF)
+
+avrdude done.  Thank you.
+
+SabinaBarcucci-MacBook-Pro:fabISP_mac.0.8.2_firmware SabinaBarcucci$ sudo program
+sudo: program: command not found
+SabinaBarcucci-MacBook-Pro:fabISP_mac.0.8.2_firmware SabinaBarcucci$ sudo make program
+avrdude -c stk500v1 -b19200 -P /dev/tty.usbmodem1411 -p attiny44 -U flash:w:main.hex:i
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.05s
+
+avrdude: Device signature = 0x1e9207
+avrdude: NOTE: "flash" memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: reading input file "main.hex"
+avrdude: writing flash (1988 bytes):
+
+Writing | ################################################## | 100% 3.44s
+
+avrdude: 1988 bytes of flash written
+avrdude: verifying flash memory against main.hex:
+avrdude: load data flash data from input file main.hex:
+avrdude: input file main.hex contains 1988 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 2.33s
+
+avrdude: verifying ...
+avrdude: 1988 bytes of flash verified
+
+avrdude: safemode: Fuses OK (E:FF, H:DF, L:FF)
+
+avrdude done.  Thank you.
+
+avrdude -c stk500v1 -b19200 -P /dev/tty.usbmodem1411 -p attiny44 -U hfuse:w:0xDF:m -U lfuse:w:0xFF:m
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.05s
+
+avrdude: Device signature = 0x1e9207
+avrdude: reading input file "0xDF"
+avrdude: writing hfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.02s
+
+avrdude: 1 bytes of hfuse written
+avrdude: verifying hfuse memory against 0xDF:
+avrdude: load data hfuse data from input file 0xDF:
+avrdude: input file 0xDF contains 1 bytes
+avrdude: reading on-chip hfuse data:
+
+Reading | ################################################## | 100% 0.02s
+
+avrdude: verifying ...
+avrdude: 1 bytes of hfuse verified
+avrdude: reading input file "0xFF"
+avrdude: writing lfuse (1 bytes):
+
+Writing | ################################################## | 100% 0.02s
+
+avrdude: 1 bytes of lfuse written
+avrdude: verifying lfuse memory against 0xFF:
+avrdude: load data lfuse data from input file 0xFF:
+avrdude: input file 0xFF contains 1 bytes
+avrdude: reading on-chip lfuse data:
+
+Reading | ################################################## | 100% 0.02s
+
+avrdude: verifying ...
+avrdude: 1 bytes of lfuse verified
+
+avrdude: safemode: Fuses OK (E:FF, H:DF, L:FF)
+
+avrdude done.  Thank you.
+
+	&lt/pre&gt;</pre>
+    
+     <img src="img4/FabISP_Laptop_WEBSAFE.jpg"/> <br>
+        <img src="img4/screenshot_FabISP_USB_WEBSAFE.jpg"/> <br>
 <!--
 To double check the pcb dimensions, I opened the png file with <a href="http://fabmodules.org/">FabModules.org</a> that provides dimensions in px, mm and inches. 
 
