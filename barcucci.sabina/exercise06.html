@@ -8,13 +8,13 @@
     <meta name="author" content="Name Surname">
     <link rel="icon" href="media/favicon.ico">
 
-    <title>Fab Academy 2015 - Name Surname</title>
+    <title>Fab Academy 2015 - Sabina Barcucci</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="media/fabacademy.css" rel="stylesheet">       <link href="media/SABINA.css" rel="stylesheet">
+   <link href="media/fabacademy.css" rel="stylesheet">       <link href="media/SABINA.css" rel="stylesheet">     <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     
     <!-- 3D files viewer -->
     <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
@@ -55,18 +55,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Name Surname</a>
+          <a class="navbar-brand" href="index.html">Sabina Barcucci</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="about.html">About</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Modules <span class="caret"></span></a>
               <ul id="exercises" class="dropdown-menu" role="menu">
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Neuro Toy <span class="caret"></span></a>
               <ul id="project" class="dropdown-menu" role="menu">
               </ul>
             </li>
@@ -81,14 +81,147 @@
 	<!-- Insert your content here below! -->
 
 
-     <h2>Exercise...</h1>
-    
-    <h3>Menu</h3>
-	<p>
-	You can edit it by changing the <em>exercises-menu.html</em> and <em>project-menu.html</em>. Do <strong>not</strong> add any &ltol&gt; or &ltul&gt;, leave the structure as it is.
+    <h2><strong>Electronics design</strong></h1>
+        <h3>Hello Echo </h3> <br> 
+         <img src="img6/Hello_Echo_Stuffed.jpg"/></a> <br> <br>
+      
+      
+      
+      
+    <h3><strong>Digital tools </strong> </h3> 
+	<p>-schematics and pcb design <br>
+	<a href="http://www.cadsoftusa.com/"> EAGLE</a> 
+        <p>pcb design and sharing, bill of materials <br>
+	<a href="https://upverter.com/"> Upverter</a> 
+        <p>-pcb boards image file editing <br>
+	<a href="http://www.gimp.org//"> GIMP</a> <br>         <p>-gcode and milling <br>
+	<a href="http://fabmodules.org/"> Fab Modules</a> <br> 
+<a href=" http://imodela-controller.software.informer.com/"> iModela Controller</a> <br> <br>
+    -Mobile apps for schematics and pcb <br>
+<a href="https://play.google.com/store/apps/details?id=it.android.demi.elettronica&hl=en">ElectroDroid</a>
+         <br>
+            <a href="http://www.adafruit.com/circuitplayground">Circuit Playground</a>
+         <br><br><br>
 	</p>
+      
+      
+      
+     <p>
+      
+      <h3><strong>Process </strong> </h3>
+      <h4><strong>  Schematic Design </strong></h4> 
+      Below my resulting schematics <br>
+      
+        <img src="img6/Schmatics_design.jpg"/><br><br>
+              
+      I followed <a href="http://fabacademy.org/archives/2015/doc/electronics_design_eagle.html">this thorough tutorial</a> to get warm with electronic design. Instead of downloading the schematic desing file of the Hello Echo board, I opted to produce one brand new file, following the schematics reported on the tutorial. Once downloaded and installed the freeware version of Eagle, I loaded in Eagle the components libraries dwonloaded at the link showed in tutorial Step 5 (download and install the components library). I then started to tinker with eagle schematic layout trying to follow the circuit logic intriduced in the tutorial. <br> <br>
     
     
+      Below, in details the libraries in which I found each component.<br><br>
+      
+    <strong>01_FAB_Hello library</strong><br>
+    - 6pin programming header (PINHD-2x3-SMD Description: PIN HEADER)<br>
+    - microcontroller attiny44A (ATTINY44-SSU Description: SOIC14)<br>
+      - Resistor (value 10k / RESISTOR1206/Description: 1206)<br>
+      - Button/6MM_SWITCH6MM_SWITCH Description OMRON SWITCH)<br>
+    - Ground/GND/Supply symbol<br>
+    - VCC/Supply Symbol<br>
+    - LED/LED1206/description 1206<br><br>
+      <strong>01_SparkFun Library</strong><br>
+    - FTDI header (ARDUINO_SERIAL_PROGRAMSMD /ARDUINO_SERIAL_PROGRAM)/Description: 1X06-SMD<br>
+    - 20MHz resonator (RESONATOR SMD)<br> <br> 
+      
+         </p> 
+    
+    
+    <p>
+      
+      
+      <h4><strong>  PCB Design </strong></h4>
+      
+       Below my resulting pcb layout <br>
+      
+        <img src="img6/pcb_layout_design.jpg"/><br><br>
+    Pcb layout can be a long process if it's not clear the general logic of the board. Since the components were just few, I did a manual routing, and I had to test several layout version to get a nice one, without bridges. To get the final version, I had to rotate meny components several times before "solve" the routing in a clean way. In Eagle, I set the grid as quite fine grained, in orer to be more free to route those parts going under electronics components (like for the ATTTiny). <br> <br>
+    
+    Once completed the routing an displayed only the Top Layer, I exported the image file to work on it in GIMP. Indeed, I had to edit the file for many reasons: <br><br>
+    - I had to produce the png file for the Interior, mining the pcb part that needs to be cut off. <br>
+    - Since I wanted to completely fill the milling, I had to reduce as much as possible the copper surface to mill<br>
+    - I had to evaluate if some of the traces needed to be cleaned up, or better distributed, according to the milling tool diameterers (especially in some points of the board). <br><br>
+    Below an image that shows some tips to rework the eagle image file in order to create suitable. traces and interior PNGs.  <br> <br> 
+    <img src="img6/PNGs_design_tips.jpg"/><br><br>In this image colors are just to explain how to produce a suitable interior shape for the cut off process based on the traces layout file. The final png must be in black and whit colors only and they can be downloaded just below in PNG format, ready for the milling machine. The yellow area and red one are thos parts that need to be carefully worked in GIMP or in an image raster editor software. The yellow part doesn't need to be milled (is useless an time consuming for the machine) while the red part (wich is the interior file footprint) needs to be a bit calculated in order to be sure that the traces will be not milled away. Thus, it's important to remember the tool diameter we are going to use on the milling machine). <br> <br> 
+      <img src="img6/Hello_Echo_traces.png"width="50%" height="50%"/><br>
+    Hello_Echo_TRaces.png<br>
+    <br> <br> 
+      <img src="img6/Hello Echo_interior.png"width="50%" height="50%"/><br>
+    Hello_Echo_Interior.png<br><br>
+      </p>
+
+
+<p>
+<h4><strong>  Milling process </strong></h4>
+<br> 
+      <img src="img6/iModela_Hello_Echo.jpg"/><br><br>
+I used iModela to mill the Hello Echo board using the same settings I used for the <a href="http://fabacademy.org/archives/2015/eu/students/barcucci.sabina/exercise04.html"/>FabISP milling process</a> using Fab Modules to generate rml files. <br><br>
+<strong>Traces</strong> <br>
+Speed: 1.4 mm/s<br>
+Jog: 1 mm<br>
+x=4<br>
+y=4<br>
+z=0<br>
+Cut depth: 0.27 mm<br>
+Tool diameter: 0.3 mm<br>
+nr offsets: -1<br>
+offsets overlap: 70%<br><br>
+     <strong>Interior</strong> <br>
+speed: 1.2 mm/s<br>
+jog: 1 mm<br>
+x=4<br>
+y=4<br>
+z=0<br>
+cut depth: 0.5 mm<br>
+stock thickness: 1.8 mm<br>
+tool diameter: 1.6 mm<br>
+      <br>
+</p>
+
+<p>
+	<a href="img6/Eagles_files.zip">
+	<button type="button" class="btn btn-primary btn-lg">Grab the schematics and pcb files</button>
+	</a>
+	</p>
+<p>
+	<a href="img6/Hello_Echo_PNGs.zip">
+	<button type="button" class="btn btn-primary btn-lg">Grab the PNGs files for pcb milling</button>
+	</a>
+	</p>
+
+        
+	</a>
+	</p>
+
+<p>
+<h3><strong>Issues and mistakes </strong> </h3>
+      
+
+The main mistake I can report is the one I did for the first version of my Hello Echo board. Traces on my eagle pcb file were to close to each other, and I didn't consider that the tool diameter would have been not milled properly since the distance among traces in some points where smaller than the tool diameter. The image below shows one of the main point in which this mistake occurred. 
+
+<br> <br> 
+      <img src="img6/mistake.jpg"/><br><br>
+I reworked the png file manually, using GIMP, and paying attention to leave among traces at least 0.3 mm, which is the size of the tool diameter I used to mill traces. 
+
+   <h3><strong>References and books</strong> </h3> 
+      <a href="http://shop.oreilly.com/product/0636920026440.do">Make: Wearable Electronics</a><br>
+
+<a href="http://www.amazon.com/Make-Electronics-Discovery-Charles-Platt/dp/0596153740">Make: Electronics (Learning by Discovery)
+</a><br>
+
+<a href="http://www.amazon.com/Make-Electronics-Journey-Amplifiers-Randomicity/dp/1449344046">Make: More Electronics: Journey Deep Into the World of Logic Chips, Amplifiers, Sensors, and Randomicity
+</a><br>
+
+<a href="http://www.amazon.com/Making-Things-Talk-Sensors-Networks/dp/1449392431">Making Things Talk: Using Sensors, Networks, and Arduino to see, hear, and feel your world
+</a><br>
+    <!--
     <h3>Text</h3>
 	<p>
 	You can set it up with:
@@ -222,7 +355,7 @@
         <p id="cclicense">
                 </p>
         <p class="license">
-        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> modified by Sabina Barcucci  <br>
         Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
         </p>
     </footer>
