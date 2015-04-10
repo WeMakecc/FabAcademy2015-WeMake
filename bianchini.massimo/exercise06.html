@@ -15,6 +15,8 @@
 
     <!-- Custom styles for this template -->
     <link href="media/fabacademy.css" rel="stylesheet">
+         <link href="media/stilemassimo.css" rel="stylesheet"> 
+      <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     
     <!-- 3D files viewer -->
     <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
@@ -81,153 +83,48 @@
 	<!-- Insert your content here below! -->
 
 
-     <h2>Exercise...</h1>
+<h2>Exercise 06 - Electronics design</h2>
     
-    <h3>Menu</h3>
-	<p>
-	You can edit it by changing the <em>exercises-menu.html</em> and <em>project-menu.html</em>. Do <strong>not</strong> add any &ltol&gt; or &ltul&gt;, leave the structure as it is.
-	</p>
+<h3>Assignement</h3>
+<p>Redraw the echo hello-world board, add (at least) a button and LED (with current-limiting resistor), check the design rules, and make it extra credit: simulate its operation</p><br>
     
-    
-    <h3>Text</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp&gt;
-	Your text here
-	&lt/p&gt;</pre>
-	</p>
-	Result:
-	<p>
-	Your text here
-	</p>
-	
-	<h3>Images</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp class="pic&gt;>&ltimg src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg"&gt;
-	&ltlegend&gt;Here's the legend of the picture.&lt/legend&gt;
-	&lt/p&gt;</pre>
-	</p>
-	Result:
-	<p class="pic"><img src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg">
-	<legend>Here's the legend of the picture.</legend>
-	</p>
-     
-	<h3>Code</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltpre class="prettyprint linenums"&gt;
-	Your code here
-	&lt/pre&gt;</pre>
-	
-	Result:
-	<pre class="prettyprint linenums">
-	for i in members:
-		print ""
-		print "USER:",members[i]
-		print "Loading connections..."
-		followers = load_connections([i], "followers")
-		friends = load_connections([i], "friends")
+<h3>Redraw HelloEcho</h3>
+<p> I follow step by step the tutorial. First of all, I downloaded and imported the libraries in Eagle. I open the HelloEcho schematic placing the led and the button. Then I switch from the schematic to the board application, placing all components and tracing all routes. Finally I exported the traces in a 500dpi png format.
+In Illustrator I resize the png personalizing the board adding the write “H!”. Starting from the file containing all traces I design the interior.png. I have redraw and personalized my HelloEcho Board.
+ </p><br>
+        
+<img src="images/esercitazione06/01helloecho.jpg"></br>
+<img src="images/esercitazione06/02helloecho.jpg"></br>
+<img src="images/esercitazione06/03helloecho.jpg"></br>
+<img src="images/esercitazione06/04helloecho.jpg"></br>
+<img src="images/esercitazione06/05helloecho.jpg"></br>
+<img src="images/esercitazione06/06helloecho.jpg"></br>
 
-		# Add edges...
-		print "Building the graph..."
-
-		for f in followers:
-			for k in followers[f]:
-				graph.add_edge(k,f)
-	
-		for f in friends:
-			for k in friends[f]:
-				graph.add_edge(f,k)</pre>
-	</p>
-	
-	<h3>3D Model</h3>
-	<p>	
-	The model can be rotated and zoomed with the mouse/trackpad. You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltcanvas id="cv" width=640 height=480&gt;
-	It seems you are using an outdated browser that does not support canvas :-(
-	&lt/canvas&gt;
-	&ltscript type="text/javascript"&gt;
-		var canvas = document.getElementById('cv');
-		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
-		viewer.setParameter('ModelColor','#CAA618');
-		viewer.setParameter('BackgroundColor1','#E5D7BA');
-		viewer.setParameter('BackgroundColor2','#383840');
-		viewer.setParameter('RenderMode','flat');
-		viewer.setParameter('MipMapping','on');
-		viewer.setParameter('Definition','high');
-		viewer.setParameter('Renderer','webgl');
-		viewer.init();
-		viewer.update();
-	&lt/script&gt;</pre>
-	
-	You can set up the path to the 3D model (.stl/.obj) within this line:
-	<pre class="prettyprint linenums">
-	viewer.setParameter('SceneUrl','media/monkey.stl');</pre>
-	
-	Result:
-	<canvas id="cv" width=640 height=480>
-	It seems you are using an outdated browser that does not support canvas :-(
-	</canvas>
-	<script type="text/javascript">
-		var canvas = document.getElementById('cv');
-		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
-		viewer.setParameter('ModelColor','#CAA618');
-		viewer.setParameter('BackgroundColor1','#E5D7BA');
-		viewer.setParameter('BackgroundColor2','#383840');
-		viewer.setParameter('RenderMode','flat');
-		viewer.setParameter('MipMapping','on');
-		viewer.setParameter('Definition','high');
-		viewer.setParameter('Renderer','webgl');
-		viewer.init();
-		viewer.update();
-	</script> 
-    </p> 
-    
-    <h3>Download</h3>
-	<p>
-	You can set up a button for files to be downloaded with:
-	<pre class="prettyprint linenums">
-	&lta href="#"&gt;
-	&ltbutton type="button" class="btn btn-primary btn-lg">Download the file&lt/button&gt;
-	&lt/a&gt;</pre>
-	</p>
-	
-	<p>
-	Result:
-	</p>
-	<p>
-	<a href="#">
-	<button type="button" class="btn btn-primary btn-lg">Download the file</button>
-	</a>
-	</p>
+<h3>Milling the board with a Roland iModela</h3>
+<p> I start to generate an .RML file from Fabmodules.org using the same parameters set up for FabISP (see Exercise 04).
+Bad results an a lot of problems. bad quality and lot of mistakes. After more than 10 attempts all the boards can't be used. iModela requires a lot of time to be used and the material for PCB is too hard for this micro machine.
+ </p><br>
       
-    <h3>Would you like to insert more style/elements?</h3>
-      <p>
-      Check the documentation of Bootstrap <a href="">here</a>.
-      </p>
-    <!-- End of your content -->
-
-    </div> <!-- /container -->
-
-	<!-- footer -->
+<img src="images/esercitazione06/07helloechomodela.jpg"></br>
+<img src="images/esercitazione06/08helloechomodela.jpg"></br>
+<img src="images/esercitazione06/09helloechoerror.jpg"></br>
     
-    <footer id="footer">
-        <p id="cclicense">
-                </p>
-        <p class="license">
-        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
-        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
-        </p>
-    </footer>
+<h3>Finding alternative solutions</h3>
+<p> To solve the problem of micro milling which concerns other exercises at Fab Academy (e.g. Exercise 09 - Molding and Casting), at We Make we start to find an alternative solution. We are modifying a Shapeoko installing a Makita electrotool (a powerfull mini mill, faster and more precise than iModela). At We Make we have 3D printed two blocks installing the Makita tool on the Shapeoko. Below the first encouraging attempts to mill the HelloEcho board. This week at We Make we will complete the set-up of this and at the same time I will complete my HelloEcho board.</p><br>
     
+<img src="images/esercitazione06/10helloechomakita.jpg"></br>
+<img src="images/esercitazione06/11helloechomakita.jpg"></br>
+<img src="images/esercitazione06/12helloechomakita.jpg"></br>
+<img src="images/esercitazione06/13helloechomakita.jpg"></br>
+    
+<h3>Download</h3>
+<p><a href="images/esercitazione06/HelloEchoMBtraces.png" class="link_text"> <strong> HelloEcho traces </strong></a><br>
+<a href="images/esercitazione06/HelloEchoMBnterior.png" class="link_text"> <strong> HelloEcho interior </strong></a> </p></br>
+                                                                    
+        
 
+        
+        
 	<!-- Do not touch this! -->
     <!-- Bootstrap core JavaScript
     ================================================== -->

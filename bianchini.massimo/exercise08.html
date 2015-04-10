@@ -15,6 +15,8 @@
 
     <!-- Custom styles for this template -->
     <link href="media/fabacademy.css" rel="stylesheet">
+         <link href="media/stilemassimo.css" rel="stylesheet"> 
+      <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     
     <!-- 3D files viewer -->
     <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
@@ -81,153 +83,53 @@
 	<!-- Insert your content here below! -->
 
 
-     <h2>Exercise...</h1>
+<h2>Exercise 08 - Computer-controlled machining</h1>
     
-    <h3>Menu</h3>
-	<p>
-	You can edit it by changing the <em>exercises-menu.html</em> and <em>project-menu.html</em>. Do <strong>not</strong> add any &ltol&gt; or &ltul&gt;, leave the structure as it is.
-	</p>
-    
-    
-    <h3>Text</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp&gt;
-	Your text here
-	&lt/p&gt;</pre>
-	</p>
-	Result:
-	<p>
-	Your text here
-	</p>
+<h3>Assignment</h3>
+<p>Make something big</p><br>
+        
+<h3>Approach</h3>
+<p>To do this exercise, I decided to solve a problem that's in the kitchen of my house.
+In my kitchen there is a boiler, above it a space where there are two pipes that are seen: the first on is directly connected to the boiler, the second one is connected to the kitchen hood. Aesthetically I never liked them and I always thought about what to do to hide them. Well, I think is the right exercise to solve this problem! To do this  I have to create and produce an ‘ad hoc’ solution. I decide to design and make a cover-boiler lightweight, easy to install and remove for the maintenance of the boiler. This solution should also allow the heat escape and at the same time be aesthetically decent. So, I decided to create a grid system composed only of joints (without hardware) that gives me the option to add in the future other pieces such as a bar or holder of the shelves.</p><br>
+        
+<img src="images/esercitazione08/drawingpieces.jpg"></br>
+<img src="images/esercitazione08/img01_caldaia.jpg"><br>
 	
-	<h3>Images</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp class="pic&gt;>&ltimg src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg"&gt;
-	&ltlegend&gt;Here's the legend of the picture.&lt/legend&gt;
-	&lt/p&gt;</pre>
-	</p>
-	Result:
-	<p class="pic"><img src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg">
-	<legend>Here's the legend of the picture.</legend>
-	</p>
-     
-	<h3>Code</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltpre class="prettyprint linenums"&gt;
-	Your code here
-	&lt/pre&gt;</pre>
-	
-	Result:
-	<pre class="prettyprint linenums">
-	for i in members:
-		print ""
-		print "USER:",members[i]
-		print "Loading connections..."
-		followers = load_connections([i], "followers")
-		friends = load_connections([i], "friends")
-
-		# Add edges...
-		print "Building the graph..."
-
-		for f in followers:
-			for k in followers[f]:
-				graph.add_edge(k,f)
-	
-		for f in friends:
-			for k in friends[f]:
-				graph.add_edge(f,k)</pre>
-	</p>
-	
-	<h3>3D Model</h3>
-	<p>	
-	The model can be rotated and zoomed with the mouse/trackpad. You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltcanvas id="cv" width=640 height=480&gt;
-	It seems you are using an outdated browser that does not support canvas :-(
-	&lt/canvas&gt;
-	&ltscript type="text/javascript"&gt;
-		var canvas = document.getElementById('cv');
-		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
-		viewer.setParameter('ModelColor','#CAA618');
-		viewer.setParameter('BackgroundColor1','#E5D7BA');
-		viewer.setParameter('BackgroundColor2','#383840');
-		viewer.setParameter('RenderMode','flat');
-		viewer.setParameter('MipMapping','on');
-		viewer.setParameter('Definition','high');
-		viewer.setParameter('Renderer','webgl');
-		viewer.init();
-		viewer.update();
-	&lt/script&gt;</pre>
-	
-	You can set up the path to the 3D model (.stl/.obj) within this line:
-	<pre class="prettyprint linenums">
-	viewer.setParameter('SceneUrl','media/monkey.stl');</pre>
-	
-	Result:
-	<canvas id="cv" width=640 height=480>
-	It seems you are using an outdated browser that does not support canvas :-(
-	</canvas>
-	<script type="text/javascript">
-		var canvas = document.getElementById('cv');
-		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
-		viewer.setParameter('ModelColor','#CAA618');
-		viewer.setParameter('BackgroundColor1','#E5D7BA');
-		viewer.setParameter('BackgroundColor2','#383840');
-		viewer.setParameter('RenderMode','flat');
-		viewer.setParameter('MipMapping','on');
-		viewer.setParameter('Definition','high');
-		viewer.setParameter('Renderer','webgl');
-		viewer.init();
-		viewer.update();
-	</script> 
-    </p> 
-    
-    <h3>Download</h3>
-	<p>
-	You can set up a button for files to be downloaded with:
-	<pre class="prettyprint linenums">
-	&lta href="#"&gt;
-	&ltbutton type="button" class="btn btn-primary btn-lg">Download the file&lt/button&gt;
-	&lt/a&gt;</pre>
-	</p>
-	
-	<p>
-	Result:
-	</p>
-	<p>
-	<a href="#">
-	<button type="button" class="btn btn-primary btn-lg">Download the file</button>
-	</a>
-	</p>
+<h3>CAM</h3>
+<p> As CAM software I used Vcarve Pro. First I checked the size of the panel, then I designed the brackets to lock the panel on the milling machine. With the option fillet I created the T-bones on all pieces to facilitate the joints. Then I drew the holes for the lock panel on the work surface with screws. So I drew the little bridges to be secured all the pieces during milling.
+I chose an end mill 0.6 mm in diameter. with a height of 18 mm. I set the speed and the advancement of the cutter. Then I exported two Gcode for the post processor. A Gcode to create the pocket for the fixing screws, Another one containing the program for milling the pieces. In this way I have experienced all the basic processes: drilling, engraving and profiling.</p><br>
       
-    <h3>Would you like to insert more style/elements?</h3>
-      <p>
-      Check the documentation of Bootstrap <a href="">here</a>.
-      </p>
-    <!-- End of your content -->
-
-    </div> <!-- /container -->
-
-	<!-- footer -->
+<img src="images/esercitazione08/img_Vcarve_tbone.jpg"></br>
+<img src="images/esercitazione08/img_vcarve_paths.jpg"></br>
+<img src="images/esercitazione08/img_Vcarve-GCode.jpg"><br>
+	
     
-    <footer id="footer">
-        <p id="cclicense">
-                </p>
-        <p class="license">
-        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
-        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
-        </p>
-    </footer>
+<h3>Computer-controlled machining</h3>
+<p> CNC Milling Machine: It is a 3 Axes CNC Macchine produced by an Italian SMEs (macchineCNC). First of all, the plywood panel has been locked setting up the relative zero. After I have enabled the three axes the CNC machine starts to make the first process, engraving the pockets to apply the screws. Then I start the second process cutting all pieces of the first wooden panel.
+Everything was fine then some small problems in fixing (few bridges) did move some pieces that have been touched by the end mill. During the milling of the second wooden panel the pieces did not move. I finally milled 22 different pieces.</p><br>
+      
+<img src="images/esercitazione08/img_machine.jpg"></br>
+<img src="images/esercitazione08/img_cutted-pieces.jpg"><br>
+	
+<h3>Final Assembly</h3>
+<p>I brought the pieces at home and I started assemblari all parts creating the structure. The structure was mounted. Two things are to be done to complete the object: The first is painted white object, the second is to modify a pair of parts of the housing of the boiler to enter the workpiece with the bulb holder.</p><br>
+	  
+<img src="images/esercitazione08/img08a_assembled.jpg"></br>
+<img src="images/esercitazione08/img08a_assembled.jpg"></br>
+<img src="images/esercitazione08/img08c_assembled-particular.jpg"></br>
+<img src="images/esercitazione08/img09_installed.jpg"></br>
+<img src="images/esercitazione08/img09a_installed-front.jpg"><br>
     
+<h3>Lesson Learnt</h3>
+<p>The milling machine is undoubtedly the most challenging and complex that I have used at Fab Academy. It is also extremely versatile. A machine that requires much accuracy and so much attention.
+I learned that it is very important to carefully plan the object, nesting, the use of the elements to block the materials on the machine and setting the processing parameters.</p><br>	
 
+    <h3>Download</h3>
+	<p><a href="nesting.dxf" class="link_text"> <strong> Download 2D object part 1 </strong></a><br>
+<a href="nesting2.dxf " class="link_text"> <strong> Download 2D object part 2 </strong></a>
+	</p></br>
+    
+    
 	<!-- Do not touch this! -->
     <!-- Bootstrap core JavaScript
     ================================================== -->
