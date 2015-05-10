@@ -82,11 +82,35 @@
 	<!-- Insert your content here below! -->
      <h2><strong>Output device</strong></h1>
          <h3>FabKit04</h3> 
+        <img src="img11/FabKit_Blink_ok.jpg"/></a><br><br>
+         <img src="img11/fabkit_04.jpg"/></a><br><br>
+ 
+      For output device, I prepared two boards but I still need to completely accomplish the assignments. <br><br>
+      I first prepared a FabKit, version 04, an Arduino-compatible board designed by David Mellis and based on an ATMEGA382P microcontroller, and I followed the <a href="http://fabacademy.org/archives/2015/doc/projects/fabkit-0.4.html">Massimo's</a> tutorial. I laser cut and engraved the board using the C02 fiber laser of Open Dot FabLab in Milan instead of milling the pcb. I then cleaned the board up using an eraser and then soldered the components, including the ATMEGA. This appeared to be the most complex part to solder but in reality was quite easy. <br><br>
+   
+    
+    To program the board, I used my FabISP that I connected with some jumper wires to the FabKit, following this scheme for Pin Out and the ATMEGA168 datasheet.<br><br>
+    
+    <img src="img11/Fab_Kit_Pin_OUt_AtMega.jpg"/></a><br><br>
+    To power the FabKit04, I used a little arduino board USB-FTDI. <br> <br>
+     <img src="img11/FabKit_Blink.jpg"/></a><br><br>
+    <p>
 
-     <img src="img11/fabkit_04.jpg"/></a>
+Once connected and powered everything, I tried several times to burn the FabKit bootloader, using the Arduino IDE (version 1.0) but apparently without success. I tried also to keep the FabKit reset button pushed while burning the bootloader but the warning message was always reporting me that the program wasn't able to read from a .hex file related to ATMEGA168 bootloader. The .hex file was at its place, and I couldn't find any helpful tips on this issue online. 
+        
+        After severak hours of damnation, I then tried to upload a blinck sketch using the FabISP programmer and it looked to be working. Result: you don't need to burn any bootloader to program a FabKit. 
+        
+        </p>
+    
         <h3>HelloServo44 board</h3> 
+<img src="img11/servo_soldered.jpg"/></a><br><br>
+I wanted also to experiment with servo, and I started downloading images and schematics from the Academy archive of the hello.servo.44 board from Neil. I redesigned the board <br><br>
 <img src="img11/SCHEMATICS_SERVOSOFT.jpg"/></a> <br><br>
-     <img src="img11/servosoft.jpg"/></a>
+     
+<a href="img11/Soft_Servo.brd">
+	<button type="button" class="btn btn-primary btn-lg">Grab the eagle file</button>
+    
+   
 
 <!--
 	
