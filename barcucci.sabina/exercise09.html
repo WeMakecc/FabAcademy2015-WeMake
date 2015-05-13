@@ -83,15 +83,28 @@
 
 
      <h2><strong>Molding & Casting</strong></h1>
-        <h3>PneuNets Bending Actuator </h3> 
+        <h3>PneuNets Soft Bending Actuator </h3> 
 	<p>
-<img src="img9/Molds_WEBSAFE.jpg"/></a> <br> 
+        <img src="img9/Pneu_Netz.jpg"/></a> <br> 
+
       
-      In this tutorial you will find the steps that I faced to design, mold and cast a soft robot, a PneuNets Bending actuator. I started to study this topic with the 3D printing module and now I am ready to prototype a more complex actuator. The final goal is to create something close to this air-muscle designed by Bijing Zhang & Francois Mangion as part of "Furl: Soft Pneumatic Pavilion" (Bartlett University): 
+      In this tutorial you will find the steps that I faced to design, mold and cast a soft robot, a PneuNets Bending actuator. I started to study this topic with the 3D printing module and now I am ready to prototype a more complex actuator. I collected almost the whole know-how for this assignment through: <br><br>
       
-      <img src="img9/0-_Soft-Architecture_GAD-RC3-Bartlett-032-copy-700x325.jpg"/></a> <br>
+      - Design phase: I used the <a href="http://www.softroboticstoolkit.com/"/>Harvard Soft Robotics toolkit</a><br>
+    - Casting phase: I have been supported by some researchers of Institute of Bio-Robotics o
+    f Pisa (Italy)<br>
+      - Further development phase (coming soon): I participated to the Soft Robotics Week in Livorno (Italya)
+    <br><br>
+    The design and fabrication phases have been accomplished at the Wemake makerspace, where I attend Fab Academy.<br><br>
     
+    After the whole process, I set up a video tutorial that shortly describes every phase of the PneuNetz actuator, from its design, to fabrication and molding, to casting and testing.<br> <br> 
     
+    <iframe width="640" height="480" src="https://www.youtube.com/embed/0KMap-hNfWc" frameborder="0" allowfullscreen></iframe><br> <br> 
+      
+ 
+    
+
+        
 <h3>Design </h3> 
     
     To understand and design my actuator, I followed the thorough tutorial I found on <a href="http://softroboticstoolkit.com/book/pneunets-mold-design-cad-tutorial"/>Soft Robotics Toolkit</a> and I designed my actuator taking ispiration by the one of Pneumatic Pavilion. <br><br>
@@ -103,7 +116,7 @@ Two parts are necessary to cast a silycon bening PenuNets actuator, which  in to
         I designed first in 2D the 3 actuatuors components and then I exported in rhino the dwg file to extrude them, taking into consideration the machinable wax carving block dimensions. <br> <br>
 
 <img src="img9/carving_wax.jpg"/></a><br><br>
-<img src="img9/Actuator_DIM_WEBSAFE.jpg"/></a><br><br>
+
 <img src="img9/Rhinoceros.jpg"/></a> <br> <br>
 
 <p>
@@ -114,6 +127,8 @@ Two parts are necessary to cast a silycon bening PenuNets actuator, which  in to
 
 <h3>Fabrication </h3>
 <img src="img9/After_milling.jpg"/></a><br><br>
+<img src="img9/wax_placement.jpg"/></a><br><br>
+
 
 Once the stl models were ready, I created the toolpaths for the Shopbot Alpha model milling machine. I used VCarve as postprocessor for this purpose. Below the settings I used for the three models (I used purple machinable wax): <br><br>
 - diameter: 2 mm<br>
@@ -122,31 +137,49 @@ Once the stl models were ready, I created the toolpaths for the Shopbot Alpha mo
 - Spindle speed: 18000 rpm (to be lowered and fine tuned manually)<br>
 - feed rate: 6000 mm/min (since the machine works with in minutes units)<br>
 - plunge: 1500 mm/min (same reason)<br><br>
-<img src="img9/wax_placement.jpg"/></a><br><br>
-<h3>Casting and demolding </h3>
-<h4>Bill of Materials </h4>
 
+ <img src="img9/Molds_WEBSAFE.jpg"/></a> <br> <br><br>
+<h3>Casting and demolding </h3>
+The type of silycon used is crucial: indeed, we need a specific bi-components silycon with a low level of viscosity and high level of flexibility. On Smooth-On we can find DragonSkin (several types) and Ecoflex. For this first attempt, I used the Ecoflex, which apparently is better than Dragon Skin. Both types of silycon need about 4/6 hours of curing. You can make this process faster by placing the molds and the silycon into a hoven at 65°. The only issue is that this option would force you not to mill with machinable wax the molds. In my case I couldn't faster the process since I used wax for the molds.<br><br>
+<img src="img9/silycon_Ecoflex.jpg"/></a><br><br>
+
+
+
+<h4>Bill of Materials </h4><br>
 	<pre class="prettyprint linenums">
-	&ltpre class="prettyprint linenums"&gt;
+
    ELASTOMERS & MOLDING			
-- Dragon Skin® 30		Smooth-On	http://www.smooth-on.com/Silicone-Rubber-an/c2_1115_1129/index.html
+- Dragon Skin® 30 or 20		Smooth-On	http://www.smooth-on.com/Silicone-Rubber-an/c2_1115_1129/index.html
+Or
+- Ecoflex silycon (smooth-on website) <br><br>
 - Pneumatic Tubing (OD 1/8 ")	5790K15	McMaster	http://www.mcmaster.com/#5790k15/=t1audv
 - Office Paper (White)			
 - Thin rod (2-3 mm diameter)	1681T21	McMaster	http://www.mcmaster.com/#1681t21/=t1bdoj
+- silycon glue (smooth-on website)
 			
 LAB SUPPLIES			
 - Latex gloves	6072T94	McMaster	http://www.mcmaster.com/#6072t94/=t1c9vh
+
+- plastic glass + a manual mixer
 
 - Syringe for pressurizing actuator	7510A802	McMaster	http://www.mcmaster.com/#7510a802/=t1bj3v
 
 - Vacuum chamber + pump	70.01032.AA	A-Vac	http://www.avac.com/economy-vacuum-chamber-systems-vacuum-p-39.html
 
-- Lab oven	13-262-52	Fisher Scientific	http://www.fishersci.com/ecomm/servlet/itemdetail?storeId=10652&langId=-1&catalogId=-1&productId=2080238&distype=0&hasPromo=0
 
-- Mass scale	1863T61	McMaster	http://www.mcmaster.com/#1863t61/=szo1b3
+	&lt&gt;</pre>
 
-- Centrifugal mixer + mixing cups		Thinky USA	http://www.thinkyusa.com/products/item-all/rotation-revolution-mixer/are-310.html
-	&lt/pre&gt;</pre>
+<h4>Casting a soft actuator</h4>
+ About casting, it is important to have clearly understood how the soft actuator works: there are two parts, the main body (the one with tridimensional structure) and the top (the silycon straight layer).The two elements should be stiched together in order to create an iar chamber in between. To do that, we need to cast the two elements in two different moments, starting with casting the main body. <br><br><img src="img9/casting_molding.jpg"/></a><br><br>
+ 
+<br><br>
+
+Silycon is bi-component (both Dragonskin than Ecoflex) that requires a same quantity of A and B components. You need to use a libra to start and a plastic glass. Place the empy glass on the libra and make tare. Fill half glass with component A and take the weight measurement. Change component, make tare again and release the same quantity of component B. With a plastic coffee spoon, mix the liquid for about 5 to 8 minutes, manually. The silycon will become plenty of air bubbles and this condition will require some de-gassing sessions to eliminate them. <br><br>
+A nice tip is the one of the plastic glass residual. Leave in the plastic glass that you use to mix the silycon components a little amount of silycon, meaning do not cast the 100% of it. This remaining quantity will be useful after the curing process to maker you sure first that the silycon would have cured in the proper way, and then safely proceed to demold the actuator. 
+
+
+<br><br><img src="img9/glas-Tip.jpg"/></a><br><br>
+
 
         <!-- <em>exercises-menu.html</em> and <em>project-menu.html</em>. Do <strong>not</strong> add any &ltol&gt; or &ltul&gt;, leave the structure as it is.
 	</p>
