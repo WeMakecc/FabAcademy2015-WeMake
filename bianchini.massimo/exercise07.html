@@ -8,7 +8,7 @@
     <meta name="author" content="Name Surname">
     <link rel="icon" href="media/favicon.ico">
 
-    <title>Fab Academy 2015 - Name Surname</title>
+    <title>Fab Academy 2015 - Massimo Bianchini</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -83,16 +83,53 @@
 	<!-- Insert your content here below! -->
 
 
-    <h2>Exercise 07 - Embedded Programming </h1>
+<h2>Exercise 07 - Computer-controlled machining</h1>
     
-    <h3>Assignment</h3>
-	<p> Read a microcontroller data sheet program your board to do something, with as many different programming languages
-      and programming environments as possible </p><br>
+<h3>Assignment</h3>
+<p>Make something big</p><br>
+        
+<h3>Approach</h3>
+<p>To do this exercise, I decided to solve a problem that's in the kitchen of my house.
+In my kitchen there is a boiler, above it a space where there are two pipes that are seen: the first on is directly connected to the boiler, the second one is connected to the kitchen hood. Aesthetically I never liked them and I always thought about what to do to hide them. Well, I think is the right exercise to solve this problem! To do this  I have to create and produce an ‘ad hoc’ solution. I decide to design and make a cover-boiler lightweight, easy to install and remove for the maintenance of the boiler. This solution should also allow the heat escape and at the same time be aesthetically decent. So, I decided to create a grid system composed only of joints (without hardware) that gives me the option to add in the future other pieces such as a bar or holder of the shelves.</p><br>
+        
+<img src="images/esercitazione08/drawingpieces.jpg"></br>
+<img src="images/esercitazione08/img01_caldaia.jpg"><br>
+	
+<h3>CAM</h3>
+<p> As CAM software I used Vcarve Pro. First I checked the size of the panel, then I designed the brackets to lock the panel on the milling machine. With the option fillet I created the T-bones on all pieces to facilitate the joints. Then I drew the holes for the lock panel on the work surface with screws. So I drew the little bridges to be secured all the pieces during milling.
+I chose an end mill 0.6 mm in diameter. with a height of 18 mm. I set the speed and the advancement of the cutter. Then I exported two Gcode for the post processor. A Gcode to create the pocket for the fixing screws, Another one containing the program for milling the pieces. In this way I have experienced all the basic processes: drilling, engraving and profiling.</p><br>
+      
+<img src="images/esercitazione08/img_Vcarve_tbone.jpg"></br>
+<img src="images/esercitazione08/img_vcarve_paths.jpg"></br>
+<img src="images/esercitazione08/img_Vcarve-GCode.jpg"><br>
+	
     
-  <h3>Task</h3>
-        <p> This week I worked to launch Polifactory, the new makerspace of Politecnico di Milano. For this reason this exercise is still work in progress. Deadline: first week of April. </p><br>
+<h3>Computer-controlled machining</h3>
+<p> CNC Milling Machine: It is a 3 Axes CNC Macchine produced by an Italian SMEs (macchineCNC). First of all, the plywood panel has been locked setting up the relative zero. After I have enabled the three axes the CNC machine starts to make the first process, engraving the pockets to apply the screws. Then I start the second process cutting all pieces of the first wooden panel.
+Everything was fine then some small problems in fixing (few bridges) did move some pieces that have been touched by the end mill. During the milling of the second wooden panel the pieces did not move. I finally milled 22 different pieces.</p><br>
+      
+<img src="images/esercitazione08/img_machine.jpg"></br>
+<img src="images/esercitazione08/img_cutted-pieces.jpg"><br>
+	
+<h3>Final Assembly</h3>
+<p>I brought the pieces at home and I started assemblari all parts creating the structure. The structure was mounted. Two things are to be done to complete the object: The first is painted white object, the second is to modify a pair of parts of the housing of the boiler to enter the workpiece with the bulb holder.</p><br>
+	  
+<img src="images/esercitazione08/img08a_assembled.jpg"></br>
+<img src="images/esercitazione08/img08a_assembled.jpg"></br>
+<img src="images/esercitazione08/img08c_assembled-particular.jpg"></br>
+<img src="images/esercitazione08/img09_installed.jpg"></br>
+<img src="images/esercitazione08/img09a_installed-front.jpg"><br>
     
+<h3>Lesson Learnt</h3>
+<p>The milling machine is undoubtedly the most challenging and complex that I have used at Fab Academy. It is also extremely versatile. A machine that requires much accuracy and so much attention.
+I learned that it is very important to carefully plan the object, nesting, the use of the elements to block the materials on the machine and setting the processing parameters.</p><br>	
 
+    <h3>Download</h3>
+	<p><a href="nesting.dxf" class="link_text"> <strong> Download 2D object part 1 </strong></a><br>
+<a href="nesting2.dxf " class="link_text"> <strong> Download 2D object part 2 </strong></a>
+	</p></br>
+    
+    
 	<!-- Do not touch this! -->
     <!-- Bootstrap core JavaScript
     ================================================== -->
