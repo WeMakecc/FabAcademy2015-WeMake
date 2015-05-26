@@ -8,13 +8,15 @@
     <meta name="author" content="Name Surname">
     <link rel="icon" href="media/favicon.ico">
 
-    <title>Fab Academy 2015 - Name Surname</title>
+    <title>Fab Academy 2015 - Massimo Bianchini</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="media/fabacademy.css" rel="stylesheet">
+   <link href="media/fabacademy.css" rel="stylesheet">
+         <link href="media/stilemassimo.css" rel="stylesheet"> 
+      <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     
     <!-- 3D files viewer -->
     <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
@@ -81,151 +83,76 @@
 	<!-- Insert your content here below! -->
 
 
-    <h2>Final Project...</h1>
+    <h2>Final Project: IMPLEMENTATION</h1>
     
-    <h3>Menu</h3>
-	<p>
-	You can edit it by changing the <em>exercises-menu.html</em> and <em>project-menu.html</em>. Do <strong>not</strong> add any &ltol&gt; or &ltul&gt;, leave the structure as it is.
-	</p>
-    
-    
-    <h3>Text</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp&gt;
-	Your text here
-	&lt/p&gt;</pre>
-	</p>
-	Result:
-	<p>
-	Your text here
-	</p>
-	
-	<h3>Images</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp class="pic&gt;>&ltimg src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg"&gt;
-	&ltlegend&gt;Here's the legend of the picture.&lt/legend&gt;
-	&lt/p&gt;</pre>
-	</p>
-	Result:
-	<p class="pic"><img src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg">
-	<legend>Here's the legend of the picture.</legend>
-	</p>
+    <h3>Implementation phase</h3>
+	<p> Starting from the initial concept a lot of things i change now in my final project.
+A lot of things i learnt in these five months. For this reason, now I have refined and radically redesigned my idea. I think OBike is now a more (almost) feasible project. First of all, after the electronics design lessons I totally re-designed the case which contains all the electronics parts. Now the case is a compact box which contain two sensors and a Bluetooth module (infrared for measuring safety distance and a Co2 sensor). The case and bike mount will be 3D modeled and 3D printed.
+        The second important thing is related to the basic version of a Obike mobile APP. 
+I will use Python for interaction design and Kivy to create the Android Mobile Application. At this moment, the estimated cost to realize the first prototype of OBike is 50-60 euros.
+Finally a possible implementation of this project can be based on the concept of Smart Citizen Kit. </p> 
+
+        
+    <img src="images/progettoimplentation/01-general.jpg"><br>
+        <a href="images/progettoimplentation/01-general.pdf">General concept</a><br> 
+        <img src="images/progettoimplentation/02-components.jpg"><br>
+<a href="images/progettoimplentation/02-components.pdf">Components</a><br> 
+        <img src="images/progettoimplentation/03-case.jpg"><br>
+  <a href="images/progettoimplentation/03-case.pdf">Case</a><br> 
+        <img src="images/progettoimplentation/04-electronics.jpg">
+<a href="images/progettoimplentation/04-electronics.pdf">Electronics</a><br> 
+
+        
+
+    <h3>Case Studies</h3>
+        
+    <a href=”https://superpedestrian.com/”>Copenaghen Wheel</a><br> 
+    <a href=”https://mylapka.com/”>Lapka</a><br> 
+    <a href=”https://smartcitizen.me/”>Smart Citizen Kit</a><br> 
+    <a href=”http://supermechanical.com/twine/”>Twine</a><br> 
+        
+      <h3>BOM (Work in progress)</h3> 
+
+Below an in progress list of materials to create Obike
+<ol>
+<li>Lipo Battery 1000mAh 7.4V</li>
+<li>Module CO2 sensor MQ-135</li>
+<li>Infrared sensor Sharp GP2Y0A21</li>
+<li>BLE Bluetooth module HM10</li>
+<li>Module CO2 sensor MQ-135</li>
+<li>Transistor MOSFET ON Semiconductor 2N7002ET1G, canale N, SOT-23, 3 pin</li>
+<li>Low Dropout Voltage Regulator LP2985-33DBVT, 0.15A, 3,3 V, ±1.5%, 2,2 → 16 Vin, SOT-23, 5-Pin</li>
+<li> Low Dropout Voltage Regulator NCP1117ST50T3G, 2200mA, 5 V, ±1%, Massimo 20 Vin, SOT-223, 3-Pin</li>
+<li>Resistors</li>
+<li>Capacitors</li>
+</ol>    
+        
+        
+<h3> Process and machine tools</h3>
+       
+<li>OBike case and bike mount: 3D printers</li>
+<li>Electronic Design: Desktop Milling machine (for boards)</li>        
+
+<h3>Softwares</h3>
+        
+<li>Electronic Design: Eagle/Kicad and Fabmodules</li>
+<li>Application: Python</li>
+<li>3D printing: Rhino and Cura</li>
+<li>Application: Python and Kivy</li>
+
+        
+<h3>Tutorials</h3>
+<a href=”http://www.robot-italy.com/it/sensors/gas-2.html”>Gas Sensors tutorial</a><br> 
+<a href=”https://github.com/kivy/plyer/tree/master/examples/gps”>GPS in Kivy</a><br> 
+<a href=”https://github.com/tito/android-demo”>GPS in Kivy</a><br> 
+<a href=”http://www.fabacademy.org/archives/2015/doc/python-kivy.html”>A timer in Kivy</a><br> 
      
-	<h3>Code</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltpre class="prettyprint linenums"&gt;
-	Your code here
-	&lt/pre&gt;</pre>
-	
-	Result:
-	<pre class="prettyprint linenums">
-	for i in members:
-		print ""
-		print "USER:",members[i]
-		print "Loading connections..."
-		followers = load_connections([i], "followers")
-		friends = load_connections([i], "friends")
-
-		# Add edges...
-		print "Building the graph..."
-
-		for f in followers:
-			for k in followers[f]:
-				graph.add_edge(k,f)
-	
-		for f in friends:
-			for k in friends[f]:
-				graph.add_edge(f,k)</pre>
-	</p>
-	
-	<h3>3D Model</h3>
-	<p>	
-	The model can be rotated and zoomed with the mouse/trackpad. You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltcanvas id="cv" width=640 height=480&gt;
-	It seems you are using an outdated browser that does not support canvas :-(
-	&lt/canvas&gt;
-	&ltscript type="text/javascript"&gt;
-		var canvas = document.getElementById('cv');
-		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
-		viewer.setParameter('ModelColor','#CAA618');
-		viewer.setParameter('BackgroundColor1','#E5D7BA');
-		viewer.setParameter('BackgroundColor2','#383840');
-		viewer.setParameter('RenderMode','flat');
-		viewer.setParameter('MipMapping','on');
-		viewer.setParameter('Definition','high');
-		viewer.setParameter('Renderer','webgl');
-		viewer.init();
-		viewer.update();
-	&lt/script&gt;</pre>
-	
-	You can set up the path to the 3D model (.stl/.obj) within this line:
-	<pre class="prettyprint linenums">
-	viewer.setParameter('SceneUrl','media/monkey.stl');</pre>
-	
-	Result:
-	<canvas id="cv" width=640 height=480>
-	It seems you are using an outdated browser that does not support canvas :-(
-	</canvas>
-	<script type="text/javascript">
-		var canvas = document.getElementById('cv');
-		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
-		viewer.setParameter('ModelColor','#CAA618');
-		viewer.setParameter('BackgroundColor1','#E5D7BA');
-		viewer.setParameter('BackgroundColor2','#383840');
-		viewer.setParameter('RenderMode','flat');
-		viewer.setParameter('MipMapping','on');
-		viewer.setParameter('Definition','high');
-		viewer.setParameter('Renderer','webgl');
-		viewer.init();
-		viewer.update();
-	</script> 
-    </p> 
-    
-    <h3>Download</h3>
-	<p>
-	You can set up a button for files to be downloaded with:
-	<pre class="prettyprint linenums">
-	&lta href="#"&gt;
-	&ltbutton type="button" class="btn btn-primary btn-lg">Download the file&lt/button&gt;
-	&lt/a&gt;</pre>
-	</p>
-	
-	<p>
-	Result:
-	</p>
-	<p>
-	<a href="#">
-	<button type="button" class="btn btn-primary btn-lg">Download the file</button>
-	</a>
-	</p>
-      
-    <h3>Would you like to insert more style/elements?</h3>
-      <p>
-      Check the documentation of Bootstrap <a href="">here</a>.
-      </p>
+   
     <!-- End of your content -->
 
     </div> <!-- /container -->
 
 	<!-- footer -->
-    
-    <footer id="footer">
-        <p id="cclicense">
-                </p>
-        <p class="license">
-        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
-        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
-        </p>
-    </footer>
     
 
 	<!-- Do not touch this! -->
