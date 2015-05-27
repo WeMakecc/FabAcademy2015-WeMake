@@ -66,7 +66,7 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Neuro Toy <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Breathing Pod <span class="caret"></span></a>
               <ul id="project" class="dropdown-menu" role="menu">
               </ul>
             </li>
@@ -113,7 +113,7 @@ program-usbtiny: $(PROJECT).hex
 
 program-usbtiny-fuses: $(PROJECT).hex
 	avrdude -p t44 -P usb -c usbtiny -U lfuse:w:0x5E:m
-</pre>
+&lt/pre&gt;</pre>
 
        <h3>Program USBTiny / hello.ftdi.44.echo.c </h3> 
      
@@ -180,7 +180,7 @@ avrdude: safemode: Fuses OK (H:FF, E:DF, L:5E)
 
 avrdude done.  Thank you.
 
-</pre>
+&lt/pre&gt;</pre>
     <img src="img7/connection_scheme_Webasafe.jpg"/>
 
 <h3>LED blinking / Make FIle </h3>
@@ -201,7 +201,7 @@ Program:     758 bytes (18.5% Full)
 Data:         64 bytes (25.0% Full)
 (.data + .bss + .noinit)
 
-</pre>
+&lt/pre&gt;</pre>
 
 <h3>LED blinking program USBtiny </h3>
        <pre class="prettyprint linenums">
@@ -248,17 +248,17 @@ avrdude: 1 bytes of lfuse verified
 avrdude: safemode: Fuses OK (H:FF, E:DF, L:5E)
 
 avrdude done.  Thank you.
-</pre>
+&lt/pre&gt;</pre>
       
   <br>
 <a href="img7/C_LED.zip">
 	<button type="button" class="btn btn-primary btn-lg">Grab #C code/LED blink</button>
-    </a>
     <br><br><br>
     
     <h3>LED Button / Program USBtiny </h3>
     
 <pre class="prettyprint linenums">
+	&ltpre &gt;
 cicciocane:button sabinabarcucci$ make program-usbtiny
 avr-objcopy -O ihex button.out button.c.hex;\
 avr-size --mcu=attiny44 --format=avr button.out
@@ -304,7 +304,10 @@ avrdude: 106 bytes of flash verified
 avrdude: safemode: Fuses OK (H:FF, E:DF, L:5E)
 
 avrdude done.  Thank you.
-</pre>
+
+
+
+	&lt/pre&gt;</pre>
       
       <a href="img7/C_Button.zip">
 	<button type="button" class="btn btn-primary btn-lg">Grab #C code / Button</button>
@@ -343,7 +346,7 @@ avrdude done.  Thank you.
 	<pre class="prettyprint linenums">
 	&ltpre class="prettyprint linenums"&gt;
 	Your code here
-	</pre>
+	&lt/pre&gt;</pre>
 	
 	Result:
 	<pre class="prettyprint linenums">
