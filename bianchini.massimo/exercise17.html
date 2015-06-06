@@ -84,149 +84,35 @@
 	<!-- Insert your content here below! -->
 
 
-     <h2>Exercise 17 - invention, intellectual property, and income</h1>
+     <h2>Exercise 17 - Invention, intellectual property, and income</h1>
     
-    <h3>Start</h3>
-	<p>WIP</p>
+    <h3>Assignment</h3>
+	<p>Develop a plan for dissemination of your final project.</p><br>
     
-    <h3>Text</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp&gt;
-	Your text here
-	&lt/p&gt;</pre>
-	</p>
-	Result:
-	<p>
-	Your text here
-	</p>
-	
-	<h3>Images</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp class="pic&gt;>&ltimg src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg"&gt;
-	&ltlegend&gt;Here's the legend of the picture.&lt/legend&gt;
-	&lt/p&gt;</pre>
-	</p>
-	Result:
-	<p class="pic"><img src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg">
-	<legend>Here's the legend of the picture.</legend>
-	</p>
-     
-	<h3>Code</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltpre class="prettyprint linenums"&gt;
-	Your code here
-	&lt/pre&gt;</pre>
-	
-	Result:
-	<pre class="prettyprint linenums">
-	for i in members:
-		print ""
-		print "USER:",members[i]
-		print "Loading connections..."
-		followers = load_connections([i], "followers")
-		friends = load_connections([i], "friends")
+<h3>Invention</h3>
+<p>OBike can be defined as a product-service system, or better, an ‘embrión’ of a meta-product (a smart thing). I think this project can be basically open source. But open is not (necessarely) Free. This is a shared principle.
+First of all, I am really interested to explore the potential of Copyleft and Creative Commons. I am not interested to become a stable entrepeneurs. I am more interested to experiment and prototype new service-system solution adopting an hands-on approach. 
+For these reasons, I am not interesting to scale-up my idea into a permanent business, I prefer to make thing to explore and develop my design capabilities.
+During my PhD Thesis I investigated how designers, due the economic crisis, are combining analog/digital fabrication, interactive fabrication and bio-fabrication becoming temporary o permanent self-producers (<a href="https://polimi.academia.edu/MassimoBianchini">Academia / Massimo Bianchini</a>). For this reason I am very interested to self-experiment this kind of activity: the final scope is the knowledge transfer related to these practices to design students. A first dissemination activity concerns a paper/academic article about the topic of “independent innovation for urban service ecosystem” having the following structure:
+<li>1.	A state-of-the-art on the impact of independent innovation (making, hacking, self-production, crafting) in the development of new product-service system for urban ecosystems;</li>
+<li>A first map of “light case studies” related to indie product-service systems in order to isolate and describe common characteristics in the innovation process “from ideas to market”;</li>
+<li>The Obike experience and other projects related to urban mobility as a range of “deep case studies explaining the development of indie innovation processes.</li></p><br>
+        
+<h3>Intellectual property</h3>
+<p>Obike is conceived as Open Source project (both Hardware and Software). I want to share my idea to receive feedback and implementation by others people but not for a commercial scope. Probably, I will select the CC BY-NC-SA License (Attribution + Noncommercial + ShareAlike). It allows to distribute, modify, create derivative works from the original, but not for commercial purposes, provided that you recognized the paternity of the author and that the new work are granted the same license as the original (so each derived will not be allowed the commercial use).</p><br>
 
-		# Add edges...
-		print "Building the graph..."
+<h3>Income</h3>
+<p>In case of developing a small business based on the Obike concept, I could adopt the following strategy. 
+Firstly, I could sell Obike as a full assembled final product . This product is for a small number of ‘passive’ customers. In this case Obike could be sold online estimating a cost 70 euros without delivery costs (the cost of the prototype is around 35 dollars). The second part of the strategy concerns to sell a pre-assembled kit ze to a wider number of active users. These people can be interested to modify/personalize the product in this case could be interesting to give them the opportunity to buy additional sensors. In this case the price of Obike kit could be estimated in 50 euros. Pre-assembled kit could allow me to create a community market of users interested to give me possible feedback about future development of Obike. Finally, Obike open design digital files can be released online in order to allow all the people to self-produce the kit. In this case it is interesting augment the social reputation of my idea.</p><br>
+	
+<img src="images/esercitazione17/Image-property.jpg"><br>  
+        
+<h3>Company</h3>
+<p>I do not believe to create a brand new company it is a good idea maybe except in a condition. The first one is related to a possible business related to the sustainable mobility. Municipalities could be interested to install Obikes for bike sharing. In this case GPS, Alarm, Air Quality Control, Safety distance devices should be installed enabling environmental monitoring. Assistance service, repairing, refurbishing, personalization activities could be justify the creation of a new (small) company. An interested approach could be the lean start-up approach defined by Eric Ries.</p><br>
 
-		for f in followers:
-			for k in followers[f]:
-				graph.add_edge(k,f)
-	
-		for f in friends:
-			for k in friends[f]:
-				graph.add_edge(f,k)</pre>
-	</p>
-	
-	<h3>3D Model</h3>
-	<p>	
-	The model can be rotated and zoomed with the mouse/trackpad. You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltcanvas id="cv" width=640 height=480&gt;
-	It seems you are using an outdated browser that does not support canvas :-(
-	&lt/canvas&gt;
-	&ltscript type="text/javascript"&gt;
-		var canvas = document.getElementById('cv');
-		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
-		viewer.setParameter('ModelColor','#CAA618');
-		viewer.setParameter('BackgroundColor1','#E5D7BA');
-		viewer.setParameter('BackgroundColor2','#383840');
-		viewer.setParameter('RenderMode','flat');
-		viewer.setParameter('MipMapping','on');
-		viewer.setParameter('Definition','high');
-		viewer.setParameter('Renderer','webgl');
-		viewer.init();
-		viewer.update();
-	&lt/script&gt;</pre>
-	
-	You can set up the path to the 3D model (.stl/.obj) within this line:
-	<pre class="prettyprint linenums">
-	viewer.setParameter('SceneUrl','media/monkey.stl');</pre>
-	
-	Result:
-	<canvas id="cv" width=640 height=480>
-	It seems you are using an outdated browser that does not support canvas :-(
-	</canvas>
-	<script type="text/javascript">
-		var canvas = document.getElementById('cv');
-		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
-		viewer.setParameter('ModelColor','#CAA618');
-		viewer.setParameter('BackgroundColor1','#E5D7BA');
-		viewer.setParameter('BackgroundColor2','#383840');
-		viewer.setParameter('RenderMode','flat');
-		viewer.setParameter('MipMapping','on');
-		viewer.setParameter('Definition','high');
-		viewer.setParameter('Renderer','webgl');
-		viewer.init();
-		viewer.update();
-	</script> 
-    </p> 
-    
-    <h3>Download</h3>
-	<p>
-	You can set up a button for files to be downloaded with:
-	<pre class="prettyprint linenums">
-	&lta href="#"&gt;
-	&ltbutton type="button" class="btn btn-primary btn-lg">Download the file&lt/button&gt;
-	&lt/a&gt;</pre>
-	</p>
-	
-	<p>
-	Result:
-	</p>
-	<p>
-	<a href="#">
-	<button type="button" class="btn btn-primary btn-lg">Download the file</button>
-	</a>
-	</p>
-      
-    <h3>Would you like to insert more style/elements?</h3>
-      <p>
-      Check the documentation of Bootstrap <a href="">here</a>.
-      </p>
-    <!-- End of your content -->
+<h3>Company</h3>
+        <p>In case of development of a small business, crowdfunding could be evaluated as a possible middle-term option. In case of success the cost to produce a first series of 100 Obike full assembled kit should be implemented (35 euros x 100 pieces = 3.500 euros ). I can estimated a goal of 5000$ for a Kickstarter campaign.</p>
 
-    </div> <!-- /container -->
-
-	<!-- footer -->
-    
-    <footer id="footer">
-        <p id="cclicense">
-                </p>
-        <p class="license">
-        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
-        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
-        </p>
-    </footer>
-    
 
 	<!-- Do not touch this! -->
     <!-- Bootstrap core JavaScript
