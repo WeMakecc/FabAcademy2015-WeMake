@@ -27,7 +27,7 @@ var tasks = {
         {id:4, 
          text:"Select doc", 
          start_date:"28-05-2015", 
-         duration:13, 
+         duration:10, 
          progress:0.1, 
          parent:1, 
          open: true, 
