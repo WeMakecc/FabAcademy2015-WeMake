@@ -56,49 +56,50 @@ void loop () {
 
   if (gas < 500)
     {
-      // do Thing A
+      // Blue LED
+      ledBon();
+      delay (5000);
+      ledBoff ();
+
+      // Use the pump
+      pompaon (); // fa partire il void della scheda Pompa
+      digitalWrite (valvola, HIGH); // apre la vlvola
+      digitalWrite (valvola, LOW); // apre la vlvola
+      delay (8000); // questo valore è quello che serve al muscolo per gonfiarsi che trovo empiricamente
+      pompaoff (); //digitalWrite (valvola, LOW);
+
     }
    else if (gas >= 1000)
     {
-      // do Thing B
+      // Red LED
+      ledRon();
+      delay (5000);                                                 
+      ledRoff ();
+
+      // Use the pump
+      pompaon (); // fa partire il void della scheda Pompa
+      digitalWrite (valvola, HIGH); // apre la vlvola
+      digitalWrite (valvola, LOW); // apre la vlvola
+      delay (8000); // questo valore è quello che serve al muscolo per gonfiarsi che trovo empiricamente
+      pompaoff (); //digitalWrite (valvola, LOW);
+      
     }
    else
     {
-      // do Thing C
+      // Green LED
+      ledGon();
+      delay (5000);
+      ledGoff ();
+
+      // Use the pump
+      pompaon (); // fa partire il void della scheda Pompa
+      digitalWrite (valvola, HIGH); // apre la vlvola
+      digitalWrite (valvola, LOW); // apre la vlvola
+      delay (8000); // questo valore è quello che serve al muscolo per gonfiarsi che trovo empiricamente
+      pompaoff (); //digitalWrite (valvola, LOW);
     }
   
-  //ValPot = analogRead (Pot);
-  pompaon (); // fa partire il void della scheda Pompa
-  digitalWrite (valvola, HIGH); // apre la vlvola
-  ledRon () ; 
-  digitalWrite (valvola, LOW); // apre la vlvola
-  delay (8000); // questo valore è quello che serve al muscolo per gonfiarsi che trovo empiricamente
-  ledRoff;
-  pompaoff (); //digitalWrite (valvola, LOW);
-  ledGon ();
-  delay (10000);
-  ledGoff ();
-  digitalWrite (valvola, HIGH);
-  ledBon ();
-  delay (10000); 
-  ledBoff ();
-
-
-ledBon();
-delay (5000);
-ledBoff ();
-ledRon();
-delay (5000);                                                 
-ledRoff ();
-ledGon();
-delay (5000);
-ledGoff ();
-
-
-/*
-leggigas ();
-gasreport (); 
-*/
+  
 
 
 }
