@@ -50,6 +50,22 @@ void setup () {
 }
   
 void loop () {
+
+  // We read the gas data, and behave accordingly
+  gas = leggigas();
+
+  if (gas < 500)
+    {
+      // do Thing A
+    }
+   else if (gas >= 1000)
+    {
+      // do Thing B
+    }
+   else
+    {
+      // do Thing C
+    }
   
   //ValPot = analogRead (Pot);
   pompaon (); // fa partire il void della scheda Pompa
