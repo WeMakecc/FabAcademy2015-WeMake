@@ -8,13 +8,15 @@
     <meta name="author" content="Name Surname">
     <link rel="icon" href="media/favicon.ico">
 
-    <title>Fab Academy 2015 - Name Surname</title>
+    <title>Fab Academy 2015 - Massimo Bianchini</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="media/fabacademy.css" rel="stylesheet">
+    <link href="media/stilemassimo.css" rel="stylesheet"> 
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     
     <!-- 3D files viewer -->
     <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
@@ -55,7 +57,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Name Surname</a>
+          <a class="navbar-brand" href="index.html">Massimo Bianchini</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -81,152 +83,116 @@
 	<!-- Insert your content here below! -->
 
 
-    <h2>Final Project...</h1>
+    <h2>Final Project OBIKE</h1>
     
-    <h3>Menu</h3>
-	<p>
-	You can edit it by changing the <em>exercises-menu.html</em> and <em>project-menu.html</em>. Do <strong>not</strong> add any &ltol&gt; or &ltul&gt;, leave the structure as it is.
-	</p>
-    
-    
-    <h3>Text</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp&gt;
-	Your text here
-	&lt/p&gt;</pre>
-	</p>
-	Result:
-	<p>
-	Your text here
-	</p>
-	
-	<h3>Images</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp class="pic&gt;>&ltimg src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg"&gt;
-	&ltlegend&gt;Here's the legend of the picture.&lt/legend&gt;
-	&lt/p&gt;</pre>
-	</p>
-	Result:
-	<p class="pic"><img src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg">
-	<legend>Here's the legend of the picture.</legend>
-	</p>
-     
-	<h3>Code</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltpre class="prettyprint linenums"&gt;
-	Your code here
-	&lt/pre&gt;</pre>
-	
-	Result:
-	<pre class="prettyprint linenums">
-	for i in members:
-		print ""
-		print "USER:",members[i]
-		print "Loading connections..."
-		followers = load_connections([i], "followers")
-		friends = load_connections([i], "friends")
-
-		# Add edges...
-		print "Building the graph..."
-
-		for f in followers:
-			for k in followers[f]:
-				graph.add_edge(k,f)
-	
-		for f in friends:
-			for k in friends[f]:
-				graph.add_edge(f,k)</pre>
-	</p>
-	
-	<h3>3D Model</h3>
-	<p>	
-	The model can be rotated and zoomed with the mouse/trackpad. You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltcanvas id="cv" width=640 height=480&gt;
-	It seems you are using an outdated browser that does not support canvas :-(
-	&lt/canvas&gt;
-	&ltscript type="text/javascript"&gt;
-		var canvas = document.getElementById('cv');
-		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
-		viewer.setParameter('ModelColor','#CAA618');
-		viewer.setParameter('BackgroundColor1','#E5D7BA');
-		viewer.setParameter('BackgroundColor2','#383840');
-		viewer.setParameter('RenderMode','flat');
-		viewer.setParameter('MipMapping','on');
-		viewer.setParameter('Definition','high');
-		viewer.setParameter('Renderer','webgl');
-		viewer.init();
-		viewer.update();
-	&lt/script&gt;</pre>
-	
-	You can set up the path to the 3D model (.stl/.obj) within this line:
-	<pre class="prettyprint linenums">
-	viewer.setParameter('SceneUrl','media/monkey.stl');</pre>
-	
-	Result:
-	<canvas id="cv" width=640 height=480>
-	It seems you are using an outdated browser that does not support canvas :-(
-	</canvas>
-	<script type="text/javascript">
-		var canvas = document.getElementById('cv');
-		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
-		viewer.setParameter('ModelColor','#CAA618');
-		viewer.setParameter('BackgroundColor1','#E5D7BA');
-		viewer.setParameter('BackgroundColor2','#383840');
-		viewer.setParameter('RenderMode','flat');
-		viewer.setParameter('MipMapping','on');
-		viewer.setParameter('Definition','high');
-		viewer.setParameter('Renderer','webgl');
-		viewer.init();
-		viewer.update();
-	</script> 
-    </p> 
-    
-    <h3>Download</h3>
-	<p>
-	You can set up a button for files to be downloaded with:
-	<pre class="prettyprint linenums">
-	&lta href="#"&gt;
-	&ltbutton type="button" class="btn btn-primary btn-lg">Download the file&lt/button&gt;
-	&lt/a&gt;</pre>
-	</p>
-	
-	<p>
-	Result:
-	</p>
-	<p>
-	<a href="#">
-	<button type="button" class="btn btn-primary btn-lg">Download the file</button>
-	</a>
-	</p>
-      
-    <h3>Would you like to insert more style/elements?</h3>
+    <h3>Video</h3>
       <p>
-      Check the documentation of Bootstrap <a href="">here</a>.
-      </p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mv8wx1_YfOM" frameborder="0" allowfullscreen></iframe>
+      </p><br>
+        
+<h3>3D Model</h3>
+<p> Using Inventor I create the case for Obike. I design the case in three parts to host all boards and components
+The bike mou and the join for the case have been downloaded by Thingiverse. The join has been remodeled and adapted to the case.
+Material is PLA, the image below shows the parameters used in Cura:
+</p>
+        
+<img src="progettodevelopment/3dmodeling.png"><br>
+<img src="progettodevelopment/curasetup.png"><br>
+
+<h3>3D Model</h3>
+<p> <a href="progettodevelopment/casesx.stl" class="link_text"> <strong>Case SX</strong></a><br>
+    </p>    
+<p> <a href="progettodevelopment/casedx.stl" class="link_text"> <strong>Case SX</strong></a><br>
+    </p><br>    
+        
+<h3>Electronics design</h3>
+</h3>
+<p> I start to develop my project designing 3 small boards:
+<li>FabKit 3.0 </li>    
+<li>An adapter to converte the 9V energy to 3.3V and 5V </li>    
+<li>An adapter to converte the 9V energy to 3.3V and 5V </li>
+<li>A specific board for the MH12 Bluetooth Module <li>
+<li>A small board to convert RX/TX 3.3V to 5V for bluetooth module (the assembled board of bluetooth module doesn't need these boards)</li><br>
+
+I mill the three boards using a Shapeoko with these parameters creating gcode file through FabModules:
+<li>OUTPUT</li>	
+<li>cut speed (mm/s):4</li>	
+<li>plunge speed (mm/s):4</li>	
+<li>jog speed (mm/s):10</li>	
+<li>jog height (mm): 1</li>	
+<li>spindle speed (RPM):10000</li>	
+<li>tool:0.4</li>	
+<li>coolant:off</li>	
+<li>PROCESS	</li>	
+<li>direction:climb</li>	
+<li>cut depth (mm): 0.18</li>	
+<li>stock thickness (mm): 0.18</li>	
+<li>tool diameter (mm): 0.4</li>	
+<li>number of offsets (-1 to fill): -1</li>	
+<li>offset overlap (%):70%</li>	
+<li>path error (pixels):1.0</li>	
+<li>image threshold (0-1):0.5</li>	
+<li>sort merge diameter multiple: 1.5</li>	
+<li>sort order weight: -1</li>	
+<li>sort sequence weight: -1</li><br>    
+
+<p> Costantino Bongiorno and me had some problems to set-up the right parameters and we use both Eagle and Illustrator to adapt and refine/optimize the traces of FabKit in order to be easy milled. The final BOM and datasheets of parts and components will be updated. </p><br>
+
+<img src="progettodevelopment/rxtxconvertertraces.zip">
+<img src="progettodevelopment/energyconvertertraces.png">
+<img src="progettodevelopment/bluetoothtraces.zip"><br>
+    
+<h3>OBIKE CODE</h3>
+I wrote a code to control both the Air Quality and Ultrasound sensors and connecting its to the Bluetooth:
+<p>
+<pre class="prettyprint linenums">
+
+#include <SoftwareSerial.h>// import the serial library
+SoftwareSerial Genotronex(10, 11); // RX, TX
+
+void setup() {
+ 
+  Genotronex.begin(9600);
+  Genotronex.println("Welcome to PoliFactory");
+  pinMode(13, OUTPUT);
+}
+
+void loop() {
+  float SonarValue=0;
+  float GasValue=0;
+ 
+  SonarValue = analogRead(A0);
+  GasValue = analogRead(A1);
+  //float value=pow(116.6020682*(sensorValue2/41763),(-2.769034857));
+  //float value=pow(10,((220-sensorValue2*1000)+158.631)/62.877 );  
+  delay(100);
+  
+  Genotronex.print("Gas Value = ");
+  Genotronex.print(2.2*GasValue);
+  
+  Genotronex.print("  Sonar Value =");
+  Genotronex.println(SonarValue);
+  if(SonarValue>30)
+  pinMode(13, HIGH);
+  else
+  pinMode(13,LOW);
+  delay(100);
+
+}</pre>
+	</p>
+    
+<h3>App and GUI</h3>
+<p>I am completing the GUI and the APP learning to use Kivy. Next and Final step is connect bluetooth to the kivy application. 
+The OBIKE app will be composed by two screenshot:
+<li>the first will generate a sound when the ultrasonar sensor will detect the critical distance between the bike and a vehicle.</li>
+<li>the second screenshot will generate a map (will be connercted to a GPS in order to show where the level/concentration of CO2 is more of 1000mmp (the critical level)</li>
+
+<h3>Acknowledgments</h3>
+<p>I Thank you very much all the people that help me to complete my final project (and other exercises) providing me tips and precious suggestions. I want to thank you in particula Gianni Terragni (We Make FabLab), Diego Quetti, Patrizia Bolzan and Naveed Anwar Bhatti (Politecnico di Milano, Polifactory).	</p>
+
     <!-- End of your content -->
 
-    </div> <!-- /container -->
-
-	<!-- footer -->
-    
-    <footer id="footer">
-        <p id="cclicense">
-                </p>
-        <p class="license">
-        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
-        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
-        </p>
-    </footer>
-    
+    </div> <!-- /container -->    
 
 	<!-- Do not touch this! -->
     <!-- Bootstrap core JavaScript
