@@ -83,46 +83,75 @@
 
         <h2><strong>Mechanical Design, Machine design</strong></h1>
     
-        <h3>Granatina: a linear pneumatic extruder </h3> 
+        <h3>The Granatina Machine: a linear pneumatic extruder </h3> 
         <br> <br>
-        <iframe width="853" height="480" src="https://www.youtube.com/embed/wt6w9UyjyEw" frameborder="0" allowfullscreen></iframe> 
-           <h3>Final iteration </h3> 
+        <iframe width="853" height="480" src="https://www.youtube.com/embed/wt6w9UyjyEw" frameborder="0" allowfullscreen></iframe> <br><br>
+        
+ Assignment: make a machine, including the end effector
+   build the passive parts and operate it manually
+   document the group project and your individual contribution. <br><br>
+        As group assignment, we decided to use the 3 axis and 3 gestalt nodes in order to create a machine able to pick and release liquids, using a preumatic extruder equipepd qith a sirynge. <br> <br>
+        
+        All three collaborate to develop this machine. In particular:<br> 
+
+- I mainly focused my work on developing the E axis and the pneumatic system to pick the liquid using the syringe. This was interesting for me because of my final project that at the begin had to work with syromges. I will document below this work<br>
+- <a href="http://fabacademy.org/archives/2015/eu/students/bongiorno.costantino/exercise16.html">Costantino</a> has mainly worked on developing the X and Z axis and connecting the gestalt nodes.<br>        
+- <a href="http://fabacademy.org/archives/2015/eu/students/bianchini.massimo/exercise16.html">Massimo</a> has mainly worked on developing the GUI and the Algorithm (or better, learning ho to make it). In particular, this assignment has to be finally implemented.<br>
+        
+        Below the original scheme of the three axis. Actually, all axis have the same lenght, since they derive from the stage design of the gestalt project. I focused on the extruder, the second Z axis named "E". <br> <br>
+        <img src="img14/Granatine_scheme.jpg"/></a><br><br>
+        
+           <h3>Extruder development </h3> 
         <br> 
         
     For the group project I developed the pneumatic extruder axe of the Granatina machine that integrate a syringe aspiring and releasing liquids to be moved from one point (a glass) to an other (an other glass) and make the mix.    <br> <br>
-        I modified the original stage design of the the Gestalt project, integrating a syringe in the stage and making the stage with a more resistant material (plywood 4 mm thick) since the pression necessary for operating the syringe would be too high for a cardboard stage. Cardboard stages would have shown problems of stability. 
+      <img src="img14/small_16.jpg"/></a><br><br>
+        I modified the original stage design of the the Gestalt project, integrating a syringe in the stage and making the stage with a more resistant material (plywood 4 mm thick) since the pression necessary for operating the syringe would be too high for a cardboard stage. Cardboard stages would have shown problems also of stability. 
             <br> <br>
+    
+    I designed the new stage enlarging the whole element in order to host the syringe and leaving also space for hands during syringe operation (insertion and removal). I have got inspiration studying the extruder of an FDM 3D printer that has a preumatic extruder to print fused chocolate (3DRag printer). <br> <br>
+    
+    <img src="img14/old_2.jpg"/></a><br><br>
+<img src="img14/small_2.jpg"/></a><br><br>
+<h3>Mechanical details </h3> 
+    
+      <img src="img14/small_15.jpg"/></a><br><br>
         
-        <img src="img14/small_1.jpg"/></a><br><br>
-      <img src="img14/small_2.jpg"/></a><br><br>
-    <img src="img14/small_3.jpg"/></a><br><br>
-<img src="img14/small_4.jpg"/></a><br><br>
-<img src="img14/small_5.jpg"/></a><br><br>
-<img src="img14/small_6.jpg"/></a><br><br>
-<img src="img14/small_7.jpg"/></a><br><br>
-<img src="img14/small_8.jpg"/></a><br><br>
-<img src="img14/small_9.jpg"/></a><br><br>
-<img src="img14/small_10.jpg"/></a><br><br>
-<img src="img14/small_11.jpg"/></a><br><br>
-<img src="img14/small_12.jpg"/></a><br><br>
-<img src="img14/small_13.jpg"/></a><br><br>
-<img src="img14/small_14.jpg"/></a><br><br>
-<img src="img14/small_15.jpg"/></a><br><br>
-<img src="img14/small_16.jpg"/></a><br><br>
+<a href="img14/Granatina_Extruder.dxf">
+	<button type="button" class="btn btn-primary btn-lg">Grab the extruder dxf files</button> </a>
+    
 
-<h3>Previous iteration </h3> 
-        <br> 
-<img src="img14/old_1.jpg"/></a><br><br>
-<img src="img14/old_2.jpg"/></a><br><br>
-<img src="img14/old_3.jpg"/></a><br><br>
-<img src="img14/old_4.jpg"/></a><br><br>
-<img src="img14/old_5.jpg"/></a><br><br>
-<img src="img14/old_6.jpg"/></a><br><br>
-<img src="img14/old_7.jpg"/></a><br><br>
-<img src="img14/old_8.jpg"/></a><br><br>
+<h3>The Gestals nodes </h3>
+We follow all the tutorials to use Fabnet, and connected Gestalt nodes for the three axis. Moreover, a first version of the machine has been prototyped laser cutting cardboard and drawing the first version of a basic GUI to control the steppers. As shown in the pictures we did'nt use the suggested cable for RS485. We use instead a simpler bord with FTDI chip (to use it via Usb) and a RS485 ic. As next step I'll design a new fabnet with a RS485 chip. It would be a good to save money and adding some features on that board.
+As power source we use a power bench supply 12V DC (current about 2 amps).<br><br>
+
+<img src="img14/02Gestaltnodestest.jpg"/></a><br><br>
 
 
-      
+
+<h3>Assembling the machine</h3>
+<img src="img14/assembly.jpg"/></a><br><br>
+
+<h3>Testing the machine </h3>
+We follow all the instructions from various tutorials in the Fab academy archive. We download Python, then install wxGestalt in order to control and command the gestalt nodes and moving the machine. We use the template provided by the tutorial to move the nodes in order to test the machine. The final GUI has to be implemented as follow. Nodes 1 (X axis) has been tested alone to understand how to command and move it. Finally the same procedure has been adopted for the other three axis and finally Granatina works.
+Creating the GUI and final algorithm to move the three axis is the final step to complete the machine. The GUI will have 7 buttons.
+X axis moves left and right the syringe
+- Z axis moves up and down the syringe
+- E axis moves up and down the piston of the syringe
+
+<h3>GUI </h3>
+The simplest solution is to create a simple GUI which have 6 buttons. two buttons for each Axis as follow:
+X Axis: Button “-“ (less) and “+” (more)
+Z Axis: Button “-“ (down) and “+” (up)
+E Axis Button “-“ (down) and “+” (up)
+Home Button: X0, Z0, E0
+
+
+To control the machine we rely on the good interface created by Massimo Menichinelli. See here!
+In order to make Granatina works we simply modified the moves:
+<pre class="prettyprint linenums">
+	1.		moves = [[0,0,0],[0,80,0],[0,80,30],[0,0,30],[110,0,30],[110,40,30],[110,30,0],[110,0,0],[0,0,0]</pre>
+
       <!--
 
      <h2>Exercise...</h1>
