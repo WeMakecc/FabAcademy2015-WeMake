@@ -87,12 +87,107 @@
 
 <h3>Assignment</h3>
 <p> Read a microcontroller data sheet program your board to do something, with as many different programming languages
-and programming environments as possible </p><br>        
+and programming environments as possible </p><br>
 
-<h3>Task</h3>
-<p> This week I worked to launch Polifactory, the new makerspace of Politecnico di Milano. For this reason this exercise is still work in progress. Deadline: first week of April. </p><br>
+<h3>Read Datasheet</h3>
+<p> This week I worked to launch Polifactory, the new makerspace of Politecnico di Milano. For this reason this exercise is still work in progress. Deadline: first week of April.</p><br>
+        
+<img src="images/esercitazione07/explication.jpg"><br>
+
+<h3>Programming Hello Echo! using C+</h3>
+<p>I follow the tutorial provided by FabAcademy archive. The first difficult phase is to write the make file. <br>
+
+<pre class="prettyprint linenums">
+
+PROJECT=hello.ftdi.44.echo
+SOURCES=$(PROJECT).c
+MMCU=attiny44
+F_CPU = 20000000
+ 
+CFLAGS=-mmcu=$(MMCU) -Wall -Os -DF_CPU=$(F_CPU)
+ 
+$(PROJECT).hex: $(PROJECT).out
+	avr-objcopy -O ihex $(PROJECT).out $(PROJECT).c.hex;\
+	avr-size --mcu=$(MMCU) --format=avr $(PROJECT).out
+ 
+$(PROJECT).out: $(SOURCES)
+	avr-gcc $(CFLAGS) -I./ -o $(PROJECT).out $(SOURCES)
+ 
+program-bsd: $(PROJECT).hex
+	avrdude -p t44 -c bsd -U flash:w:$(PROJECT).c.hex
+ 
+program-dasa: $(PROJECT).hex
+	avrdude -p t44 -P /dev/ttyUSB0 -c dasa -U flash:w:$(PROJECT).c.hex
+ 
+program-avrisp2: $(PROJECT).hex
+	avrdude -p t44 -P usb -c avrisp2 -U flash:w:$(PROJECT).c.hex
+ 
+program-avrisp2-fuses: $(PROJECT).hex
+	avrdude -p t44 -P usb -c avrisp2 -U lfuse:w:0x5E:m
+ 
+program-usbtiny: $(PROJECT).hex
+	avrdude -p t44 -P usb -c usbtiny -U flash:w:$(PROJECT).c.hex
+ 
+program-usbtiny-fuses: $(PROJECT).hex
+	avrdude -p t44 -P usb -c usbtiny -U lfuse:w:0x5E:m
+ 
+program-dragon: $(PROJECT).hex
+	avrdude -p t44 -P usb -c dragon_isp -U flash:w:$(PROJECT).c.hex
+</pre></p><br>
+
+<p>After the make file I moved to "hello.ftdi.44.echo.C". Gianni Terragni, a superskilled engineer that work at WeMake follows me step by step and helps me to complete this task.</p><br>
+
+<img src="images/esercitazione07/blinkC.jpg"><br>
+
+<p>Programming Hello Echo! using ARDUINO IDE </p><br>
+      
+<pre class="prettyprint linenums">
+
+/*
+  Blink
+  Turns on an LED on for one second, then off for one second, repeatedly.
+
+  Most Arduinos have an on-board LED you can control. On the Uno and
+  Leonardo, it is attached to digital pin 13. If you're unsure what
+  pin the on-board LED is connected to on your Arduino model, check
+  the documentation at http://arduino.cc
+
+  This example code is in the public domain.
+
+  modified 8 May 2014
+  by Scott Fitzgerald
+ */
+
+
+// the setup function runs once when you press reset or power the board
+void setup() {
+  // initialize digital pin 7 as an output.
+  pinMode(7, OUTPUT);
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(7, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(5000);              // wait for a second
+  digitalWrite(7, LOW);    // turn the LED off by making the voltage LOW
+  delay(5000);              // wait for a second
+}
+
+</pre></p><br>
+
+<img src="images/esercitazione07/blinkIDE.jpg">
+<img src="images/esercitazione07/blinkarduino.jpg"><br>
     
-    
+<p>Using Arduino it has been easy to create the blink. I am totally a beginner in the field of electronics and to be honest without some help it was not possible for me to complete this task. So I have to improve a lot my knowledge in the filed of coding and electronics. </p>
+
+<h3>Video</h3>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wzXErLCvsBQ" frameborder="0" allowfullscreen></iframe>
+<p>Blink video #1</p><br>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/V28euFo3B-o" frameborder="0" allowfullscreen></iframe>
+<p>Blink video #2</p>
+
 	<!-- Do not touch this! -->
     <!-- Bootstrap core JavaScript
     ================================================== -->
