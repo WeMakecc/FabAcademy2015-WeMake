@@ -122,7 +122,7 @@
     
 
 <h3>The Gestals nodes </h3>
-We follow all the tutorials to use Fabnet, and connected Gestalt nodes for the three axis. Moreover, a first version of the machine has been prototyped laser cutting cardboard and drawing the first version of a basic GUI to control the steppers. As shown in the pictures we did'nt use the suggested cable for RS485. We use instead a simpler bord with FTDI chip (to use it via Usb) and a RS485 ic. As next step I'll design a new fabnet with a RS485 chip. It would be a good to save money and adding some features on that board.
+We follow all the tutorials to use Fabnet, and connected Gestalt nodes for the three axis. We prototyped a first cardboard version. We did'nt use the FabNet and the suggested cable for RS485. We use instead a simpler board with FTDI chip (to use it via Usb) and a RS485 ic. 
 As power source we use a power bench supply 12V DC (current about 2 amps).<br><br>
 
 <img src="img14/02Gestaltnodestest.jpg"/></a><br><br>
@@ -133,22 +133,25 @@ As power source we use a power bench supply 12V DC (current about 2 amps).<br><b
 <img src="img14/assembly.jpg"/></a><br><br>
 
 <h3>Testing the machine </h3>
-We follow all the instructions from various tutorials in the Fab academy archive. We download Python, then install wxGestalt in order to control and command the gestalt nodes and moving the machine. We use the template provided by the tutorial to move the nodes in order to test the machine. The final GUI has to be implemented as follow. Nodes 1 (X axis) has been tested alone to understand how to command and move it. Finally the same procedure has been adopted for the other three axis and finally Granatina works.
-Creating the GUI and final algorithm to move the three axis is the final step to complete the machine. The GUI will have 7 buttons.
-X axis moves left and right the syringe
-- Z axis moves up and down the syringe
-- E axis moves up and down the piston of the syringe
+<img src="img14/Granatina.jpg"/></a><br><br>
+We follow all the instructions from various tutorials in the Fab academy archive. We download Python, then install wxGestalt in order to control and command the gestalt nodes and moving the machine. We use the template provided by the tutorial to move the nodes in order to test the machine. The final GUI has to be implemented as follow. Nodes 1 (X axis) has been tested alone to understand how to command and move it. Finally the same procedure has been adopted for the other three axis and  Granatina worked.
+
 
 <h3>GUI </h3>
-The simplest solution is to create a simple GUI which have 6 buttons. two buttons for each Axis as follow:
-X Axis: Button “-“ (less) and “+” (more)
-Z Axis: Button “-“ (down) and “+” (up)
-E Axis Button “-“ (down) and “+” (up)
-Home Button: X0, Z0, E0
+Creating the GUI and final algorithm to move the three axis is the final step to complete the machine. The GUI will have 7 buttons.<br><br>
+- X axis moves left and right the syringe<br>
+- Z axis moves up and down the syringe<br>
+- E axis moves up and down the piston of the syringe<br><br>
+The simplest solution is to create a simple GUI which have 6 buttons. Two buttons for each Axis as follow:<br><br>
+X Axis: Button “-“ (less) and “+” (more)<br>
+Z Axis: Button “-“ (down) and “+” (up)<br>
+E Axis Button “-“ (down) and “+” (up)<br>
+Home Button: X0, Z0, E0<br><br>
 
 
-To control the machine we rely on the good interface created by Massimo Menichinelli. See here!
-In order to make Granatina works we simply modified the moves:
+To control the machine we rely on the good interface created by Massimo Menichinelli and documented <a href="http://fabacademy.org/archives/2015/doc/projects/wxgestalt.html">here</a>.<br><br>
+
+In order to make Granatina works we simply modified the moves:<br><br>
 <pre class="prettyprint linenums">
 	1.		moves = [[0,0,0],[0,80,0],[0,80,30],[0,0,30],[110,0,30],[110,40,30],[110,30,0],[110,0,0],[0,0,0]</pre>
 
