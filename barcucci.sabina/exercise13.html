@@ -80,27 +80,156 @@
 
 	<!-- Insert your content here below! -->
  <h2><strong>Networking and Communication</strong></h1>
-    
-        <h3>FabKits Serial Communication</h3> 
+        <h3>FabKit Serial Communication</h3> 
+        Weekly assignment: design and build a wired &/or wireless network connecting at least two processors. <br>
+        For this assignment I went for making a FabKit 0.4 and to connect it with another fabKit via serial communication. <br><br>
         
         <img src="img13/serial_communication_FabKit.jpg"/></a> <br><br>
-      It is possible to chain FabKits together in such a way as to get communication between the two. Having FabKit-FabKit communication can be useful for many projects, such as having one FabKit to run motors and having another sense the surroundings and then relay commands to the other FabKit. This can be done in several methods serial port, among others.
+         <h3>1) Making a FabKit 0.4</h3>
+      I decided to make, solder and program a FabKit, an Arduino-compatible board designed by David Mellis and based on an ATMEGA382P microcontroller, because this board will be useful for my final project. I started following this tutorial <a href="http://fabacademy.org/archives/2015/doc/projects/fabkit-0.4.html">this tutorial on FabKit 0.4 by Massimo Menichinelli</a> where I could donwload the several files to understand it, make it, stuff it and wire it. <br> <br>
+      
+      <a href="img13/FabKit_0.4_eagle_files.zip">
+      <button type="button" class="btn btn-primary btn-lg">Grab FabKit0.4 eagle files</button> </a><br> <br>
+      
+      <a href="img13/FabKit_0.4_png_files.zip">
+    <button type="button" class="btn btn-primary btn-lg">Grab FabKit0.4 png files</button> </a><br> <br>
+      To make the board, I have been at <a href="http://www.opendotlab.it/">OpenDot FabLab</a> to use their lasercutter, a Trotec Speedy 100 flexx. The flexx line of laser cutters has both CO2 and fiber laser technologies: 60 watt CO2 laser, 30 watt fiber laser. <br><br>
       
       
+ Below you find a description of the laser settings from this <a href="http://fabacademy.org/archives/2015/doc/fiber-laser-cutting-pcb.html">OpenDot tutorial</a>: <br><br>
+    
+      <img src="img13/FR1_settings_Trotec.jpg"/></a> <br><br>
+    <img src="img13/fabkit_colors.jpg"/></a> <br><br>
+      <blockquote cite="http://fabacademy.org/archives/2015/doc/fiber-laser-cutting-pcb.html">
+The black color is used for the first pass, and it is needed for engraving the copper away (otherwise we cannot cut the FR1 board). These are the settings:
+
+Type: fiber laser.
+Power: 80.00.
+Speed: 20.00.
+PPI/Hz: 20000.
+Passes: 9.
+Advanced:
+Correction: 10.
+High quality: yes.
+Raster correction: yes.
+The red color is used for the second pass, for cutting the holes in the FR1 board. These are the settings:
+
+Type: CO2.
+Power: 50.00.
+Speed: 0.60.
+PPI/Hz: 5000.
+Passes: 3.
+Advanced: Default
+The blue color is used for the third pass, for cutting the border in the FR1 board. These are the settings:
+
+Type: CO2.
+Power: 80.00.
+Speed: 0.60.
+PPI/Hz: 5000.
+Passes: 2.
+Advanced: Default
+</blockquote>
+      
+      <img src="img13/trotec_fiber_laser.jpg"/></a> <br><br>
+
+Then I soldered the board, using the Bill of Material below reported. 
+      
+        <pre class="prettyprint linenums">
+<h3>FabKit 0.4 BOM</h3> 
+-C1 .1uf C-EUC1206 C1206 CAPACITOR, European symbol
+399-4674-1-ND 
+http://www.digikey.it/product-detail/it/C1206C104KARACTU/399-4674-1-ND/992199
+-C2 1uf UNPOLARIZED_CAPACITOR1206 unpolarized_capacitor
+445-1423-1-ND
+http://www.digikey.it/product-detail/it/C3216X7R1H105K160AB/445-1423-1-ND/569089
+- C3 .1uf UNPOLARIZED_CAPACITOR1206 unpolarized_capacitor
+399-4674-1-ND
+http://www.digikey.it/product-detail/it/C1206C104KARACTU/399-4674-1-ND/992199
+- C4 10uf UNPOLARIZED_CAPACITOR1206 unpolarized_capacitor
+587-1352-1-ND
+http://www.digikey.it/product-detail/it/GMK316F106ZL-T/587-1352-1-ND/931129
+- IC1 ATMEGA48/88/168-AU
+TQFP32-08 ATMEGA328P-AU-ND
+http://www.digikey.it/product-detail/it/ATMEGA328P-AU/ATMEGA328P-AU-ND/1832260
+- JP1 M06SMD 1X06-SMD Header 6 SAM1043-06-ND
+http://www.digikey.it/product-detail/it/TSW-106-08-L-S-RA/SAM1043-06-ND/1102018
+ - LED1206 LED YELLOW ORANGE CLEAR 1206 SMD
+160-1403-1-ND
+http://www.digikey.it/product-search/it?KeyWords=160-1403-1-ND%09&WT.z_header=search_go
+- PAD2 WIREPAD2,54/0,9
+Wire PAD connect wire on PCB
+-R1 10k RESISTOR1206 311-10.0KFRCT-ND
+http://www.digikey.it/product-detail/it/RC1206FR-0710KL/311-10.0KFRCT-ND/731430
+- R2 499 RESISTOR1206 311-499FRCT-ND
+http://www.digikey.it/product-detail/it/RC1206FR-07499RL/311-499FRCT-ND/731891
+- S1 6MM_SWITCH6MM_SWITCH OMRON SWITCH SW262CT-ND
+http://www.digikey.it/product-detail/it/B3SN-3112P/SW262CT-ND/60835
+- SV1 MA08-1 PIN HEADER S9016E-10-ND
+http://www.digikey.it/product-detail/it/GRPB101VWCN-RC/S9016E-10-ND/1786473
+- U$2 RESONATOREFOB EFOBM 535-10004-1-ND
+http://www.digikey.it/product-detail/it/AWSCR-8.00CV-T/535-10004-1-ND/2001627
+</pre>
+
+I was quite scared of soldering the microcontroller, since the several pins to solder and their super tiny dimensions. Actually, this was quite easy, fast and surprisingly clean. <br><br>
+
+<img src="img13/fabkit_soldering.jpg"/></a> <br><br>
+
+<h3>2) Programming a FabKit 0.4</h3>
+
+Always in <a href="http://fabacademy.org/archives/2015/doc/projects/fabkit-0.4.html">this tutorial</a>, I found instructions on how to program the FabKit using the Arduino IDE. <br><br>
+First I added this text to the boards.txt files of the arduino application installed in my computer. 
+
+<pre class="prettyprint linenums">
+##############################################################
+
+fabduino.name=Fabkit/Fabduino w/ ATmega328 (internal clock)
+
+fabduino.upload.protocol=stk500v1
+fabduino.upload.maximum_size=14336
+fabduino.upload.speed=19200
+
+fabduino.bootloader.low_fuses=0xe2
+fabduino.bootloader.high_fuses=0xdd
+fabduino.bootloader.extended_fuses=0x00
+fabduino.bootloader.path=arduino:atmega
+fabduino.bootloader.file=atmega/ATmegaBOOT_168_atmega328_pro_8MHz.hex
+fabduino.bootloader.unlock_bits=0x3F
+fabduino.bootloader.lock_bits=0x0F
+
+fabduino.build.mcu=atmega328p
+fabduino.build.f_cpu=8000000L
+
+fabduino.build.core=arduino:arduino
+fabduino.build.variant=arduino:standard
+
+fabduino.upload.tool=arduino:avrdude
+fabduino.bootloader.tool=arduino:avrdude
+</pre>
+Once that was done, I could find in my arduino IDE a new board, the FabKit, among the others. <br>
+<img src="img13/type_of_arduino.jpg"/></a> <br>
+I selected USBtinyISP as programmer since I used the FabISP to burn the booloader of the FabKit. <br>
+<img src="img13/progammer.jpg"/></a> <br>
+
+The IDE feedback when I tried to "burn the bootloader" was always reporting connection problem and I struggled for a while before understanding that the board was already programmable. I tried the simple blink sketch and it worked (better to keep the reset button pushed while the code is uploaded on the FabKit). <br><br>
+
+Finally, I was ready to experiment with Networking and communication, connecting two FabKits to each other. 
+
+    
+        <h3>FabKits Serial Communication</h3> 
+        <iframe width="640" height="480" src="https://www.youtube.com/embed/-O7YasFL6B4" frameborder="0" allowfullscreen></iframe>
+<br><br>
+        
+      It is possible to chain FabKits together in such a way as to get communication between the two. Having FabKit-FabKit communication can be useful for many projects, such as having one FabKit to run motors and having another sense the surroundings and then relay commands to the other FabKit. This can be done in several methods serial port, among others.<br><br>
 
 I followed <a href="http://robotic-controls.com/learn/arduino/arduino-arduino-serial-communication">this</a> tutorial for the Networking and Communication assignment. It focuses on Arduino-Arduino communication through the serial ports (RX and TX). The Fritzing scheme below shows the simple connection among pcbs. Note that note that TX goes to RX and RX goes to TX. <br><br><br>
       
       <img src="img13/arduino_serial.jpg"/></a> <br>
      
-    <h3>FabKits PinOut</h3> 
-    I used this pinout for ATMEGA168 to understand where Tx, Rx and FabKit-Arduino corresponding pins are located before starting wiring and coding the boards. <br><br>
-    <img src="img13/FabKit_PinOut.jpg"/></a> <br><br><br>
 To let the two FabKit communicate, I needed to prepare two sketches, the first sending a data (an input) to the second that had to give an output according to the data received: a first arduino as sender, and the second as receiver. When the FabKit sender sends via serial port "1", the FabKit receiver lights up a LED. When the sender sends a "0", the receiver shut down the LED. <br><br>
 
     <img src="img13/IDE_tx_rx.jpg"/></a> <br><br>
 
-<iframe width="640" height="480" src="https://www.youtube.com/embed/-O7YasFL6B4" frameborder="0" allowfullscreen></iframe>
-<br><br>
+
 
 <h3>Sender</h3>
 	<p>The
