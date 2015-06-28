@@ -110,7 +110,7 @@ I started thinking on how to work my object using a 3d modeling software. Afterw
         The software generated a pdf file that I opened in Illustrator and exported as dwg file in order to work on it in Autocad. Infact, to do this job, I needed a tool highly precise, and, since I had few hour to accomplish my goal, I decided to use the one I know better, that is Autocad. 
         <img src="img3/Export_pdf_Illustrator.jpg"> <br>
         <br>
-        
+        I have a background as an architect that allows me to easily work in 2 dimensions to create elements that will compose a tridimensional outputs, most of all if they are simple as the object I wanted to create for this module. I work with section and projections instead of makind 3D models to create 2D elements. In this case I worked as well in this way: working in 2D allows me to master all the elements in a faster way than using 3D modeling. And for this kind of project I didn't really need to work 3Dmensionally.  <br> <br>
         In Autocad I worked mainly on three aspects: bending pattern for curved faces, notches fitting and position for bending faces and notches dimension in order to make the element solid without gluing it. 
     <br><br>    <img src="img3/Autocad.jpg"> <br>
     
@@ -140,6 +140,30 @@ CUT <br>
 	</a>
 	</p>
         
+        <h3>Press Fit Construction Kit</h3>
+        
+    <p>
+        I previously set the notch lenght on 9 mm. To create my press-fit construction kit I started adding to the online customizer "BOx Maker Connection Lab" the cut tickness of the EPILOG laser I used for cutting the bending object, which is 0.15 mm. This is the divergence between the teeth that protrude left-and-right which is called kerf and it defines the width of the saw cut.<br><br>
+        
+	<img src="img3/press_fit.JPG"> <br><br>
+       
+        Each laser has its own kerf. This is a kind of information that the machine retailer should provide you otherwise you can determine this measure empirically, making different cuts and using a caliber to understand how ticjk is the cut width. 
+	</p>
+        
+        <img src="img3/press_fit_scheme.jpg"> <br><br>
+        
+        This is how  I basically operated: making "male notches" 0.15 mm larger on each side, and making "female notches" 0.15 narrower in order to create an overal interference between notches of 0.3 mm. Using a plywood material this interference still allows a good press fit. Using a stiffner material could probably not to allow notches to interlock each other. The dimension indicated as "notch tickness" is basically the 9 mm average lenght I set in the box maker web customizer. 
+        
+        For the curved elements, the issue was a little bit more complex and I managed it in this way. 
+        
+As for designing the notches along the curves, I first designed a curve and then divided it into little modules in as many pieces as dividng the line in modules ore or less 9 mm long. Then I fould a common center of projection and derived 3 mm tick and about 9 mm long notches. This operation requires to be veruy precise. To make if faster, it is necessary to set up OBJECT SNAPS as in the below image. This settings work not only in Autocad software but in any CAD you choose to use.   <br><br>
+        
+        <img src="img3/snaps_settings.jpg"> <br><br>
+        
+      <img src="img3/curved_notches_construction_lines.jpg"> <br><br>
+        As for the other notches, I used the same method: adding 0.15 mm to the male notch lenght on each side (0.3 in total) that means subtracting 0.15 mm each side of the male notch. <br><br>
+        
+        <img src="img3/curved_kerf.jpg"> <br><br>
         
         <h3>Prototyping Test and Retry</h3>
         
