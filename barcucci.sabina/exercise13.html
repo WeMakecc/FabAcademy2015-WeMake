@@ -215,10 +215,19 @@ The IDE feedback when I tried to "burn the bootloader" was always reporting conn
 Finally, I was ready to experiment with Networking and communication, connecting two FabKits to each other. 
 
     
-        <h3>FabKits Serial Communication</h3> 
+        
+        <h3>What is serial communication?</h3>
+Embedded electronics is all about interlinking circuits (processors or other integrated circuits) to create a symbiotic system. In order for those individual circuits to swap their information, they must share a common communication protocol. Hundreds of communication protocols have been defined to achieve this data exchange, and, in general, each can be separated into one of two categories: parallel or serial.
+
+Serial interfaces stream their data, one single bit at a time. These interfaces can operate on as little as one wire, usually never more than four.
+
+A serial bus consists of just two wires - one for sending data and another for receiving. As such, serial devices should have two serial pins: the receiver, RX, and the transmitter, TX.<br><br>
+
+<img src="img13/scheme000.jpg"/></a> <br><br>
+It’s important to note that those RX and TX labels are with respect to the device itself. So the RX from one device should go to the TX of the other, and vice-versa. It’s weird if you’re used to hooking up VCC to VCC, GND to GND, MOSI to MOSI, etc., but it makes sense if you think about it. The transmitter should be talking to the receiver, not to another transmitter.<br><br>
+<h3>FabKits Serial Bus Communication</h3> 
         <iframe width="640" height="480" src="https://www.youtube.com/embed/-O7YasFL6B4" frameborder="0" allowfullscreen></iframe>
 <br><br>
-        
       It is possible to chain FabKits together in such a way as to get communication between the two. Having FabKit-FabKit communication can be useful for many projects, such as having one FabKit to run motors and having another sense the surroundings and then relay commands to the other FabKit. This can be done in several methods serial port, among others.<br><br>
 
 I followed <a href="http://robotic-controls.com/learn/arduino/arduino-arduino-serial-communication">this</a> tutorial for the Networking and Communication assignment. It focuses on Arduino-Arduino communication through the serial ports (RX and TX). The Fritzing scheme below shows the simple connection among pcbs. Note that note that TX goes to RX and RX goes to TX. <br><br><br>
