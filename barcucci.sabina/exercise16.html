@@ -8,13 +8,13 @@
     <meta name="author" content="Name Surname">
     <link rel="icon" href="media/favicon.ico">
 
-    <title>Fab Academy 2015 - Name Surname</title>
+    <title>Fab Academy 2015 - Sabina Barcucci</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="media/fabacademy.css" rel="stylesheet">       <link href="media/SABINA.css" rel="stylesheet">
+      <link href="media/fabacademy.css" rel="stylesheet">       <link href="media/SABINA.css" rel="stylesheet">
     
     <!-- 3D files viewer -->
     <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
@@ -55,7 +55,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Name Surname</a>
+          <a class="navbar-brand" href="index.html">Sabina Barcucci</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -66,7 +66,7 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Breathing Pod <span class="caret"></span></a>
               <ul id="project" class="dropdown-menu" role="menu">
               </ul>
             </li>
@@ -81,137 +81,60 @@
 	<!-- Insert your content here below! -->
 
 
-     <h2>Exercise...</h1>
+     <h2><strong>Applications and Implications</strong></h1>
     
-    <h3>Menu</h3>
-	<p>
-	You can edit it by changing the <em>exercises-menu.html</em> and <em>project-menu.html</em>. Do <strong>not</strong> add any &ltol&gt; or &ltul&gt;, leave the structure as it is.
-	</p>
-    
-    
-    <h3>Text</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp&gt;
-	Your text here
-	&lt/p&gt;</pre>
-	</p>
-	Result:
-	<p>
-	Your text here
-	</p>
-	
-	<h3>Images</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp class="pic&gt;>&ltimg src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg"&gt;
-	&ltlegend&gt;Here's the legend of the picture.&lt/legend&gt;
-	&lt/p&gt;</pre>
-	</p>
-	Result:
-	<p class="pic"><img src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg">
-	<legend>Here's the legend of the picture.</legend>
-	</p>
-     
-	<h3>Code</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltpre class="prettyprint linenums"&gt;
-	Your code here
-	&lt/pre&gt;</pre>
-	
-	Result:
-	<pre class="prettyprint linenums">
-	for i in members:
-		print ""
-		print "USER:",members[i]
-		print "Loading connections..."
-		followers = load_connections([i], "followers")
-		friends = load_connections([i], "friends")
-
-		# Add edges...
-		print "Building the graph..."
-
-		for f in followers:
-			for k in followers[f]:
-				graph.add_edge(k,f)
-	
-		for f in friends:
-			for k in friends[f]:
-				graph.add_edge(f,k)</pre>
-	</p>
-	
-	<h3>3D Model</h3>
-	<p>	
-	The model can be rotated and zoomed with the mouse/trackpad. You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltcanvas id="cv" width=640 height=480&gt;
-	It seems you are using an outdated browser that does not support canvas :-(
-	&lt/canvas&gt;
-	&ltscript type="text/javascript"&gt;
-		var canvas = document.getElementById('cv');
-		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
-		viewer.setParameter('ModelColor','#CAA618');
-		viewer.setParameter('BackgroundColor1','#E5D7BA');
-		viewer.setParameter('BackgroundColor2','#383840');
-		viewer.setParameter('RenderMode','flat');
-		viewer.setParameter('MipMapping','on');
-		viewer.setParameter('Definition','high');
-		viewer.setParameter('Renderer','webgl');
-		viewer.init();
-		viewer.update();
-	&lt/script&gt;</pre>
-	
-	You can set up the path to the 3D model (.stl/.obj) within this line:
-	<pre class="prettyprint linenums">
-	viewer.setParameter('SceneUrl','media/monkey.stl');</pre>
-	
-	Result:
-	<canvas id="cv" width=640 height=480>
-	It seems you are using an outdated browser that does not support canvas :-(
-	</canvas>
-	<script type="text/javascript">
-		var canvas = document.getElementById('cv');
-		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
-		viewer.setParameter('ModelColor','#CAA618');
-		viewer.setParameter('BackgroundColor1','#E5D7BA');
-		viewer.setParameter('BackgroundColor2','#383840');
-		viewer.setParameter('RenderMode','flat');
-		viewer.setParameter('MipMapping','on');
-		viewer.setParameter('Definition','high');
-		viewer.setParameter('Renderer','webgl');
-		viewer.init();
-		viewer.update();
-	</script> 
-    </p> 
-    
-    <h3>Download</h3>
-	<p>
-	You can set up a button for files to be downloaded with:
-	<pre class="prettyprint linenums">
-	&lta href="#"&gt;
-	&ltbutton type="button" class="btn btn-primary btn-lg">Download the file&lt/button&gt;
-	&lt/a&gt;</pre>
-	</p>
-	
-	<p>
-	Result:
-	</p>
-	<p>
-	<a href="#">
-	<button type="button" class="btn btn-primary btn-lg">Download the file</button>
-	</a>
-	</p>
+        <p>
+Assignment: 
+Propose a final project that integrates the range of units covered. <br><br>
+        <h3>// What will it do?</h3>
+        The final project I have in mind is a Breathing Pod, an device based on experimentations on soft robotics and environmental data detection. Indeed, the Breathing Pod will deploy soft robotics actuators in silycon to visually and physically describe a specific data detection by an environmental sensor for Carbon Dioxide.<br><br> If soft robotics has been quite largely investigated in the last 3 years and many "families" of soft actuators have been designed, their use in design and visual art field has not yet provided a concrete production. I'd like to produce a home object, a sort of companion, able to monitor the quality of air at home, and modifing its life-like behaviour (its breath rithm) according to the air quality detected. <br><br>
       
-    <h3>Would you like to insert more style/elements?</h3>
-      <p>
-      Check the documentation of Bootstrap <a href="">here</a>.
-      </p>
+            
+<h3>// Who's done what beforehand?</h3>
+        I followed with a lot of interest the design experiments realized by Bartlett University and ETH Architecture Department and of course the work of OtherLab by Pneubotics and Harward Biodesign department that has developed the Soft Robotics Toolkit that is the most important resource for learning about the state of the art of Soft Robotics. <br><br>
+        
+        
+        - <a href="http://softroboticstoolkit.com/">Soft Robotic Toolkit</a><br>
+        - <a href="http://biodesign.seas.harvard.edu/">Harward BioDesign Lab</a><br>
+        - <a href="http://assemblageworkshop.com/2014/07/18/soft-robotics-for-architects-2013-workshop/">ETH Zurich, Architecture Department</a><br>
+        - <a href="http://monograph.io/ialab/furl-soft-pneumatic-pavillion">Interactive Architecture, The Soft Pneumatic Pavillion</a><br>
+        - <a href="http://www.pneubotics.com/">Pneubotics, the Other Lab project on Soft Robotics</a><br>
+
+        
+<h3>// What materials and components will be required? </h3>
+        Basically, it will be done by a layered light structure in plywood in which a set of silycon soft actuators will be hanged. A further development will deploy acrylic sheets. For the pneumatics actuators, it is necessary to combine different rubbers, basically extra soft silycons, silycon epoxi glue and silycon pigments. All these materials are amazing but also quite complex and very expensive, unfortunately. So, I can't really experiment with them without a proper funding. I can count on the knowledge acquired by an italian bio-robotics department, <a href="http://www.sssup.it/ist_home.jsp?ID_LINK=10458">the BioRobotics Institute at Scuola Superiore Sant'Anna</a>, that researches and experiments a lot with soft actuators and fortunately they like to share part fo their achievements. <br><br>
+        In term of hardware, the Breathign Pod can be inflated or using a set of big syringes controlled by a couple of stepper motors, or by a central electro pump. In any case, with one Arduino or FabKit or with an Arduino Mega I will be able to control the pump or the syringes and the sensor. A third hardware element, a wifi board called ESP8266, will send detected data to an online monitoring platform like smartcitizen.me
+        
+<h3>// Where will they come from?</h3><br>
+        About the plywood, I rely on a local production. About the FabKit, I will produce it locally using FR1 and chinese electronics components. If I would use an Arduino I will take then an italian producted board or an american one (since the current arduino crisis). About the silycon, it will be produced by Smooth-On, an american brand. The pump will be chinese.  
+        
+<h3>// How much will it cost?</h3><br>
+        
+        I calculated that each soft actuator will have the super expensive price of 5 euros each (this is just the cost of silyconics components). So: actuators will cost 15 euros in total. The machinable wax necessary to make 3 actuators costs about 12 euros. 
+    
+        The FabKit costs about 14 euros, while the several wiring cables necessary I can approximately estimate them about 3 euros. The pump costs 20 euros, while the plywood would be about 4 euros. RGB LEDs will be about 5 euros while the ESP8266 is about 5 euros and the MQ7 sensor is about 7 euros. I can estimate 3 hours for milling the whole molds and 1 hour of laser cutter for the plywood structure. 8 hours will be for curing the silycons and about 6 to make the whole pod assembled and working properly.
+
+The cost of the whole POD in terms of materials, without shipping costs, will be between 70 and 85 euros. 
+        
+        Adding the working time and the machine costs, the costs will rise to about 200 euros. The most expensive part remains the one related to silycon. 
+        
+<h3>// what parts and systems will be made?</h3><br>
+        Almost everything. TO create the silycon muscles, I will mill the molds according to the 3D model I developed. The general structure will be completely in plywood and lasercut according to my own design. The microcontroller board FabKit is completely DIY (except for the components, of course). I will need a logic level converter board that I will prototype and a mos driver board that I will make. Connectors to pump will be probably 3D printed. I will buy the electronics components, wires and the ESP8266. 
+<h3>// What processes will be used?</h3><br>
+        Milling, molding and casting. Laser cutting, pcb milling, soldering and testing. 
+<h3>// What tasks need to be completed?</h3><br>
+    - Casting several silycon muscles hoping to get the same result for each of them.<br>
+    - Connecting the central pump with each muscle sending the same air quantity to each.<br>
+    - Controlling the electro pump in order to create a bio-inspired behaviour for the soft robots. <br>
+    - Understanding how to integrate electronics, boards and power supply in the general design.<br>
+    - Understand how to use the ESP8266 <br>
+    
+    
+<h3>what questions need to be answered?</h3><br>
+<h3>what is the schedule?</h3><br>
+<h3>how will it be evaluated?</h3><br>
+        </p>
+    
     <!-- End of your content -->
 
     </div> <!-- /container -->
@@ -222,7 +145,7 @@
         <p id="cclicense">
                 </p>
         <p class="license">
-        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a>modified by Sabina Barcucci  <br>
         Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
         </p>
     </footer>
