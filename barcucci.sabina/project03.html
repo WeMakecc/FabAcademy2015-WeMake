@@ -8,13 +8,13 @@
     <meta name="author" content="Name Surname">
     <link rel="icon" href="media/favicon.ico">
 
-    <title>Fab Academy 2015 - Name Surname</title>
+    <title>Fab Academy 2015 - Sabina Barcucci</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="media/fabacademy.css" rel="stylesheet">       <link href="media/SABINA.css" rel="stylesheet">
+      <link href="media/fabacademy.css" rel="stylesheet">       <link href="media/SABINA.css" rel="stylesheet">
     
     <!-- 3D files viewer -->
     <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
@@ -55,7 +55,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Name Surname</a>
+          <a class="navbar-brand" href="index.html">Sabina Barcucci</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -66,7 +66,7 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Breathing Pod <span class="caret"></span></a>
               <ul id="project" class="dropdown-menu" role="menu">
               </ul>
             </li>
@@ -81,18 +81,60 @@
 	<!-- Insert your content here below! -->
 
 
-    <h2>Final Project Process</h1>
-    
-    <p>
-    Edit your <em>gantt.js</em> file in order to edit the following Gantt Chart...
-    </p>
-    
-    <div class="fluidMedia">
-    <iframe id="ganttframe" onLoad="calcHeight();" width="100%" src="gantt.html" scrolling="no" style="border: 0px;">
-	This is the Gantt.
-	</iframe> 
-	</div>
-    
+     
+        
+        <h1><strong>Final Project Result</strong></h1>
+        <h2>The Breathing Pod</h2>
+        <a><img src="img18/presentation.jpg"/></a> <br><br>
+        <a><img src="img18/composit_POD_final.jpg"/></a><br><br>
+ 
+        <a href="img18/POD_IV.dxf.zip">
+	<button type="button" class="btn btn-primary btn-lg">Grab the Pod dxf file</button> </a><br> <br>
+      
+        <a href="img9/Pneumatic_Muscle_NURBS.zip">
+	<button type="button" class="btn btn-primary btn-lg">Grab the NURBS muscles 3D models</button>
+	</a><br><br>
+
+<a href="img18/Arduino_Code_POD.zip">
+	<button type="button" class="btn btn-primary btn-lg">Grab the Breathing_Pod Arduino code</button>
+	</a><br><br>
+        
+<pre class="prettyprint linenums">
+<h3>Bill of Materials</h3><br>
+<h4>Molding </h4> 
+2x Purple Machinable Wax block, 15x70x70mm, tekwani.co.uk
+<h4>Casting </h4> 
+Mass scale, http://www.mcmaster.com/#1863t61/=szo1b3
+Latex gloves http://www.mcmaster.com/#6072t94/=t1c9vh
+1x Ecoflex® Supersoft Silicone, 00-50 - Shore 00-50 hardness, http://www.smooth-on.com/Silicone-Rubber-an/c2_1115_1130/index.html
+1 x Sil-Poxy® Silicone Adhesive http://www.smooth-on.com/Epoxy,-Silicone-an/c11_1189/index.html
+1 x Silc Pig® Silicone Pigments http://www.smooth-on.com/Silicone-Rubber-an/c2_1128_1190/index.html
+Thin rod (2-3 mm diameter) http://www.mcmaster.com/#1681t21/=t1bdoj
+Pneumatic Tubing (OD 1/8")http://www.mcmaster.com/#5790k15/=t1audv
+<h4>Hardware </h4> 
+M3 screws, various lengths    https://www.pololu.com/product/1076
+3x LED - RGB Clear Common Cathode https://www.sparkfun.com/products/105
+9 x Metal Film 220 ohm resistor http://www.maplin.co.uk/p/metal-film-2w-220-ohm-resistor-d220r
+Electrical wire, 4 colors (Red, Green, Blue, Black), 2 meters each
+Jumper wires FF, https://www.sparkfun.com/products/12796
+1 x MQ-7 Carbon Monoxide Sensor- Analog+Digital  http://yourduino.com/sunshop2/index.php?l=product_detail&p=447
+<h4>FabKit 0.4 </h4> 
+-C1 .1uf C-EUC1206 C1206 CAPACITOR, European symbol, 399-4674-1-ND, http://www.digikey.it/product-detail/it/C1206C104KARACTU/399-4674-1-ND/992199
+-C2 1uf UNPOLARIZED_CAPACITOR1206 unpolarized_capacitor, 445-1423-1-ND, http://www.digikey.it/product-detail/it/C3216X7R1H105K160AB/445-1423-1-ND/569089
+- C3 .1uf UNPOLARIZED_CAPACITOR1206 unpolarized_capacitor, 399-4674-1-ND, http://www.digikey.it/product-detail/it/C1206C104KARACTU/399-4674-1-ND/992199
+- C4 10uf UNPOLARIZED_CAPACITOR1206 unpolarized_capacitor, 587-1352-1-ND, http://www.digikey.it/product-detail/it/GMK316F106ZL-T/587-1352-1-ND/931129
+- IC1 ATMEGA48/88/168-AU, TQFP32-08 ATMEGA328P-AU-ND, http://www.digikey.it/product-detail/it/ATMEGA328P-AU/ATMEGA328P-AU-ND/1832260
+- JP1 M06SMD 1X06-SMD Header 6 SAM1043-06-ND, http://www.digikey.it/product-detail/it/TSW-106-08-L-S-RA/SAM1043-06-ND/1102018
+ - LED1206 LED YELLOW ORANGE CLEAR 1206 SMD, 160-1403-1-ND, http://www.digikey.it/product-search/it?KeyWords=160-1403-1-ND%09&WT.z_header=search_go
+- PAD2 WIREPAD2,54/0,9, Wire PAD connect wire on PCB
+-R1 10k RESISTOR1206, 311-10.0KFRCT-ND, http://www.digikey.it/product-detail/it/RC1206FR-0710KL/311-10.0KFRCT-ND/731430
+- R2 499 RESISTOR1206,  311-499FRCT-ND, http://www.digikey.it/product-detail/it/RC1206FR-07499RL/311-499FRCT-ND/731891
+- S1 6MM_SWITCH6MM_SWITCH OMRON SWITCH SW262CT-ND, http://www.digikey.it/product-detail/it/B3SN-3112P/SW262CT-ND/60835
+- SV1 MA08-1 PIN HEADER, S9016E-10-ND, http://www.digikey.it/product-detail/it/GRPB101VWCN-RC/S9016E-10-ND/1786473
+- U$2 RESONATOREFOB EFOBM 535-10004-1-ND, http://www.digikey.it/product-detail/it/AWSCR-8.00CV-T/535-10004-1-ND/2001627</pre>
+
+<h2>// Results</h2><br>
+<iframe width="853" height="480" src="https://www.youtube.com/embed/NMTlpajPnXs" frameborder="0" allowfullscreen></iframe>
     <!-- End of your content -->
 
     </div> <!-- /container -->
@@ -103,7 +145,7 @@
         <p id="cclicense">
                 </p>
         <p class="license">
-        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a>modified by Sabina Barcucci  <br>
         Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
         </p>
     </footer>
