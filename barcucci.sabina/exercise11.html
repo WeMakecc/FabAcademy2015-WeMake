@@ -81,10 +81,15 @@
 
 	<!-- Insert your content here below! -->
      <h2><strong>Output device</strong></h1>
-         <h3>Sensor / Servo board </h3> 
-        <img src="img11/servo_MQ7_FabKit.jpg"/></a><br><br>
+         <h3>SensorServo board </h3> 
+        <a><img src="img11/servo_MQ7_FabKit.jpg"/></a><br><br>
+        Weekly assignment: add an output device to a microcontroller board you've designed and program it to do something. <br> <br>
+        I decided to experiment with the MQ7 gas sensor, because ti will be necessary for my final project. Thje MQ7 will be useful as input for my board, to which I will connect some actuators as servo motor and LED.  <br><br> <img src="img11/large_447_MQ7-1.jpg"/></a><br><br> 
+      
+First, I downloaded the <a href="http://www.electroshopdendermonde.be/files/9513/9116/9045/MQ-7_.pdf"/> MQ7 datasheet </a>. I discovered that you can find this sensor in two versions: one shows VCC, GND and just one digital Pin. It basically used for alarm systems. After a certain level of Carbon Dioxyde in the air, the sensor provides the alarm. <br><br>
+        
         <img src="img11/Fab_Kit_Pin_OUt_AtMega.JPG"/></a><br><br>
-    
+    <a><img src="img11/mq7_fritzing.jpg"/></a><br><br>
       
         
         
@@ -146,6 +151,50 @@ void leggigas () {
 <a href="img11/SensorServo.zip">
 	<button type="button" class="btn btn-primary btn-lg">Grab SensorServo.ino code</button> </a><br> <br>
 
+<h3>SensoLed board </h3> 
+ <a><img src="img11/sensorLed.jpg"/></a><br><br>
+ <a><img src="img11/sensorled_fritzing.jpg"/></a><br><br>
+ 
+
+<iframe width="853" height="480" src="https://www.youtube.com/embed/b2gIWMC2zVQ" frameborder="0" allowfullscreen></iframe> <br><br>
+<pre class="prettyprint linenums">
+    <h3>SensorLed_code.ino </h3>
+float MQ7 = A1; 
+int gas = 0; 
+int valgas = 0; 
+int ambient = 0;
+int LED = 9;
+void setup () {
+  Serial.begin (9600);
+  pinMode (LED, OUTPUT);
+  //analogWrite (servo, 0); 
+}
+void loop () {
+  // We read the gas data, and behave accordingly
+  valgas = analogRead(MQ7);
+  Serial.println(valgas);
+  if (valgas <= 200)
+    {
+      digitalWrite (LED, LOW); 
+      delay (1000); 
+    }
+   else if (valgas > 200) 
+   {
+     digitalWrite (LED, HIGH); 
+      delay (10000); 
+   }
+   
+}</pre>
+<pre class="prettyprint linenums">
+    <h3>MQ7.ino </h3>
+void leggigas () {
+  gas = analogRead (MQ7);
+  Serial.println (gas);
+}</pre>
+
+
+<a href="img11/SensorLed_code.zip">
+	<button type="button" class="btn btn-primary btn-lg">Grab SensorLed.ino code</button> </a><br> <br>
 <!--
 	
 	<pre class="prettyprint linenums">
