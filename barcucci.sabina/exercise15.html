@@ -85,6 +85,15 @@
         <h3>Serial Gas Visual</h3>
         
         <img src="img15/MQ7_serial_communication.jpg"/></a> <br><br>
+      
+      Weekly assignment: write an application that interfaces with an input &/or output device<br><br>
+      
+      For this assignment I used again the MQ7 sensor as input connected with the FabKit. The sensor collect floating variables and the FabKit reads them on an analog pin and write detcted values on the serial monitor. <br><br>
+      
+      I wanted to use Processing and visualize data from arduino through serial connection. I found <a href="https://processing.org/discourse/beta/num_1254511350.html">this interesting tutorial</a> that helped me understanding how to make the arduino code and the processing code relate to each other (actually, it is enough to set the same serial port). <br><br>Basically, you need to import in Processing a library called "processing.serial" that will visualize data read throu serial port. If you want to visualize both on the arduino serial monitor and on the Processing display the data flow, you then need to run both IDEs. I tried to use also processing.js to visualize also on my webpage the data streaming but I couldn't achieve nothing this wy because I then realize that processing-seria library doesn't work with processing.js. <br><br>
+      
+      
+      
       <img src="img15/fritzing.jpg"/></a> <br><br>
     <a href="img15/gasvisual.fzz">
 	<button type="button" class="btn btn-primary btn-lg">Grab the fritzing sketch</button>
