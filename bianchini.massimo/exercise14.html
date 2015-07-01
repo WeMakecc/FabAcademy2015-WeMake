@@ -88,31 +88,83 @@
 <h3>Assignment</h3>
 <p>Write an application that interfaces with an input and/or output device</p><br> 
     
-<h3>Making a DIY Bluetooth module</h3>
+<h3>Creating a DIY Bluetooth module and a basic GUI</h3>
 <p> I wanto to create a bluetooth module for my final project and test how it works detecting data from a sonar.
-In parallel I will try to create a basic GUI. Coding and programming is my real “Achilles heel”. I am totally a beginners. Python and processing seems to me almost black box. The final scope of this exercize is to connect bluetooth module and a Max Sonar sensor with a basic GUI. Basic ideas is to create a bluetooth board using a MH-10 Bluetooth modules and soldering it on a DIY board specifically designed to be connected to a system. Before to make it, I studied some datasheets and search on the Web some tutorials. I found the following information and projects:
+In parallel I will try to create a basic GUI. Coding and programming is my real “Achilles heel”. I am a real beginners. Python and Processing seems to me almost black box. The final scope of this exercize is to create a Bluetooth board using a module and connecting it to a basic GUI which can confirm to me.Basic ideas is to create a bluetooth board using a MH-10 Bluetooth modules and soldering it on a DIY board specifically designed to be connected to a system. Before to make it, I studied some datasheets and search on the Web some tutorials.
 
+<h3>Datasheet</h3><br>
+<a href="ftp://imall.iteadstudio.com/Modules/IM130614001_Serial_Port_BLE_Module_Master_Slave_HM-10/DS_IM130614001_Serial_Port_BLE_Module_Master_Slave_HM-10.pdf" class="link_text">SERIAL PORT BLE MODULE (MASTER/SLAVE) HM-10 Model, code:IM130614001</a><br>   
+
+<h3>Tutorials</h3><br>
+<a href="http://www.instructables.com/id/AT-command-mode-of-HC-05-Bluetooth-module/" class="link_text">AT command mode of HC-05 and HC-06 Bluetooth module</a><br>
+<a href="http://mcuoneclipse.com/2013/06/19/using-the-hc-06-bluetooth-module/" class="link_text">Using the HC-06 Bluetooth Module</a><br>
+<a href="ttp://www.tec.reutlingen-university.de/uploads/media/DatenblattHC-05_BT-Modul.pdf" class="link_text">Bluetooth Products User Instructional Manual</a><br>
+
+<h3>Tutorials for creating a schematic and a DIY  bluetooth board</h3><br>     
 <a href="http://www.elecfreaks.com/wiki/index.php?title=File:Wireless_BTH_05-LRG.jpg" class="link_text">Bluetooth BTH 05 </a><br>
 <a href="http://mcuoneclipse.com/2013/02/14/bluetooth-with-the-freedom-board/" class="link_text">Bluetooth with freedom board</a><br>
 <a href="http://www.tiny-labs.com/projects/electronics-projects/-part-hc-06-bluetooth-to-serial-adapter" class="link_text">Bluetooth to serial adapter</a></p><br>     
-        
-<p>It has been very complex to design this kind of board using Eagle and/or KiCad. In particular it is very difficult to find schematics on board about the MH-10 Bluetooth Module.
-So I conceived an unconventional activity: I re-designed the Bluetooth board using Illustrator. Looking datasheets and using the graphic elements of the Hello Echo board (pin heard, resistors, led, and button) I designed a board that can be host a bluetooth module in order to use it. Finally, I recreated the same board from zero because the libraries for Bluetooth are not so developed.</p><br>
+
+<h3>DIY Bluetooth board</h3>     
+<p>It has been very complex to design this kind of boards using Eagle and/or KiCad. In particular it is very difficult to find schematics h about having already installed bluetooth modules.
+So, I conceived an un-conventional activity: I designed the Bluetooth board using Illustrator. Looking datasheets and using the graphic elements of the Hello Echo board (pin heard, resistors, led, and button) I created a board that can be host an MH-10 Bluetooth module in order to use it as a a board.</p><br>
 
 <img src="images/esercitazione14/bluetooth.png">
-<img src="images/esercitazione14/bluetooth-module.png"><br>      
+<img src="images/esercitazione14/bluetooth-module.png"><br>
+      
+<p>The DIY blueooth board works and I connect it to my Google Nexus 5. The smartphone detects the Bluetooth immediately recognising HMSoft. To digit "0000000" as a password it is possible to connect the bluetooth module. More problematic is to connect the Bluetooth to my Mac. So I try an alternative.</p><br>
+
+<p>I take a Bluetooth Module HC-05, an Arduino Uno and a Potentiomter. I connect all three elements as follow.
+Importing a serial library I have been trasformed pin 10 and pin 11 into new RX and TX serial.
+I create a serial event on Arduino IDE simulating. The potentiometer, which simulates the sonar, can be observed on my smartphone and on the serial monitor of Arduino. So, I simulate an event: turning the potentiometer more than a value >500 the led is light off. In this way I have the right signal (or better, the alarm) that can be sent to a Smartphone application to informing the biker for a possible danger.</p><br>
+
+<pre class="prettyprint linenums">
     
-<h3>Approaching Python</h3>
-<p>I tried to understand the basic principles of Pyrhon looking on line tutorials for beginners. 
-I start to make some basic basic exercises to understand how Python works.</p><br>
+#include <SoftwareSerial.h>// import the serial library
+SoftwareSerial Genotronex(10, 11); // RX, TX
+int led = 13;
 
-<h3>Approaching Processing</h3>
-<p>I am starting to use Processing developing very simple GUI’s in order to connect the boards with the GUI I had a lot of problems.</p><br>
+void setup() {
 
+  Genotronex.begin(9600);
+  Serial.begin(9600);
+  Genotronex.println("Welcome to PoliFactory");
+  pinMode(led, OUTPUT);
+}
+
+void loop() {
+  float SonarValue = 0;
+  float GasValue = 0;
+
+  SonarValue = analogRead(A0);
+
+  Genotronex.print("Sonar Value =");
+  Serial.println(SonarValue);
+  Genotronex.println(SonarValue);
+  if (SonarValue > 500)
+  {
+    digitalWrite(led, HIGH);
+  }
+  else
+  {
+    digitalWrite(led, LOW);
+  }
+
+  delay(100);
+}
+
+}</pre><br>
+     
+<h3>Approaching Processing</h3> 
+<p>I use the basic tutorial for Processing provided by FabAcademy. I modified some parameters as follow to use Processing developing very simple GUI’s in order to connect the boards with the GUI I had a lot of problems. The final goal is a first attempo to simulate a GUI/app for the final Obike Project.</p><br>
+
+
+<pre class="prettyprint linenums">
+
+</pre><br>
+      
 <h3>Lessons learnt</h3>
-I approached this assignment with a lot of problems. 
-At the end of this assignment I started to understand how to make and connect these two things. I am becoming able to design and create PCB but I was not able to connect these two systems. But I need to invest more and more time to become a practitioner. Approaching this exercise, I understand which Python and other languages are a core competence in 
-        
+<p>Developing this assignment I had a lot of problems. At the end of this assignment I started to understand how to make and connect these two things. I am becoming able to design and create PCB but I was not able to connect these two systems. But I need to invest more and more time to become a practitioner.</p>  
 
         
 
