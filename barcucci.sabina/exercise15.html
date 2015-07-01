@@ -82,19 +82,76 @@
 
 
      <h1><strong>Interface and Application Programming</strong></h1>
+        <h3>Serial Gas Visual</h3>
         
-        
+        <img src="img15/MQ7_serial_communication.jpg"/></a> <br><br>
+      <img src="img15/fritzing.jpg"/></a> <br><br>
+    <a href="img15/gasvisual.fzz">
+	<button type="button" class="btn btn-primary btn-lg">Grab the fritzing sketch</button>
+	</a><br><br>
+        <iframe width="853" height="480" src="https://www.youtube.com/embed/9Q_W_EXhOrg" frameborder="0" allowfullscreen></iframe><br><br>
+      <img src="img15/screenshot.jpg"/></a> <br><br>
+<pre class="prettyprint linenums">
+<h3>Serial_Gas_Visual.pde</h3>
+import processing.serial.*;
+
+int lf = 10;    // Linefeed in ASCII
+String myString = null;
+Serial myPort;  // The serial port
+
+void setup() {v
+  size(850,600);
+  // List all the available serial ports
+  println(Serial.list());
+  // Open the port you are using at the rate you want:
+  myPort = new Serial(this, "/dev/tty.usbserial-A1012WKY", 9600);
+  myPort.clear();
+  // Throw out the first reading, in case we started reading 
+  // in the middle of a string from the sender.
+  myString = myPort.readStringUntil(lf);
+  myString = null;
+}
+
+void draw() {
+  while (myPort.available() > 0) {
+    myString = myPort.readStringUntil(lf);
+    if (myString != null) {
       
-		<head>
-			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-			
-			<script src="img15/circle/processing.js"></script> 
-            <title>My Processing Page</title>
-<canvas data-processing-sources="img15/circle/circle.pde"></canvas>
+      println(myString);
+      background(255);
+      fill(float(myString),100,100);
+      if (float(myString) > 100) {
+      ellipse(width/2, height/2, float(myString)*2, float(myString)*2);
+      } else if {
+      rect(0, 100, float(myString)*4, 120); 
+      }
+    }
+  }
+}
+	</pre>		
+    <a href="img15/Processing_serial_gas_visual.zip">
+	<button type="button" class="btn btn-primary btn-lg">Grab the Processing code</button>
+	</a><br><br>
     
+    <pre class="prettyprint linenums">
+<h3>Serial_Gas_Visual.ino</h3>
     
-    
-    
+int MQ7 = A1; // it is my sensor on analog pin
+//float temp = 0;
+float temp = 0; // not sure about it. Using float the sensor wasn't reading, as the serial monitor showed
+
+void setup () {
+  Serial.begin (9600);  
+}
+void loop () {
+   temp = analogRead (MQ7);
+  temp = map(temp,0,1023,0,500); 
+  Serial.println(temp); 
+  delay(100);
+}</pre>
+    <a href="img15/Arduino_serial_gas_visual.zip">
+	<button type="button" class="btn btn-primary btn-lg">Grab the Arduino Code</button>
+	</a>
     
     
     

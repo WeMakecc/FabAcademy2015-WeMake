@@ -80,18 +80,24 @@
     <div class="container">
 
 	<!-- Insert your content here below! -->
-     <h2><strong>Output device</strong></h1>
+     <h1><strong>Output device</strong></h1>
          <h3>SensorServo board </h3> 
         <a><img src="img11/servo_MQ7_FabKit.jpg"/></a><br><br>
         Weekly assignment: add an output device to a microcontroller board you've designed and program it to do something. <br> <br>
         I decided to experiment with the MQ7 gas sensor, because ti will be necessary for my final project. Thje MQ7 will be useful as input for my board, to which I will connect some actuators as servo motor and LED.  <br><br> <img src="img11/large_447_MQ7-1.jpg"/></a><br><br> 
       
-First, I downloaded the <a href="http://www.electroshopdendermonde.be/files/9513/9116/9045/MQ-7_.pdf"/> MQ7 datasheet </a>. I discovered that you can find this sensor in two versions: one shows VCC, GND and just one digital Pin. It basically used for alarm systems. After a certain level of Carbon Dioxyde in the air, the sensor provides the alarm. <br><br>
-        
-        <img src="img11/Fab_Kit_Pin_OUt_AtMega.JPG"/></a><br><br>
+First, I downloaded the <a href="http://www.electroshopdendermonde.be/files/9513/9116/9045/MQ-7_.pdf"/> MQ7 datasheet </a>. I discovered that you can find this sensor in two versions: one shows VCC, GND and just one digital Pin. It basically used for alarm systems. After a certain level of Carbon Dioxyde in the air, the sensor provides the alarm. Certain MQ7 only digital, have a regulator that allows to set what is the internal limit of hte sensor before providing alarm. Other are internally set to a certain carbon dioxide leve that can't be modified. <br><br>
+        For my final project, I need an analog input and I found that there is an existing version of MQ7 sensor that shows both analog and digital input like <a href="http://yourduino.com/sunshop2/index.php?l=product_detail&p=447"/> this one </a><br><br>
+
+For the Pinout of my FabKit I confronted with the one of ATMega and reported in the diagram below. Then I verified which pins are PWM in the FabKit according to the ATMEGA328 pinout, and as well for MOSI, MISO, RST and SCK. I need those pins for uploading the Arduino sketch to the FabKit using the FabISP. <br><br>
+        <img src="img11/Fab_Kit_Pin_OUt_AtMega.JPG"/></a><br><br>I started protytping the board using the Arduino Uno board in Fritzing after having prepared the code using the Arduino IDE. In the sensorServo board, the MQ7 sensor controls the angles of rotation of the servo motor.   <br><br>
+    
     <a><img src="img11/mq7_fritzing.jpg"/></a><br><br>
       
-        
+        <a href="img11/SensorServo Sketch.fzz">
+	<button type="button" class="btn btn-primary btn-lg">Grab SensorServo Fritzing sketch</button> </a><br> <br>
+
+If the MQ7 detects a certain value of Carbon Dioxide lower than 200, the servo motor rotates 90 degrees. If the levels are between 200 and 250, the servo will move 45 degrees. If MQ7 detects more than 250, the servo will rotate 120 degrees. I used a bottle of denaturated alcool to simulate a higher level of Carbon Dioxide and I was controlling on the serial monitor about the levels detected. It worked!<br><br>
         
         <br>    
     <iframe width="640" height="480" src="https://www.youtube.com/embed/OpoSgmZpmdw" frameborder="0" allowfullscreen></iframe>
@@ -150,11 +156,16 @@ void leggigas () {
 
 <a href="img11/SensorServo.zip">
 	<button type="button" class="btn btn-primary btn-lg">Grab SensorServo.ino code</button> </a><br> <br>
+    
 
 <h3>SensoLed board </h3> 
+The sensorLed board works slightly different: I connected a LED to the FabKit that should react on theCarbon Dioxide leves detected from the MQ7. In this case, the ranges were just two: less than 200 > digitalWrite (LED, HIGH); more than 200 > digitalWrite (LED, LOW). <br><br>
+In this case, I needed also a breadboard (while with the servo I didn't). To use the LED, indeed, I need to add a 220 ohm resistor ad the breadboard to locate both LED and resistor.<br> <br>
+
  <a><img src="img11/sensorLed.jpg"/></a><br><br>
  <a><img src="img11/sensorled_fritzing.jpg"/></a><br><br>
- 
+ <a href="img11/SensorLed.fzz">
+	<button type="button" class="btn btn-primary btn-lg">Grab SensorLed Fritzing sketch</button> </a><br> <br>
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/b2gIWMC2zVQ" frameborder="0" allowfullscreen></iframe> <br><br>
 <pre class="prettyprint linenums">
