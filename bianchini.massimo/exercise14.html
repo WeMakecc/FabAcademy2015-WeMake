@@ -88,12 +88,14 @@
 <h3>Assignment</h3>
 <p>Write an application that interfaces with an input and/or output device</p><br> 
     
-<h3>Creating a DIY Bluetooth module and a basic GUI</h3>
-<p> I wanto to create a bluetooth module for my final project and test how it works detecting data from a sonar.
-In parallel I will try to create a basic GUI. Coding and programming is my real “Achilles heel”. I am a real beginners. Python and Processing seems to me almost black box. The final scope of this exercize is to create a Bluetooth board using a module and connecting it to a basic GUI which can confirm to me.Basic ideas is to create a bluetooth board using a MH-10 Bluetooth modules and soldering it on a DIY board specifically designed to be connected to a system. Before to make it, I studied some datasheets and search on the Web some tutorials.
+<h3>Creating a DIY Bluetooth module and a basic interface</h3>
+<p> I wanto to create a bluetooth board for my final project and test how it works detecting data from a sonar.
+In parallel I will try to create a basic interface. Coding and programming is my real “Achilles heel”. I am a real beginners. Python and Processing seems to me almost black box. The final scope of this exercize is to create a Bluetooth board using a module and connecting it to a basic GUI which can confirm to me.Basic ideas is to create a bluetooth board using a MH-10 Bluetooth modules and soldering it on a DIY board specifically designed to be connected to a system. Before to make it, I studied some datasheets and search on the Web some tutorials.
 
 <h3>Datasheet</h3><br>
-<a href="ftp://imall.iteadstudio.com/Modules/IM130614001_Serial_Port_BLE_Module_Master_Slave_HM-10/DS_IM130614001_Serial_Port_BLE_Module_Master_Slave_HM-10.pdf" class="link_text">SERIAL PORT BLE MODULE (MASTER/SLAVE) HM-10 Model, code:IM130614001</a><br>   
+<a href="ftp://imall.iteadstudio.com/Modules/IM130614001_Serial_Port_BLE_Module_Master_Slave_HM-10/DS_IM130614001_Serial_Port_BLE_Module_Master_Slave_HM-10.pdf" class="link_text">SERIAL PORT BLE MODULE (MASTER/SLAVE) HM-10 Model, code:IM130614001</a><br>
+
+<img src="images/esercitazione14/bluetoothschematic.png">       
 
 <h3>Tutorials</h3><br>
 <a href="http://www.instructables.com/id/AT-command-mode-of-HC-05-Bluetooth-module/" class="link_text">AT command mode of HC-05 and HC-06 Bluetooth module</a><br>
@@ -112,14 +114,17 @@ So, I conceived an un-conventional activity: I designed the Bluetooth board usin
 <img src="images/esercitazione14/bluetooth.png">
 <img src="images/esercitazione14/bluetooth-module.png"><br>
       
-<p>The DIY blueooth board works and I connect it to my Google Nexus 5. The smartphone detects the Bluetooth immediately recognising HMSoft. To digit "0000000" as a password it is possible to connect the bluetooth module. More problematic is to connect the Bluetooth to my Mac. So I try an alternative.</p><br>
-
-<p>I take a Bluetooth Module HC-05, an Arduino Uno and a Potentiomter. I connect all three elements as follow.
+<p>The DIY blueooth board works and I connect it to my Google Nexus 5. The smartphone detects the Bluetooth immediately recognising HMSoft. To digit "0000000" as a password it is possible to connect the bluetooth module. More problematic is to connect the Bluetooth to my Mac. So, I try to find an alternative.<br>
+I take a Bluetooth Module HC-05, an Arduino Uno and a Potentiomter. I connect all three elements as follow.
 Importing a serial library I have been trasformed pin 10 and pin 11 into new RX and TX serial.
-I create a serial event on Arduino IDE simulating. The potentiometer, which simulates the sonar, can be observed on my smartphone and on the serial monitor of Arduino. So, I simulate an event: turning the potentiometer more than a value >500 the led is light off. In this way I have the right signal (or better, the alarm) that can be sent to a Smartphone application to informing the biker for a possible danger.</p><br>
+I create a serial event on Arduino IDE simulating an ultrasonar sensor. The potentiometer, simulating the ultrasonar, can be observed on my smartphone and on the serial monitor of Arduino. So, I simulate an event. turning the potentiometer more than a value >500 the led is light off. In this way I have the right signal (or better, the alarm) that can be sent to a smartphone application to informing the biker for a possible danger.</p><br>
 
+<img src="images/esercitazione14/testwithpotentiometer.png">
+<img src="images/esercitazione14/smartphoneandpotentiometer.png"><br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JRSIrHicWS0" frameborder="0" allowfullscreen></iframe><br>
+      
 <pre class="prettyprint linenums">
-    
+   
 #include <SoftwareSerial.h>// import the serial library
 SoftwareSerial Genotronex(10, 11); // RX, TX
 int led = 13;
@@ -154,17 +159,95 @@ void loop() {
 }
 
 }</pre><br>
-     
-<h3>Approaching Processing</h3> 
-<p>I use the basic tutorial for Processing provided by FabAcademy. I modified some parameters as follow to use Processing developing very simple GUI’s in order to connect the boards with the GUI I had a lot of problems. The final goal is a first attempo to simulate a GUI/app for the final Obike Project.</p><br>
 
+<p>A problem has been represented by the impossible connection between Bluetooth and Mac Book. For this reason, I abandoned my first purpose (simplifying the assignemnt) trying tyo create a GUI directly connected with the potentiometer. So I started from another existing example in Arduino:</p><br>
 
 <pre class="prettyprint linenums">
 
+This example code is in the public domain.
+
+ http://www.arduino.cc/en/Tutorial/Graph
+ */
+
+void setup() {
+  // initialize the serial communication:
+  Serial.begin(9600);
+}
+
+void loop() {
+  // send the value of analog input 0:
+  Serial.println(analogRead(A0));
+  // wait a bit for the analog-to-digital converter 
+  // to stabilize after the last reading:
+  delay(30);
+}
+
 </pre><br>
-      
-<h3>Lessons learnt</h3>
-<p>Developing this assignment I had a lot of problems. At the end of this assignment I started to understand how to make and connect these two things. I am becoming able to design and create PCB but I was not able to connect these two systems. But I need to invest more and more time to become a practitioner.</p>  
+     
+<h3>Approaching Processing</h3> 
+<p>Firstly I tried to used the basic tutorial for Processing provided by FabAcademy. I modified some parameters in order to understand how to create a basic interface. The final goal is create  a GUI to simulate the basic interface for my final project. I created a small window with a black circle. The circle change its size (scaling up and down) turning the potentiometer simulating the distance.</p><br>
+
+<pre class="prettyprint linenums">
+
+// Graphing sketch
+// This program takes ASCII-encoded strings
+// from the serial port at 9600 baud and graphs them. It expects values in the
+// range 0 to 1023, followed by a newline, or newline and carriage return
+// Created 20 Apr 2005
+// Updated 18 Jan 2008
+// by Tom Igoe
+// This example code is in the public domain.
+
+import processing.serial.*;
+PFont f;
+Serial myPort;        // The serial port
+int xPos = 1;         // horizontal position of the graph
+
+void setup () {
+  // set the window size:
+  size(400, 300);        
+  f = createFont("Helvetica", 16, true);
+  // List all the available serial ports
+  println(Serial.list());
+  // I know that the first port in the serial list on my mac
+  // is always my  Arduino, so I open Serial.list()[0].
+  // Open whatever port is the one you're using.
+  myPort = new Serial(this, Serial.list()[5], 9600);
+  // don't generate a serialEvent() unless you get a newline character:
+  myPort.bufferUntil('\n');
+  // set inital background:
+  background(0);
+}
+void draw () {
+  background(255);
+  textFont(f, 32);                
+  fill(0);  
+  textAlign(CENTER);   
+  text("BIG=NEAR!!", width/2, height/2);  
+  String inString = myPort.readStringUntil('\n');
+
+  if (inString != null) {
+    // trim off any whitespace:
+    inString = trim(inString);
+    // convert to an int and map to the screen height:
+    float inByte = float(inString); 
+    inByte = map(inByte, 0, 1023, 0, height);
+    ellipse (200, 150, inByte, inByte);
+    fill(127, 34, 155);
+    println ( inByte );
+  }
+}
+</pre><br>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZhKyrW1t1z4" frameborder="0" allowfullscreen></iframe>
+<br>
+
+<p>Finally, I tried to connect the interface with the Sharp infrared sensor installed on my Multitiny board developed during the output devices class.</p><br>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EDhMPw-0YSE" frameborder="0" allowfullscreen></iframe><br>
+
+<h3>Lesson learnt</h3>
+<p>During the development of this assignment I had a lot of problems. I start to approach to Python and Kivy but I have not the basic knowledge to manage the complexity required by this kind of softwares. Processing is more similar to Arduino IDE and for this reason it is more simple. Anyway, at the end of this assignment I started to understand how to make and connect input/output devices and interfaces. But I need to invest more and more time to become a practitioner in the field of coding.</p>  
 
         
 
